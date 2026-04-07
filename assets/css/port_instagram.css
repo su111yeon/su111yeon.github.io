@@ -1,0 +1,308 @@
+@import url("./reset.css");
+
+:root {
+    --primary-button: rgb(0, 149, 246;);
+    --maincolor: rgb(0, 55, 107);
+    --border-box {
+        border: 1px solid #dbdbdb;
+    }
+}
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.page__login {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.page__login-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 800px;
+    /* height: 635px; */
+}
+.device__wrap {
+    position: relative;
+    width: 465px;
+    height: 635px;
+    background: url(../images/instagram/iphone_bg.png);
+}
+.device__photo-list {
+    position: absolute;
+    width: 250px;
+    height: 541px;
+    left: 158px;
+    top: 21px;
+    animation: fade-effect;
+    background-size: cover;
+    background-position: center;
+    animation: fadeInOut 12s infinite ease-in; /* 애니메이션 시간과 반복 */
+}
+
+/* animation 영역 */
+.device__photo-list {
+    position: absolute;
+    width: 250px;
+    height: 541px;
+    left: 158px;
+    top: 21px;
+    background-image: url(../images/instagram/mobile2.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    animation: mainGif 20s cubic-bezier(1, 0, 0.8, 1) infinite;
+    animation: mainGif 16s ease infinite;
+}
+@keyframes mainGif {
+    0% {
+        background-image: url(../images/instagram/mobile1.png);
+    }
+    12.5% {
+        background-image: url(../images/instagram/mobile2.png);
+    }
+    25% {
+        background-image: url(../images/instagram/mobile3.png);
+    }
+    37.5% {
+        background-image: url(../images/instagram/mobile4.png);
+    }
+    50% {
+        background-image: url(../images/instagram/mobile1.png);
+    }
+    62.5% {
+        background-image: url(../images/instagram/mobile2.png);
+    }
+    87.5% {
+        background-image: url(../images/instagram/mobile3.png);
+    }
+    100% {
+        background-image: url(../images/instagram/mobile4.png);
+    }
+}
+.user__wrap {
+    max-width: 350px;
+    width: 100%;
+    margin-top: 10px;
+}
+.user__wrap-inner {
+    border: 1px solid #dbdbdb;
+    margin-bottom: 10px;
+}
+.login__form {
+    padding: 0 40px;
+    margin-bottom: 10px;
+}
+.login__logo {
+    width: 181px;
+    margin: 0 auto;
+    height: 53px;
+    margin: 40px auto;
+    overflow: hidden;
+    background-position: 1px 0;
+    background: url(../images/instagram/login_logo.png) 1px 0 no-repeat;
+    background-position: 1px 39%;
+}
+.login__input-container {
+    position: relative;
+    margin-bottom: 6px;
+}
+.login__input-container input {
+    position: relative;
+    border: 1px solid #dbdbdb;
+    height: 38px;
+    line-height: 38px;
+    width: 100%;
+    font-size: 12px;
+    padding: 14px 8px 0;
+    caret-color: transparent;
+    background: #fafafa;
+}
+.login__input-container input:focus {
+    outline: none;
+    border: 1px solid #a8a8a8;
+}
+.login__placeholder {
+    position: absolute;
+    top: 12px;
+    left: 8px;
+    font-size: 12px;
+    color: #737373;
+    pointer-events: none;
+}
+.input-filled .login__placeholder {
+    top: 5px;
+    font-size: 10px;
+}
+.login__placeholder-btn {
+    display: none;
+    position: absolute;
+    font-size: 14px;
+    font-weight: bold;
+    top: 9px;
+    right: 7px;
+    background: transparent;
+}
+.login__placeholder-btn:hover {
+    color: #909090;
+}
+/* input이 채워졌을 때 버튼 보이기 */
+.input-filled .login__placeholder-btn {
+    display: block;
+}
+.login__btn {
+    width: 100%;
+    height: 32px;
+    font-weight: bold;
+    color: #fff;
+    background: #4cb5f9;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    cursor: default;
+}
+.login__btn.button-active {
+    background: #0095f6;
+    cursor: pointer;
+}
+.login__btn.button-active:hover {
+    background: #1877f2;
+}
+.divider__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    text-align: center;
+    margin-top: 14px;
+    margin-bottom: 20px;
+}
+.divider__text {
+    position: relative;
+    display: block;
+    font-size: 13px;
+}
+.divider__line {
+    position: relative;
+    display: block;
+    width: 103px;
+    height: 1px;
+    background: #dbdbdb;
+}
+.user__wrap a {
+    display: inline-block;
+}
+.login__btn-faceBook {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #385185;
+    background: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.login__btn-faceBook .login__ico-facebook {
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    background: url(../images/instagram/ico_wrap.png) 1px 0 no-repeat;
+    background-position: 300px 80px;
+    background-repeat: no-repeat;
+    background-position: -414px -259px;
+}
+.login__btn-faceBook .login__btn-text {
+    font-size: 14px;
+}
+.login__link-pw {
+    font-size: 12px;
+    width: 100%;
+    display: inline-block;
+    color: var(--maincolor);
+    margin-bottom: 20px;
+    text-align: center;
+}
+.sign-up__box {
+    font-size: 14px;
+    padding: 20px 0;
+    border: 1px solid;
+    text-align: center;
+    border: 1px solid #dbdbdb;
+    margin-bottom: 10px;
+}
+.sign-up__text {
+    font-weight: bold;
+    color: rgb(0, 149, 246);
+}
+.app__link-wrap {
+    text-align: center;
+}
+.app__link-text {
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.app__link {
+    height: 40px;
+}
+.app__link img {
+    height: 100%;
+}
+.more-detail__wrap {
+    font-size: 12px;
+    line-height: 23px;
+    margin-top: 32px;
+    color: rgb(115, 115, 115);
+    padding: 0 16px;
+}
+.more-detail__top {
+    text-align: center;
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.more-detail__link {
+    margin: 0 8px;
+}
+.more-detail__bottom {
+    margin: 12px 0;
+    text-align: center;
+}
+.more-detail__wrap select {
+    border: none;
+}
+@media (max-width: 875px) {
+    .device__wrap {
+        display: none;
+    }
+}
+@media (max-width: 450px) {
+    .user__wrap {
+        margin-top: 0;
+    }
+    .user__wrap-inner {
+        border: none;
+    }
+    .login__form {
+        border: transparent;
+        padding: 0 0;
+        margin-bottom: 10px;
+        margin: 0 40px 6px;
+    }
+    .sign-up__box {
+        border: transparent;
+    }
+    .login__logo {
+        margin-top: 0;
+    }
+}

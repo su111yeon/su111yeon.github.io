@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>신년 제이위크</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://m.jestina.co.kr/content/ux_renewal/src/mo/content/css/common.css?v=20231013140903" />
+        <link rel="stylesheet" href="../swiper.css" />
+        <link rel="stylesheet" href="../local.css" />
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        <!-- <script src="../event.js"></script> -->
+        <script src="../swiper.js"></script>
+    </head>
+    <body>
+        <style>
+            @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+            @import url("https://webfontworld.github.io/gmarket/GmarketSans.css");
+            @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,500;0,600;1,500;1,600&display=swap");
+            .w100 {
+                width: 100%;
+                vertical-align: middle;
+            }
+            .jestina-detail__event {
+                margin: 0 auto;
+                width: 100%;
+                max-width: 1140px;
+                min-width: 320px;
+            }
+            .tabV2024 {
+                display: none;
+                position: absolute;
+                max-width: 1140px !important;
+                width: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 20;
+                top: 0;
+                bottom: inherit;
+            }
+            .tabV2024.fixed {
+                display: block;
+                position: fixed;
+                max-width: 1140px !important;
+                width: 100%;
+                bottom: inherit;
+            }
+            .tabV2024 ul {
+                display: flex;
+            }
+            .tabV2024 li {
+                width: 380px;
+                display: inline-block;
+            }
+            .tabV2024 li:last-child a:after {
+                display: none;
+            }
+            .tabV2024 li a {
+                display: block;
+                width: 100%;
+            }
+            .tabV2024 li a img.on {
+                display: none;
+            }
+            .tabV2024 li a img.off {
+                display: block;
+            }
+            .tabV2024 li a.active img.on {
+                display: block;
+            }
+            .tabV2024 li a.active img.off {
+                display: none !important;
+            }
+            /* main */
+            .event_sec.sec_main {
+                position: relative;
+                overflow-x: hidden;
+            }
+            .event_downList {
+                position: absolute;
+                display: flex;
+                flex-wrap: wrap;
+                width: 735px;
+                height: 660px;
+                top: 59.8%;
+                left: 50%;
+                transform: translateX(-50%);
+                border-radius: 18px;
+            }
+            .event_downItem {
+                position: relative;
+                width: 100%;
+                height: 230px;
+            }
+            .event_downItem.point {
+                height: 186px;
+                margin-bottom: 16px;
+            }
+            .event_downItem.eventCoupon {
+                height: 210px;
+                margin-bottom: 16px;
+            }
+            .event_downItem.point.soldout::after {
+                position: absolute;
+                content: "";
+                display: block;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/soldout.png) no-repeat left center;
+                background-size: 100% 100%;
+            }
+            .event_downItem.point.end::after {
+                position: absolute;
+                content: "";
+                display: block;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/soldout.png) no-repeat left center;
+                background-size: 100% 100%;
+            }
+            .event_downItem:last-child .event_couponBtn {
+                top: 24%;
+            }
+            .event_couponBtn {
+                position: absolute;
+                width: 120px;
+                height: 120px;
+                right: 8%;
+                top: 19%;
+            }
+            .event_mainFloating {
+                position: absolute;
+                left: 0;
+                top: 12.3%;
+                width: 100%;
+                height: 52px;
+                animation: textSlide 30s linear 0s infinite;
+                background-image: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/floating_text.png);
+                background-repeat: repeat-x;
+                background-position: center;
+            }
+            .event_mainItem.item01 {
+                position: absolute;
+                right: 9.4%;
+                top: 28%;
+                animation: float_motion 1s infinite linear;
+            }
+            .event_mainItem.item02 {
+                position: absolute;
+                bottom: 11.5%;
+                left: 5.5%;
+                animation: float_motion2 1s infinite linear;
+            }
+            .event_mainSwiper {
+                position: absolute;
+                width: 100%;
+                max-width: 945px;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 14.2%;
+                overflow-x: hidden;
+                border-radius: 20px;
+            }
+            .event_mainSwiper .swiper_btn-next,
+            .event_mainSwiper .swiper_btn-prev {
+                position: absolute;
+                display: block;
+                top: 62%;
+                transform: translateY(-50%);
+                width: 54px;
+                height: 30px;
+                z-index: 100;
+                cursor: pointer;
+            }
+            .event_mainSwiper .swiper_btn-prev {
+                left: 6.5px;
+                background: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/ico_btn_prev.png) no-repeat left center;
+                background-size: 100% 100%;
+            }
+            .event_mainSwiper .swiper_btn-next {
+                right: 5px;
+                background: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/ico_btn_next.png) no-repeat left center;
+                background-size: 100% 100%;
+            }
+            .event_mainSwiper .swiper-pagination {
+                display: none;
+                position: absolute;
+                text-align: right;
+                width: 100px;
+                right: 15px;
+                bottom: 15px;
+                left: auto;
+                font-size: 12px;
+                font-weight: 500;
+            }
+            /* container */
+            .event_sec-wrap {
+                position: relative;
+                background: #c5aefe;
+            }
+            .event_sec-wrap .event_sec {
+                position: relative;
+                /* max-width: 1000px; */
+                margin: 0 auto;
+            }
+            .event_sec,
+            .event_sec2 {
+                position: relative;
+            }
+            .event_sec2 {
+                margin-bottom: 30px !important;
+            }
+            .event_applyWrap {
+                position: absolute;
+                width: 356px;
+                height: 448px;
+                top: 28.2%;
+            }
+            .event_applyWrap.btn1 {
+                left: 17.8%;
+            }
+            .event_applyWrap.btn2 {
+                right: 17.5%;
+            }
+            .event_applyNum {
+                position: absolute;
+                bottom: 21.5%;
+                right: 11.5%;
+                font-size: 41px;
+                font-weight: bold;
+                color: #816bd7;
+            }
+            .event_btn {
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 80px;
+                bottom: 0;
+                line-height: 80px;
+                font-size: 22.5px;
+                font-weight: 600;
+                color: #fff;
+            }
+            .event_btn-ico {
+                position: absolute;
+                transition: all 0.4s;
+                width: 27px !important;
+                right: 32%;
+                top: 37%;
+            }
+            .event_btn:hover .event_btn-ico {
+                transform: scale(1.05);
+            }
+
+            .event_sec.sec01 .event_btn {
+                bottom: 50px;
+            }
+            .event_btn-percent {
+                position: absolute;
+                font-family: "GmarketSans" !important;
+                font-size: 77px;
+                font-weight: bold;
+                color: #41413e;
+                right: 31%;
+                top: 40%;
+            }
+            /* 노티스 */
+            .notice_wrap {
+                position: relative;
+                top: 0;
+                width: 100%;
+                max-width: 1000px;
+                color: #888;
+                background: #fff;
+            }
+            .notice_wrap.notice_wrap01 {
+                width: 100%;
+                max-width: 100%;
+                background: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/notice_bg1.jpg) no-repeat left top;
+                /* background-size: 100% 100%; */
+            }
+            .notice_wrap.notice_wrap02 {
+                width: 100%;
+                max-width: 100%;
+                background: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/notice_bg2.jpg) no-repeat left top;
+                /* background-size: 100% 100%; */
+            }
+            .notice_wrap .notice_list dt a::before {
+                display: inline-block;
+                content: "";
+                width: 24%;
+                height: 58%;
+                position: absolute;
+                top: 20%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .notice_wrap .notice_list dt {
+                text-align: center;
+            }
+            .notice_wrap .notice_list dt a {
+                position: relative;
+                display: block;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                font-size: 20px;
+                font-weight: 600;
+                color: #524e48;
+                text-decoration: none;
+                text-transform: uppercase;
+                -webkit-transition: all 0.25s;
+                transition: all 0.25s;
+                padding: 20px 0 !important;
+                font-family: "Roboto", sans-serif !important;
+            }
+            .notice_wrap .notice_list dt a::after {
+                display: inline-block;
+                content: "";
+                margin: -6px 0 0 8px;
+                padding: 2.5px;
+                border: solid #806e74;
+                border-width: 0 1px 1px 0;
+                vertical-align: middle;
+                -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+                -webkit-transition: all 0.25s;
+                transition: all 0.25s;
+            }
+            .notice_wrap .notice_list dd {
+                padding: 15px 0 40px;
+                margin: 0 auto;
+                display: none;
+            }
+            .notice_wrap.notice_wrap02 .notice_list dd {
+                background: #fff2e1;
+            }
+            .notice_wrap .notice_list dd h3 {
+                width: 100%;
+                max-width: 940px;
+                margin: 0 auto;
+                text-align: center;
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 32px;
+                color: #806e74;
+            }
+
+            .notice_wrap .notice_list .open {
+                background: transparent;
+            }
+            .notice_wrap .notice_list .open::after {
+                margin-top: 3px;
+                -webkit-transform: rotate(-135deg);
+                transform: rotate(-135deg);
+            }
+            .notice_wrap .notice_list .notice_cont {
+                margin: 0 auto 15px;
+                padding: 0;
+                width: 80%;
+                max-width: 860px;
+            }
+            .notice_wrap .notice_list .notice_cont li {
+                list-style: none;
+            }
+            .notice_wrap .notice_list .notice_cont li + li {
+                margin-top: 0.2rem;
+            }
+            .notice_wrap .notice_list .notice_cont li h2 {
+                margin: 0;
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 1.5;
+                margin-bottom: 5px;
+                color: #806e74;
+                text-align: left;
+                font-family: "Noto Sans KR", sans-serif !important;
+            }
+            .notice_wrap .notice_list .notice_cont li h3 {
+                margin: 0;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 1.35;
+                margin-bottom: 5px;
+                color: #806e74;
+                text-align: left;
+                font-family: "Noto Sans KR", sans-serif !important;
+            }
+            .notice_wrap .notice_list .notice_cont li p {
+                position: relative;
+                margin: 0;
+                padding-left: 10px;
+                font-weight: 400;
+                text-align: left;
+                font-size: 16px;
+                line-height: 1.5;
+                color: #806e74;
+                word-break: keep-all;
+                word-wrap: break-word;
+                font-family: "Noto Sans KR", sans-serif !important;
+            }
+            .notice_wrap .notice_list .notice_cont li p:before {
+                position: absolute;
+                left: 0;
+                top: 8px;
+                display: block;
+                content: "";
+                width: 4px;
+                height: 1px;
+                background-color: #806e74;
+            }
+            .notice_wrap04 {
+                margin-bottom: 64px !important;
+            }
+            .tabmenuList {
+                display: flex;
+                justify-content: space-between;
+            }
+            .tabContWrap {
+                position: absolute;
+                width: 83%;
+                top: 19.3%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .tabmenuItem {
+                cursor: pointer;
+            }
+            .tabmenuItem .off {
+                display: block;
+            }
+            .tabmenuItem .on {
+                display: none;
+            }
+            .tabmenuItem.active .off {
+                display: none;
+            }
+            .tabmenuItem.active .on {
+                display: block;
+            }
+            .tabContainerWrap {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                min-height: 794px;
+            }
+            .tabBoxWrap {
+                width: 100%;
+                display: block;
+                position: relative;
+                max-width: 1000px;
+                bottom: 15.2%;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 100%;
+            }
+            .tabContainer_tle {
+                padding-top: 45px;
+                margin-bottom: 50px;
+                font-size: 33px;
+                font-weight: 500;
+                color: #fff;
+                text-align: center;
+            }
+            .tabcnt {
+                display: none;
+                position: relative;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                right: 0;
+            }
+            .tabcnt.active {
+                display: block;
+            }
+            .tabcnt.currentNow {
+                background: none;
+            }
+            .prodWrap {
+                padding-top: 53px;
+                border-radius: 0 0 20px 20px;
+                background: #d7cdff;
+            }
+            .prodList {
+                display: flex;
+                flex-wrap: wrap;
+                row-gap: -3%;
+                margin: 0 auto;
+                width: 100%;
+                justify-content: space-between;
+                width: 90%;
+            }
+            .prodItem {
+                width: 24%;
+                margin-bottom: 2%;
+            }
+            .tabcnt1 .prodItem:nth-of-type(5) .prod_num,
+            .tabcnt1 .prodItem:nth-of-type(6) .prod_num,
+            .tabcnt1 .prodItem:nth-of-type(7) .prod_num,
+            .tabcnt1 .prodItem:nth-of-type(8) .prod_num {
+                bottom: 5%;
+            }
+            .tabcnt1 .prodItem:nth-of-type(5) .prod_price,
+            .tabcnt1 .prodItem:nth-of-type(6) .prod_price,
+            .tabcnt1 .prodItem:nth-of-type(7) .prod_price,
+            .tabcnt1 .prodItem:nth-of-type(8) .prod_price {
+                bottom: 5%;
+            }
+            .prodLink {
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+            .prod_num {
+                position: absolute;
+                /* width: 54px; */
+                /* height: 54px; */
+                font-size: 30px;
+                font-family: "Jost", sans-serif !important;
+                line-height: 30px;
+                font-weight: bold;
+                border-radius: 50%;
+                color: #d546a2;
+                /* background: #fbaabf; */
+                left: 4%;
+                bottom: 10%;
+            }
+            .prod_price {
+                position: absolute;
+                font-family: "Pretendard-Regular";
+                font-size: 24px;
+                line-height: 30px;
+                font-weight: 600;
+                bottom: 10%;
+                right: 4%;
+            }
+            .prod_more {
+                display: block;
+                margin: 55px auto 0;
+                width: 500px;
+                height: 90px;
+                line-height: 80px;
+                font-size: 20px;
+                color: #fff;
+                background: #8f72ff;
+            }
+            .prod_more-ico {
+                width: 12px !important;
+                transition: all 0.4s;
+            }
+            .prod_more:hover .prod_more-ico {
+                margin-left: 5px;
+            }
+
+            /* 팝업 */
+            .layerPop > .content {
+                display: inline-block;
+                position: relative;
+                top: 50%;
+                overflow: hidden;
+                background: transparent;
+                transform: translate(0, -50%) !important;
+                -webkit-transform: translate(0, -50%) !important;
+                -moz-transform: translate(0, -50%) !important;
+            }
+            .layerPop > .content img {
+                width: 80%;
+            }
+            .layerPop > .content button {
+                position: absolute;
+                top: 0;
+                right: 2%;
+                width: 15%;
+                height: 50px;
+                font: 0/0 a;
+                border: none;
+                outline: none;
+                background: none;
+                cursor: pointer;
+            }
+            .layerPop {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                overflow: hidden;
+                padding: 20px;
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                z-index: 10000;
+                background: rgba(0, 0, 0, 0.5);
+            }
+            .layerPop__contentWrap {
+                position: absolute;
+                width: 50%;
+                max-width: 375px;
+                left: 50%;
+                top: 30%;
+                transform: translateX(-50%);
+            }
+            .layerPop__btn {
+                position: absolute;
+                top: 9.5%;
+                right: 0%;
+                width: 3.3rem;
+                height: 3.3rem;
+                font: 0/0 a;
+                border: none;
+                outline: none;
+                background: none;
+                cursor: pointer;
+            }
+            .popBtnWrap {
+                position: fixed;
+                right: calc((100vw - 825px) / 2 - 155px);
+                cursor: pointer;
+                bottom: 15%;
+                width: 120px;
+                height: 120px;
+                z-index: 502;
+                animation-name: clickBtn;
+                animation-duration: 1.5s;
+                animation-iteration-count: infinite;
+                animation-timing-function: steps(1, end);
+            }
+            .popBtnWrap > a {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+            .popBtnWrap > a img {
+                width: 100%;
+            }
+            /* animation 영역 */
+            @keyframes download {
+                0% {
+                    right: 22%;
+                }
+                100% {
+                    right: 17%;
+                }
+            }
+            @keyframes textSlide {
+                0% {
+                    background-position-x: 0%;
+                }
+                100% {
+                    background-position-x: 300%;
+                }
+            }
+            @keyframes float_motion {
+                0%,
+                100% {
+                    transform: translate(0%, -6%);
+                }
+                50% {
+                    transform: translate(0%, -2%);
+                }
+            }
+            @keyframes float_motion2 {
+                0%,
+                100% {
+                    transform: translate(0%, -3%);
+                }
+                50% {
+                    transform: translate(0%, -6%);
+                }
+            }
+            @keyframes clickBtn {
+                0% {
+                    background: url("http://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/giftPopBtn.png") no-repeat center;
+                    background-size: 100% auto;
+                }
+
+                25% {
+                    background: url("http://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/giftPopBtn.png") no-repeat center;
+                    background-size: 100% auto;
+                }
+
+                50% {
+                    background: url("http://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/giftPopBtn_white.png") no-repeat center;
+                    background-size: 100% auto;
+                    visibility: visible;
+                }
+
+                100% {
+                    background: url("http://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/giftPopBtn_white.png") no-repeat center;
+                    background-size: 100% auto;
+                }
+            }
+
+            @-webkit-keyframes clickBtn {
+                0% {
+                    background: url("http://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/giftPopBtn.png") no-repeat center;
+                    background-size: 100% auto;
+                }
+
+                25% {
+                    background: url("http://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/giftPopBtn.png") no-repeat center;
+                    background-size: 100% auto;
+                }
+
+                50% {
+                    background: url("http://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/giftPopBtn_white.png") no-repeat center;
+                    background-size: 100% auto;
+                    visibility: visible;
+                }
+
+                100% {
+                    background: url("http://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/giftPopBtn_white.png") no-repeat center;
+                    background-size: 100% auto;
+                }
+            }
+        </style>
+        <!-- tab -->
+        <nav class="tabV2024" id="tab">
+            <ul>
+                <li class="tab2024_1">
+                    <a href="#contentV2024_1">
+                        <img class="off w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/tab1_off.png" />
+                        <img class="on w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/tab1_on.png" />
+                    </a>
+                </li>
+                <li class="tab2024_2">
+                    <a href="#contentV2024_2">
+                        <img class="off w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/tab2_off.png" />
+                        <img class="on w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/tab2_on.png" />
+                    </a>
+                </li>
+                <li class="tab2024_3">
+                    <a href="#contentV2024_3">
+                        <img class="off w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/tab3_off.png" />
+                        <img class="on w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/tab3_on.png" />
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <main class="jestina-sub-project__wrap jestina-detail__event tabContent2024">
+            <section class="event_sec sec_main">
+                <div class="event_mainFloating"></div>
+                <div class="event_mainItem item01"><img class="w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/mainItem01.png" /></div>
+                <div class="event_mainItem item02"><img class="w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/mainItem02.png" /></div>
+                <img class="w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/main.jpg" />
+            </section>
+            <section class="jestina-detail__event-wrap event_sec-wrap">
+                <!-- 최저가 혜택 -->
+                <section class="event_sec sec01" id="contentV2024_1">
+                    <div class="event_mainSwiper">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <a href="https://www.jestina.co.kr/products/view/G2000026030"
+                                    ><img src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/slide1.png" alt="LA POEME MIOELLO 14k 목걸이"
+                                /></a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="https://www.jestina.co.kr/products/view/G2000026378"
+                                    ><img src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/slide2.png" alt="ILLY LG 플랩숄더 BK"
+                                /></a>
+                            </li>
+                        </ul>
+                        <span class="swiper_btn swiper_btn-next"></span>
+                        <span class="swiper_btn swiper_btn-prev"></span>
+                    </div>
+
+                    <ul class="event_downList">
+                        <li class="event_downItem point">
+                            <button class="event_couponBtn btn1"></button>
+                        </li>
+                        <li class="event_downItem eventCoupon">
+                            <button class="event_couponBtn btn2"></button>
+                        </li>
+                        <li class="event_downItem">
+                            <button class="event_couponBtn btn3"></button>
+                        </li>
+                    </ul>
+                    <img class="w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/section01.jpg" />
+                </section>
+                <section class="notice_wrap notice_wrap01">
+                    <dl class="notice_list">
+                        <dt><a href="#" class="close">NOTICE</a></dt>
+                        <dd>
+                            <ul class="notice_cont">
+                                <li>
+                                    <h2># 포인트</h2>
+                                    <p>본 포인트는 제이위크 기간 7일동안 매일 오전 10시에 선착순 다운로드 가능하며, ID당 1회 지급됩니다.</p>
+                                    <p>누적된 포인트는 최종 구매일로부터 12개월간 미 구매 시 마지막월 말일 24시 일괄 소멸됩니다.</p>
+                                    <p>이벤트는 당사의 사정에 의해 예고 없이 변경 또는 종료 될 수 있습니다.</p>
+                                </li>
+                            </ul>
+                            <ul class="notice_cont">
+                                <li>
+                                    <h2># 더블 쿠폰</h2>
+                                    <p>본 쿠폰은 제이위크 기간 내 쿠폰 다운로드를 누른 고객에 한 해 지급 되며, 마이페이지 쿠폰관리에서 확인 가능합니다.</p>
+                                    <p>본 더블 쿠폰은 2024. 2. 25(일) 까지 사용 가능하며, ID당 1회 다운로드 가능합니다.</p>
+                                    <p>사용한 쿠폰은 취소, 반품 시 재발행 되지 않으며 유효기간 내 미 사용 시 자동 소멸됩니다.</p>
+                                    <p>
+                                        본 더블 쿠폰은 1천원: 0원 이상 / 3천원: 3만원 이상 / 5천원: 5만원 이상 / 1만원 : 10만원 이상 / 2만원 : 20만원 이상 구매 시 사용 가능하며, 일부 상품의 경우 쿠폰
+                                        적용이 불가 할 수 있습니다.
+                                    </p>
+                                    <p>이벤트는 당사의 사정에 의해 예고 없이 변경 또는 종료 될 수 있습니다.</p>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </section>
+
+                <!-- 럭키박스 -->
+                <section class="event_sec sec02" id="contentV2024_2">
+                    <img class="w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/section02.jpg" />
+                    <div class="event_applyWrap btn1">
+                        <button type="button" class="event_btn">
+                            <img class="event_btn-ico" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/ico_thumb.png" alt="응모하기" />
+                        </button>
+                        <span class="event_applyNum">355</span>
+                    </div>
+                    <div class="event_applyWrap btn2">
+                        <button type="button" class="event_btn">
+                            <img class="event_btn-ico" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/ico_thumb.png" alt="응모하기" />
+                        </button>
+                        <span class="event_applyNum">355</span>
+                    </div>
+                </section>
+                <section class="notice_wrap notice_wrap02">
+                    <dl class="notice_list">
+                        <dt><a href="#" class="close">NOTICE</a></dt>
+                        <dd>
+                            <ul class="notice_cont">
+                                <li>
+                                    <h2># 에어팟 PRO2 + 호텔 식사권</h2>
+                                    <p>본 이벤트는 제이위크 기간 내 선물하기 서비스를 1회 이상 이용한 고객대상으로 응모 가능하며, 추첨 2명 지급됩니다.</p>
+                                    <p>당첨자는 24.02.29(목) Jmall 공지사항을 통해 발표됩니다.</p>
+                                    <p>본 경품의 제세공과금 22%는 제이에스티나에서 부담합니다.</p>
+                                    <p>회원정보 미입력/오기재 시 경품 당첨 및 지급이 취소 될 수 있습니다.</p>
+                                    <p>본 이벤트는 당사의 사정에 의해 예고 없이 변경 또는 종료 될 수 있습니다.</p>
+                                </li>
+                                <li>
+                                    <h3>[ 에어팟 PRO2 ]</h3>
+                                    <p>
+                                        당첨된 에어팟 PRO2는 고객님의 연락처로 선물 안내 문자가 발송 되니, 고객님의 회원 정보를 최신 정보로 업데이트 바라며, 마케팅 수신동의란 체크박스를 꼭 체크
+                                        부탁드립니다. <br />(MY PAGE &gt; 회원정보 수정 &gt; 마케팅 수신동의 2항목(SMS/E-Mail) 체크 후 수정완료)
+                                    </p>
+                                    <p>받는 분께서 선물 수락과 함께 직접 수령을 원하는 주소를 입력하실 수 있습니다.</p>
+                                    <p>받는 분께서 선물을 거절하실 경우 자동으로 취소됩니다.</p>
+                                </li>
+                                <li>
+                                    <h3>[ 인터컨티넨탈 서울 코엑스 브래서리 식사권 (All Day/2인) ]</h3>
+                                    <p>
+                                        당첨된 기프티콘은 고객님의 연락처로 발송 되니, 고객님의 회원 정보를 최신 정보로 업데이트 바라며, 마케팅 수신동의란 체크박스를 꼭 체크 부탁드립니다. (MY PAGE
+                                        &gt; 회원정보 수정 &gt; 마케팅 수신동의 2항목(SMS/E-Mail) 체크 후 수정완료)
+                                    </p>
+                                    <p>본 교환권은 해당 호텔, 해당 상품으로만 사용이 가능합니다.</p>
+                                    <p>본 교환권은 주중 및 주말(런치or디너) 구분 없이 사용 가능한 식사권이며, 차액이 발생하더라도 반환되지 않습니다.</p>
+                                    <p>방문 전 사전 예약 해주시기 바랍니다.</p>
+                                    <p>사정에 따라 영업장 운영시간이 변경될 수 있습니다.</p>
+                                    <p>12월 연말 시즌 등 특정일 또는 상품 가격 변동으로 인해 추가 요금이 발생될 수 있습니다.</p>
+                                    <p>멤버쉽, 제휴할인, 프로모션, 이벤트, 포인트 적립은 브랜드사 정책에 따릅니다.</p>
+                                    <p>본 식사권은 유효기간 내 사용하여야 하며, 잔액 관리 및 현금 교환이 불가합니다.</p>
+                                    <p>예약 시 카카오톡 모바일 쿠폰 사용을 사전에 말씀해 주시기 바랍니다.</p>
+                                    <p>일부 식자재에 대해 알레르기가 있으신 분은 사전에 직원에게 알려주시기 바랍니다.</p>
+                                </li>
+                            </ul>
+                            <ul class="notice_cont">
+                                <li>
+                                    <h2># 선착순 사은품</h2>
+                                    <p>본 이벤트는 선착순 마감 시 종료 됩니다.</p>
+                                    <p>사은품은 주문건 당 1개 증정되며, 반품 시 동봉 해주셔야 합니다.</p>
+                                    <p>사은품은 주얼리/핸드백 구매금액의 합산이 불가 합니다.</p>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </section>
+
+                <!-- GIFT특가-->
+                <section class="event_sec2" id="contentV2024_3">
+                    <div class="tabContWrap">
+                        <ul class="tabmenuList">
+                            <li class="tabmenuItem active">
+                                <img class="w100 off" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/tabSec01_off.png" alt="" />
+                                <img class="w100 on" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/tabSec01_on.png" alt="" />
+                            </li>
+                            <li class="tabmenuItem">
+                                <img class="w100 off" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/tabSec02_off.png" alt="" />
+                                <img class="w100 on" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/tabSec02_on.png" alt="" />
+                            </li>
+                        </ul>
+                        <div class="tabContainerWrap">
+                            <ul class="tabBoxWrap">
+                                <li class="tabcnt tabcnt1 currentNow active">
+                                    <div class="prodWrap">
+                                        <ul class="prodList">
+                                            <li class="prodItem">
+                                                <a class="prodLink" href="https://www.jestina.co.kr/products/view/G2000026827">
+                                                    <span class="prod_num">56%</span>
+                                                    <span class="prod_price">151,500원</span>
+                                                    <img class="w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/item01_1.png" alt="레이첼 리본 하트 목걸이" />
+                                                </a>
+                                            </li>
+                                            <li class="prodItem">
+                                                <a class="prodLink" href="https://www.jestina.co.kr/products/view/G2000026826">
+                                                    <span class="prod_num">&nbsp;</span>
+                                                    <span class="prod_price">&nbsp;</span>
+                                                    <img class="w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/item01_2.png" alt="레이첼 리본 하트 귀걸이 "
+                                                /></a>
+                                            </li>
+                                            <li class="prodItem">
+                                                <a class="prodLink" href="https://www.jestina.co.kr/products/view/G2000026816">
+                                                    <span class="prod_num">&nbsp;</span>
+                                                    <span class="prod_price">&nbsp;</span>
+                                                    <img class="w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/item01_3.png" alt="ETER 14K 목걸이 S" />
+                                                </a>
+                                            </li>
+                                            <li class="prodItem">
+                                                <a class="prodLink" href="https://www.jestina.co.kr/products/view/G2000026229">
+                                                    <span class="prod_num">&nbsp;</span>
+                                                    <span class="prod_price">&nbsp;</span>
+                                                    <img class="w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/item01_4.png" alt="ETER 14K 목걸이"
+                                                /></a>
+                                            </li>
+                                            <li class="prodItem">
+                                                <a class="prodLink" href="https://www.jestina.co.kr/products/view/G2000026781">
+                                                    <span class="prod_num">56%</span>
+                                                    <span class="prod_price">151,500원</span>
+                                                    <img class="w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/item01_5.png" alt="WHITEMOND 1캐럿 목걸이+귀걸이 세트" />
+                                                </a>
+                                            </li>
+                                            <li class="prodItem">
+                                                <a class="prodLink" href="https://www.jestina.co.kr/products/view/G2000026794">
+                                                    <span class="prod_num">&nbsp;</span>
+                                                    <span class="prod_price">&nbsp;</span>
+                                                    <span class="prod_num">56%</span>
+                                                    <span class="prod_price">151,500원</span>
+                                                    <img class="w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/item01_6.png" alt="마리엘 리본 진주 비드귀걸이"
+                                                /></a>
+                                            </li>
+                                            <li class="prodItem">
+                                                <a class="prodLink" href="https://www.jestina.co.kr/products/view/G2000026030">
+                                                    <span class="prod_num">&nbsp;</span>
+                                                    <span class="prod_price">&nbsp;</span>
+
+                                                    <img class="w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/item01_7.png" alt="LA POEME MIOELLO 14K 목걸이" />
+                                                </a>
+                                            </li>
+                                            <li class="prodItem">
+                                                <a class="prodLink" href="https://www.jestina.co.kr/products/view/G2000026265">
+                                                    <span class="prod_num">&nbsp;</span>
+                                                    <span class="prod_price">&nbsp;</span>
+                                                    <img class="w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/item01_8.png" alt="LALA J 스네이크 팔찌"
+                                                /></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button type="button" class="prod_more" onclick="itemReload(1)">
+                                        화이트데이 주얼리 더보기
+                                        <img class="prod_more-ico" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/ico_arrow.png" alt="상품 더보기 버튼" />
+                                    </button>
+                                </li>
+                                <li class="tabcnt tabcnt2">
+                                    <div class="prodWrap">
+                                        <ul class="prodList">
+                                            <li class="prodItem">
+                                                <a class="prodLink" href="https://www.jestina.co.kr/products/view/G2000026757">
+                                                    <span class="prod_num">19%</span>
+                                                    <span class="prod_price">111,000원</span>
+                                                    <img src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/item02_1.png" alt="JOY SM 백팩 BK" />
+                                                </a>
+                                            </li>
+                                            <li class="prodItem">
+                                                <a class="prodLink" href="https://www.jestina.co.kr/products/view/G2000026378">
+                                                    <span class="prod_num">&nbsp;</span>
+                                                    <span class="prod_price">&nbsp;</span>
+                                                    <img src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/item02_2.png" alt="ILLY LG 플랩숄더 BK" />
+                                                </a>
+                                            </li>
+                                            <li class="prodItem">
+                                                <a class="prodLink" href="https://www.jestina.co.kr/products/view/G2000023063">
+                                                    <span class="prod_num">&nbsp;</span>
+                                                    <span class="prod_price">&nbsp;</span>
+                                                    <img src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/item02_3.png" alt="SARAH MD EW쇼퍼 BK" />
+                                                </a>
+                                            </li>
+                                            <li class="prodItem">
+                                                <a class="prodLink" href="https://www.jestina.co.kr/products/view/G2000024959">
+                                                    <span class="prod_num">&nbsp;</span>
+                                                    <span class="prod_price">&nbsp;</span>
+                                                    <img src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/item02_4.png" alt="MANO EW 롱숄더 BK" />
+                                                </a>
+                                            </li>
+                                            <li class="prodItem">
+                                                <a class="prodLink" href="https://www.jestina.co.kr/products/view/G2000026805">
+                                                    <span class="prod_num">19%</span>
+                                                    <span class="prod_price">111,000원</span>
+                                                    <img src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/item02_5.png" alt="LUCE SM 바게트숄더 LK" />
+                                                </a>
+                                            </li>
+                                            <li class="prodItem">
+                                                <a class="prodLink" href="https://www.jestina.co.kr/products/view/G2000026041">
+                                                    <span class="prod_num">&nbsp;</span>
+                                                    <span class="prod_price">&nbsp;</span>
+                                                    <img src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/item02_6.png" alt="MAY MD 백팩 BR" />
+                                                </a>
+                                            </li>
+                                            <li class="prodItem">
+                                                <a class="prodLink" href="https://www.jestina.co.kr/products/view/G2000026104">
+                                                    <span class="prod_num">&nbsp;</span>
+                                                    <span class="prod_price">&nbsp;</span>
+                                                    <img src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/item02_7.png" alt="HAZEL SM 크로스 TP" />
+                                                </a>
+                                            </li>
+                                            <li class="prodItem">
+                                                <a class="prodLink" href="https://www.jestina.co.kr/products/view/G2000024355">
+                                                    <span class="prod_num">&nbsp;</span>
+                                                    <span class="prod_price">&nbsp;</span>
+                                                    <img src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/item02_8.png" alt="JOELLE QUILTING 카드홀더 WH" />
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button type="button" class="prod_more" onclick="itemReload(2)">
+                                        신학기,졸업 백 더보기 <img class="prod_more-ico" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/ico_arrow.png" alt="상품 더보기 버튼" />
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <img class="w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/section03.jpg" />
+                </section>
+            </section>
+        </main>
+        <!-- 팝업 -->
+        <div class="popBtnWrap" onclick="openModal('modal1')"></div>
+        <div class="layerPop modal1">
+            <div class="content">
+                <img src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/sec01_pop3.png" />
+
+                <button type="button" onclick="fn_layer_close(this)">확인</button>
+            </div>
+        </div>
+        <div class="layerPop" id="coupon_all-popup">
+            <div class="content" style="opacity: 1">
+                <img src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/sec01_pop1.png" /> <button type="button" onclick="fn_layer_close(this)">확인</button>
+            </div>
+        </div>
+        <div class="layerPop" id="card_coupon-popup">
+            <div class="content" style="opacity: 1">
+                <img src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/0213_jWeek/sec01_pop2.png" /> <button type="button" onclick="fn_layer_close(this)">확인</button>
+            </div>
+        </div>
+
+        <a name="contentBottom" class="contentBottom"></a>
+
+        <script>
+            document.addEventListener("scroll", function () {
+                fix_func_2024();
+            });
+
+            function fix_func_2024() {
+                const eventElement = document.querySelector(".jestina-detail__event");
+                if (eventElement && eventElement.classList.contains("tabContent2024")) {
+                    const position = window.scrollY;
+                    const nav = document.querySelector(".tabV2024");
+                    const firstSection = document.querySelector(".jestina-detail__event-wrap");
+                    const headerFixedHeight = document.querySelector(".header.fixed")?.offsetHeight || 0;
+                    const navHeight = nav?.offsetHeight || 0;
+
+                    // 섹션과 탭의 ID를 배열로 정의
+                    const sections = ["#contentV2024_1", "#contentV2024_2", "#contentV2024_3"];
+                    const tabs = [".tab2024_1 a", ".tab2024_2 a", ".tab2024_3 a"];
+
+                    // 모든 탭에서 'active' 클래스를 제거하여 초기화
+                    document.querySelectorAll(".tabV2024 a").forEach((tab) => tab.classList.remove("active"));
+
+                    // 반복문을 통해 섹션을 순회하며 적절한 탭에 'active' 클래스를 추가
+                    for (let i = sections.length - 1; i >= 0; i--) {
+                        const section = document.querySelector(sections[i]);
+                        const sectionHeight = section?.offsetTop || 0;
+
+                        // 스크롤 위치에 따라 적절한 탭을 활성화
+                        if (position > sectionHeight - (headerFixedHeight + navHeight + (i === sections.length - 1 ? 35 : 0))) {
+                            document.querySelector(tabs[i])?.classList.add("active");
+                            break; // 해당 조건이 맞으면 반복문 종료
+                        }
+                    }
+
+                    // 네비게이션을 고정하는 로직
+                    if (firstSection && position > firstSection.offsetTop - (headerFixedHeight + navHeight)) {
+                        nav?.classList.add("fixed");
+                    } else {
+                        nav?.classList.remove("fixed");
+                    }
+                }
+            }
+            /* tabmenu */
+            $(function () {
+                var tabContWrap = $(".tabContWrap");
+
+                tabContWrap.each(function () {
+                    var tabMenu = $(this).find(".tabmenuList li");
+                    var tabcnt = $(this).find(".tabBoxWrap .tabcnt");
+
+                    213; //tabMenu.first().addClass("current"); // Set the first tab as active by default
+                    213; //tabcnt.first().show(); // Show the content of the first tab by default
+
+                    tabMenu.click(function (e) {
+                        e.preventDefault();
+                        var currentIndex = $(this).index();
+                        var currentTabContent = tabcnt.eq(currentIndex);
+
+                        tabMenu.removeClass("active");
+                        $(this).addClass("active");
+
+                        tabcnt.hide();
+                        tabcnt.eq(currentIndex).show();
+
+                        console.log(tabcnt.eq(currentIndex));
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

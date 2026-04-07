@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" sec0ent="IE=edge" />
+        <meta name="viewport" sec0ent="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="../assets/css/reset.css" />
+        <link rel="stylesheet" href="../assets/css/jestina.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="../assets/css/default/animate.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
+        <script src="../assets/js/jestina.js"></script>
+        <script src="../assets/js/swiper.js"></script>
+    </head>
+    <body class="sweet_day">
+        <style>
+            .sweet_day .event_sec {
+                position: relative;
+                width: 100%;
+                overflow-y: hidden;
+            }
+            .sweet_day .event_effect-wrap {
+                display: none;
+            }
+            .sweet_day .event_sec.start .event_effect-wrap {
+                opacity: 1;
+                display: block;
+            }
+            .sweet_day .event_link-item {
+                position: absolute;
+                width: 150px;
+                height: 150px;
+                z-index: 10;
+            }
+            .sweet_day .event_link {
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+            .sweet_day .event_main-btn {
+                position: absolute;
+                top: 44.8%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 9rem;
+                height: 2.38rem;
+                background-image: url(../assets/images/jestina/sweet_day/main_btn-off.png);
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                background-color: transparent;
+                animation: btnEffect 1s linear infinite;
+                cursor: pointer;
+            }
+            .sweet_day .event_effec-item {
+                position: absolute;
+                z-index: 100;
+                cursor: pointer;
+            }
+            .sweet_day .event_effec-item.item01 {
+                left: 6%;
+                animation: dropIcon01 3s linear infinite;
+            }
+            .sweet_day .event_effec-item.item02 {
+                right: 15%;
+                animation: dropIcon01 3s 5s linear infinite;
+                z-index: 101;
+                top: -200px;
+            }
+            .sweet_day .event_effec-item.item03 {
+                left: 39%;
+                animation: dropIcon02 4s linear infinite;
+            }
+            .sweet_day .event_effec-item.item04 {
+                right: 3%;
+                animation-duration: 5s;
+                animation: dropIcon02 5s linear infinite;
+            }
+            .sweet_day .event_effec-item.item05 {
+                left: 20%;
+                top: -200px;
+                animation: dropIcon01 4s 5s linear infinite;
+            }
+
+            /* 노티스 */
+            .sweet_day .notice_wrap .notice_list dt a::before {
+                display: inline-block;
+                content: "";
+                width: 24%;
+                height: 58%;
+                position: absolute;
+                top: 20%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .sweet_day .notice-wrap {
+                background: linear-gradient(70deg, #fddcf1, #f7cae9);
+            }
+            .sweet_day .notice-wrap .tle {
+                color: #343434;
+            }
+            .sweet_day .notice-wrap .tle::after {
+                border: solid #323232;
+                border-width: 0 1px 1px 0;
+                padding: 4px;
+                transform: rotate(45deg);
+            }
+            .sweet_day .notice_cont li {
+            }
+            .sweet_day .notice-wrap li + li {
+                margin-top: 1rem;
+            }
+            .sweet_day .notice-wrap .notice_cont li:before {
+                display: none;
+            }
+            .sweet_day .notice_cont h2 {
+                margin: 0;
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 1.5;
+                margin-bottom: 5px;
+                color: #343434;
+                text-align: left;
+            }
+            .sweet_day .notice_cont p {
+                list-style-type: none;
+                position: relative;
+                margin: 0;
+                padding-left: 15px;
+                font-weight: 400;
+                text-align: left;
+                font-size: 18px;
+                line-height: 1.7;
+                color: #323232;
+                word-break: keep-all;
+                word-wrap: break-word;
+            }
+            .sweet_day .notice_cont p:before {
+                position: absolute;
+                left: 0;
+                top: 17px;
+                display: block;
+                content: "";
+                width: 4px;
+                height: 1px;
+                background-color: #343434;
+            }
+            .sweet_day .layerPop {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                overflow: hidden;
+                padding: 20px;
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                z-index: 10000;
+                background: rgba(0, 0, 0, 0.5);
+            }
+            .sweet_day .layerPop__contentWrap {
+                position: absolute;
+                width: 50%;
+                max-width: 375px;
+                left: 50%;
+                top: 30%;
+                transform: translateX(-50%);
+            }
+            .sweet_day .layerPop__btn {
+                position: absolute;
+                top: 5%;
+                right: 3%;
+                /* transform: translateX(-50%); */
+                font: 0/0 a;
+                border: none;
+                outline: none;
+                background: none;
+                cursor: pointer;
+            }
+            .sweet_day .layerPop.winning1 .winning1_prize {
+                display: block;
+            }
+            .sweet_day .layerPop.winning1 .winning2_prize {
+                display: none;
+            }
+            .sweet_day .layerPop.winning2 .winning1_prize {
+                display: none;
+            }
+            .sweet_day .layerPop.winning2 .winning2_prize {
+                display: block;
+            }
+            .sweet_day .layerPop.winning1 .layerPop__btn {
+                top: 11%;
+            }
+            .sweet_day .layerPop.winning2 .layerPop__btn {
+                top: 19%;
+            }
+
+            @keyframes btnEffect {
+                0% {
+                    background-image: url(../assets/images/jestina/sweet_day/main_btn-off.png);
+                }
+                100% {
+                    background-image: url(../assets/images/jestina/sweet_day/main_btn-on.png);
+                }
+            }
+            @keyframes dropIcon01 {
+                0% {
+                    top: -200px;
+                }
+                100% {
+                    top: 1500px;
+                }
+            }
+            @keyframes dropIcon02 {
+                0% {
+                    top: -150px;
+                }
+                100% {
+                    top: 1500px;
+                }
+            }
+            @media (max-width: 768px) {
+                .sweet_day .jestina-sub-project__wrap {
+                    margin: 0 auto;
+                    width: 100%;
+                    max-width: 960px;
+                    min-width: 320px;
+                }
+                .sweet_day .event_link-item {
+                    position: absolute;
+                    width: 150px;
+                    height: 150px;
+                    z-index: 10;
+                }
+                .sweet_day .event_main-btn {
+                    top: 36.4%;
+                    width: 70%;
+                    height: 6rem;
+                    background-image: url(../assets/images/jestina/sweet_day/main_btn-off.png);
+                }
+                .sweet_day .event_effec-item {
+                    position: absolute;
+                    z-index: 100;
+                    cursor: pointer;
+                    transform: scale(0.9);
+                }
+                .sweet_day .event_effec-item.item01 {
+                    left: 7%;
+                    animation: dropIcon01 3s linear infinite;
+                    width: 26%;
+                    top: 3%;
+                }
+                .sweet_day .event_effec-item.item02 {
+                    right: 3%;
+                    animation: dropIcon01 3s 5s linear infinite;
+                    z-index: 101;
+                    top: -12%;
+                    width: 25%;
+                }
+                .sweet_day .event_effec-item.item03 {
+                    left: 3%;
+                    animation: dropIcon02 4s linear infinite;
+                    top: 29%;
+                }
+                .sweet_day .event_effec-item.item04 {
+                    right: 1%;
+                    width: 39%;
+                    /* top: 39%; */
+                    animation-duration: 5s;
+                    animation: dropIcon02 5s linear infinite;
+                }
+                .sweet_day .event_effec-item.item05 {
+                    left: 30%;
+                    width: 40%;
+                    top: -20%;
+                    animation: dropIcon01 4s 5s linear infinite;
+                }
+                .sweet_day .layerPop {
+                    display: none;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    overflow: hidden;
+                    text-align: center;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 10000;
+                    background: rgba(0, 0, 0, 0.8);
+                }
+                .sweet_day .layerPop__contentWrap {
+                    position: absolute;
+                    max-width: 400px;
+                    width: 25rem;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                .sweet_day .layerPop__btn {
+                    position: absolute;
+                    top: 12%;
+                    right: 2%;
+                    width: 2rem;
+                    height: 2rem;
+                    font: 0/0 a;
+                    border: none;
+                    outline: none;
+                    background: none;
+                    cursor: pointer;
+                }
+                .sweet_day .layerPop.winning1 .winning1_prize {
+                    display: block;
+                }
+                .sweet_day .layerPop.winning1 .winning2_prize {
+                    display: none;
+                }
+                .sweet_day .layerPop.winning2 .winning1_prize {
+                    display: none;
+                }
+                .sweet_day .layerPop.winning2 .winning2_prize {
+                    display: block;
+                }
+                .sweet_day .layerPop.winning1 .layerPop__btn {
+                    top: 13%;
+                    right: 2%;
+                }
+                .sweet_day .layerPop.winning2 .layerPop__btn {
+                    top: 21%;
+                }
+                /* 노티스 */
+                .sweet_day .notice_wrap .notice_list dt a::before {
+                    display: inline-block;
+                    content: "";
+                    width: 24%;
+                    height: 58%;
+                    position: absolute;
+                    top: 20%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+
+                .sweet_day .notice_wrap .notice_list dt {
+                    text-align: center;
+                }
+                .sweet_day .notice_wrap .notice_list dt a {
+                    position: relative;
+                    display: block;
+                    -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    color: #343434;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    -webkit-transition: all 0.25s;
+                    transition: all 0.25s;
+                    padding: 1rem 0 !important;
+                    font-family: "Roboto", sans-serif !important;
+                }
+                .sweet_day .notice_wrap .notice_list dt a::after {
+                    display: inline-block;
+                    content: "";
+                    margin: -6px 0 0 8px;
+                    padding: 0.35rem;
+                    border: solid #343434;
+                    border-width: 0 1px 1px 0;
+                    vertical-align: middle;
+                    -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                    -webkit-transition: all 0.25s;
+                    transition: all 0.25s;
+                }
+                .sweet_day .notice_wrap .notice_list dd {
+                    padding: 15px 0 40px;
+                    margin: 0 20px;
+                    display: none;
+                }
+                .sweet_day .notice_wrap .notice_list dd h3 {
+                    width: 100%;
+                    max-width: 940px;
+                    margin: 0 auto;
+                    text-align: center;
+                    font-size: 16px;
+                    font-weight: 300;
+                    line-height: 32px;
+                    color: #343434;
+                }
+                .sweet_day .notice_wrap .notice_list .open {
+                    background: transparent;
+                }
+                .sweet_day .notice_wrap .notice_list .open::after {
+                    margin-top: 3px;
+                    -webkit-transform: rotate(-135deg);
+                    transform: rotate(-135deg);
+                }
+                .sweet_day .notice_wrap .notice_list .notice_cont {
+                    margin: 0 auto;
+                    padding: 0;
+                    width: 95%;
+                    max-width: 100%;
+                }
+                .sweet_day .notice_wrap .notice_list .notice_cont li {
+                    list-style: none;
+                }
+                .sweet_day .notice_wrap .notice_list .notice_cont li + li {
+                    margin-top: 0.5rem;
+                }
+                .sweet_day .notice_wrap .notice_list .notice_cont li h2 {
+                    margin: 0;
+                    font-size: 1.3rem;
+                    font-weight: 600;
+                    line-height: 1.5;
+                    margin-bottom: 5px;
+                    color: #343434;
+                    text-align: left;
+                    font-family: "Noto Sans KR", sans-serif !important;
+                }
+                .sweet_day .notice_wrap .notice_list .notice_cont li p {
+                    position: relative;
+                    margin: 0;
+                    padding-left: 1rem;
+                    font-weight: 400;
+                    text-align: left;
+                    font-size: 1.2rem;
+                    line-height: 1.5;
+                    color: #343434;
+                    word-break: keep-all;
+                    word-wrap: break-word;
+                    font-family: "Noto Sans KR", sans-serif !important;
+                }
+                .sweet_day .notice_wrap .notice_list .notice_cont li p:before {
+                    position: absolute;
+                    left: 0;
+                    top: 8px;
+                    display: block;
+                    content: "";
+                    width: 4px;
+                    height: 1px;
+                    background-color: #343434;
+                }
+                @keyframes btnEffect {
+                    0% {
+                        background-image: url(../assets/images/jestina/sweet_day/main_btn-off.png);
+                    }
+                    100% {
+                        background-image: url(../assets/images/jestina/sweet_day/main_btn-on.png);
+                    }
+                }
+                @keyframes dropIcon01 {
+                    0% {
+                        top: -200px;
+                    }
+                    100% {
+                        top: 1500px;
+                    }
+                }
+                @keyframes dropIcon02 {
+                    0% {
+                        top: -150px;
+                    }
+                    100% {
+                        top: 1500px;
+                    }
+                }
+            }
+        </style>
+        <main>
+            <section class="event_sec">
+                <ul class="event_effect-wrap">
+                    <li class="event_effec-item item01">
+                        <img class="event_effect-photo" src="../assets/images/jestina/sweet_day/effcet-choco01.png" alt="초콜릿효과1" />
+                    </li>
+                    <li class="event_effec-item item02">
+                        <img class="event_effect-photo" src="../assets/images/jestina/sweet_day/effcet-choco02.png" alt="초콜릿효과2" />
+                    </li>
+                    <li class="event_effec-item item03">
+                        <img class="event_effect-photo" src="../assets/images/jestina/sweet_day/effcet-choco03.png" alt="초콜릿효과3" />
+                    </li>
+                    <li class="event_effec-item item04">
+                        <img class="event_effect-photo" src="../assets/images/jestina/sweet_day/effcet-choco04.png" alt="초콜릿효과4" />
+                    </li>
+                    <li class="event_effec-item item05">
+                        <img class="event_effect-photo" src="../assets/images/jestina/sweet_day/effcet-choco04.png" alt="초콜릿효과4" />
+                    </li>
+                </ul>
+                <img class="pc" alt="section01" src="../assets/images/jestina/sweet_day/event_main.jpg" />
+                <img class="mo" alt="section01" src="../assets/images/jestina/sweet_day/m_event_main.jpg" />
+                <button class="event_main-btn"></button>
+            </section>
+            <section class="notice-wrap">
+                <div class="tle close">NOTICE</div>
+                <div class="content-wrap">
+                    <ul class="notice_cont">
+                        <li>
+                            <h2># 더블 할인 쿠폰</h2>
+                            <p>본 쿠폰은 이벤트 기간 내 이벤트에 참여한 매일 선착순 214명 고객에 한 해 전원 지급 되며, 마이페이지 쿠폰관리에서 확인 가능합니다.</p>
+                            <p>본 더블 쿠폰은 2024. 02. 14(수) 까지 사용 가능하며, ID당 1회 다운로드 가능합니다.</p>
+                            <p>사용한 쿠폰은 취소, 반품 시 재발행 되지 않으며 유효기간 내 미 사용 시 자동 소멸됩니다.</p>
+                            <p>본 더블 쿠폰은 10만원 이상 구매 시 사용 가능하며, 일부 상품의 경우 쿠폰 적용이 불가 할 수 있습니다.</p>
+                        </li>
+                        <li>
+                            <h2># 기프티콘 증정</h2>
+                            <p>본 기프티콘은 이벤트 기간 내 이벤트에 참여한 고객 중 랜덤으로 지급되며, 당첨자는 초콜릿 클릭 시 노출되는 팝업창에서 확인 가능합니다.</p>
+                            <p>당첨된 고객님께 2024. 02. 15(목)에 기프티콘이 발송됩니다.</p>
+                            <p>
+                                당첨된 기프티콘은 고객님의 연락처로 발송 되니, 고객님의 회원 정보를 최신 정보로 업데이트 바라며, 마케팅 수신동의란 체크박스를 꼭 체크 부탁드립니다<br />(MY PAGE &gt;
+                                회원정보 수정 &gt; 마케팅 수신동의 2항목(SMS/E-Mail) 체크 후 수정완료)
+                            </p>
+                            <p>회원정보 미입력/오기재 시 경품 당첨 및 지급이 취소 될 수 있습니다.</p>
+                            <p>본 이벤트는 당사의 사정에 의해 사전 고지 없이 변경 또는 종료될 수 있습니다.</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <!-- layer -->
+        <div class="layerPop modal1">
+            <div class="layerPop__contentWrap">
+                <button type="button" class="layerPop__btn" onclick="fn_layer_close(this)">
+                    <img src="../assets/images/jestina/sweet_day/ico_close.png" alt="closeicon" />
+                </button>
+                <img class="w100 winning1_prize" src="http://webimg.jestina.co.kr/UpData/jestina/2024/event/0202_sweet_day/popup01.png" alt="쿠폰&amp;상품지급 팝업" />
+                <img class="w100 winning2_prize" src="http://webimg.jestina.co.kr/UpData/jestina/2024/event/0202_sweet_day/popup02.png" alt="쿠폰지급 팝업" />
+            </div>
+        </div>
+        <!-- //layer -->
+        <a name="contentBottom" class="contentBottom"></a>
+        <script>
+            // var eventId = "${event.eventId}";
+            // var startEndDT = getStartEndDT();
+            // var startDate = startEndDT[0];
+            // var endDate = startEndDT[1];
+
+            $(".event_main-btn").on("click", function (e) {
+                e.preventDefault();
+                $(".event_sec").addClass("start");
+            });
+
+            $(".event_effec-item").on("click", function (e) {
+                e.preventDefault();
+            });
+        </script>
+    </body>
+</html>

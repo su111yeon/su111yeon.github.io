@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" sec0ent="IE=edge" />
+        <meta name="viewport" sec0ent="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="../assets/css/reset.css" />
+        <link rel="stylesheet" href="../assets/css/jestina.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="../assets/css/default/animate.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
+        <script src="../assets/js/jestina.js"></script>
+        <script src="../assets/js/swiper.js"></script>
+    </head>
+    <body class="jaward">
+        <style>
+            .jestina-detail__event {
+                margin: 0 auto;
+                width: 100%;
+                width: 1140px;
+            }
+            /* tab menu */
+            .tabV2024 {
+                /* display: none; */
+                position: absolute;
+                max-width: 1140px !important;
+                width: 100%;
+                left: 0;
+                z-index: 20;
+                bottom: 0;
+                background: #151628;
+            }
+            .tabV2024.fixed {
+                display: block;
+                position: fixed;
+                max-width: 1140px !important;
+                width: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 20;
+                top: 0;
+                bottom: inherit;
+                background: #151628;
+            }
+            .tabV2024 ul {
+                display: flex;
+                margin: 0 auto;
+            }
+            .tabV2024 li {
+                text-align: center;
+                width: auto;
+                display: block;
+            }
+            .tabV2024 li:last-child a:after {
+                display: none;
+            }
+            .tabV2024 li a {
+                display: block;
+                width: 100%;
+            }
+            .tabV2024 li a img.on {
+                display: none;
+            }
+            .tabV2024 li a img.off {
+                display: block;
+            }
+            .tabV2024 li a.active img.on {
+                display: block;
+            }
+            .tabV2024 li a.active img.off {
+                display: none !important;
+            }
+            /* main */
+            .event_sec-wrap {
+                position: relative;
+            }
+            .event_btn {
+                position: absolute;
+                display: block;
+                width: 266px;
+                height: 71px;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 0;
+            }
+            .event_sec.sec01 .event_btn.btn1 {
+                top: 458px;
+            }
+            .event_sec.sec01 .event_btn.btn2 {
+                top: 996px;
+            }
+            .event_sec.sec01 .event_btn.btn3 {
+                top: 1673px;
+            }
+            .event_sec.sec02 .event_btn {
+                top: 347px;
+                left: 12.7%;
+                transform: initial;
+            }
+            .event_btn-percent {
+                position: absolute;
+                font-family: "GmarketSans" !important;
+                font-size: 19px;
+                font-weight: 500;
+                color: #3c3c3c;
+                left: 55%;
+                top: 11.9%;
+            }
+            .event_sec {
+                position: relative;
+            }
+            /* 노티스 */
+            .notice_wrap {
+                position: relative;
+                top: 0;
+                width: 100%;
+                margin: 0 auto !important;
+                color: #fff;
+                background: #000;
+            }
+            .notice_wrap .notice_list dt a::before {
+                display: inline-block;
+                content: "";
+                width: 24%;
+                height: 58%;
+                position: absolute;
+                top: 20%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .notice_wrap .notice_list dt {
+                text-align: center;
+            }
+            .notice_wrap .notice_list dt a {
+                position: relative;
+                display: block;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                font-size: 20px;
+                font-weight: 600;
+                color: #fff;
+                text-decoration: none;
+                text-transform: uppercase;
+                -webkit-transition: all 0.25s;
+                transition: all 0.25s;
+                padding: 20px 0 !important;
+                font-family: "Roboto", sans-serif !important;
+            }
+            .notice_wrap .notice_list dt a::after {
+                display: inline-block;
+                content: "";
+                margin: -6px 0 0 8px;
+                padding: 2.5px;
+                border: solid #fff;
+                border-width: 0 1px 1px 0;
+                vertical-align: middle;
+                -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+                -webkit-transition: all 0.25s;
+                transition: all 0.25s;
+            }
+            .notice_wrap .notice_list dd {
+                padding: 15px 0 20px;
+                margin: 0 20px;
+                display: none;
+            }
+            .notice_wrap .notice_list dd h3 {
+                width: 100%;
+                max-width: 940px;
+                margin: 0 auto;
+                text-align: center;
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 32px;
+                color: #fff;
+            }
+            .notice_wrap .notice_list .open {
+                background: transparent;
+            }
+            .notice_wrap .notice_list .open::after {
+                margin-top: 3px;
+                -webkit-transform: rotate(-135deg);
+                transform: rotate(-135deg);
+            }
+            .notice_wrap .notice_list .notice_cont {
+                margin: 0 auto 20px;
+                padding: 0;
+                width: 89%;
+                max-width: 100%;
+            }
+            .notice_wrap .notice_list .notice_cont li {
+                list-style: none;
+            }
+            .notice_wrap .notice_list .notice_cont li + li {
+                margin-top: 0.5rem;
+            }
+            .notice_wrap .notice_list .notice_cont li h2 {
+                margin: 0;
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 1.5;
+                margin-bottom: 5px;
+                color: #fff;
+                text-align: left;
+                font-family: "Noto Sans KR", sans-serif !important;
+            }
+            .notice_wrap .notice_list .notice_cont li p {
+                position: relative;
+                margin-bottom: 4px;
+                padding-left: 10px;
+                font-weight: 400;
+                text-align: left;
+                font-size: 16px;
+                line-height: 1.5;
+                color: #fff;
+                word-break: keep-all;
+                word-wrap: break-word;
+                font-family: "Noto Sans KR", sans-serif !important;
+            }
+            .notice_wrap .notice_list .notice_cont li p:before {
+                position: absolute;
+                left: 0;
+                top: 10px;
+                display: block;
+                content: "";
+                width: 4px;
+                height: 1px;
+                background-color: #fff;
+            }
+            .notice_wrap04 {
+                margin-bottom: 64px !important;
+            }
+            @keyframes download {
+                0% {
+                    right: 22%;
+                }
+                100% {
+                    right: 17%;
+                }
+            }
+            .event_link-wrap {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100%;
+                max-width: 607px;
+                height: 240px;
+            }
+            .event_link-wrap.wrap01 {
+                top: 339px;
+            }
+            .event_link {
+                width: 32%;
+            }
+            .event_link-wrap.wrap02 {
+                top: 826px;
+            }
+
+            /* 팝업 */
+            .layerPop {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                overflow: hidden;
+                padding: 20px;
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                z-index: 10000;
+                background: rgba(0, 0, 0, 0.7);
+            }
+            .layerPop > .content {
+                display: inline-block;
+                position: relative;
+                top: 50%;
+                overflow: hidden;
+                background: transparent;
+                transform: translate(0, -50%) !important;
+                -webkit-transform: translate(0, -50%);
+                -moz-transform: translate(0, -50%);
+            }
+            .layerPop > .content img {
+                width: auto !important;
+            }
+            .layerPop > .content button {
+                position: absolute;
+                top: 3%;
+                right: 2%;
+                width: 13%;
+                height: 33px;
+                font: 0/0 a;
+                outline: none;
+                background: none;
+                cursor: pointer;
+                border: none;
+            }
+            .machine_wrap {
+                position: absolute;
+                top: 12.4%;
+                left: 56.87%;
+                width: 346px;
+                height: 546px;
+                /* background: #bd7587ad; */
+                /* mix-blend-mode: color-burn; */
+                /* opacity: 0.5; */
+            }
+            .machine_box {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-image: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/drawing_machine.png);
+                z-index: 19;
+                background-size: 100% 100%;
+            }
+            .draw_item {
+                position: absolute;
+                width: 110px;
+                height: 118px;
+                /* background: #bd7587ad; */
+                background-size: 100% 100%;
+                border-radius: 50%;
+                /* mix-blend-mode: color-dodge; */
+                z-index: 10;
+            }
+            .draw_item img {
+                width: 100%;
+            }
+            .draw_item.item01 {
+                top: 16.2%;
+                left: 48%;
+                width: 118px;
+                height: 116px;
+                opacity: 0.5;
+            }
+            .draw_item.item02 {
+                top: 16.2%;
+                left: 19%;
+                width: 116px;
+                height: 114px;
+            }
+            .draw_item.item03 {
+                top: 31.1%;
+                left: 34%;
+                width: 114px;
+                height: 112px;
+            }
+            .draw_item.item04 {
+                top: 31.2%;
+                left: 63.1%;
+                width: 114px;
+                height: 114px;
+            }
+            .draw_item.item05 {
+                top: 44.6%;
+                left: 47%;
+                width: 114px;
+                height: 114px;
+            }
+            .draw_item.item06 {
+                top: 44.6%;
+                left: 19.7%;
+                width: 116px;
+                height: 114px;
+            }
+            .draw_item.item07 {
+                top: 31.6%;
+                left: 5.5%;
+                width: 114px;
+                height: 114px;
+            }
+
+            .machine_wrap [id^="effet_"] {
+                position: absolute;
+                width: 114px;
+                height: 114px;
+                display: block;
+                background-size: 100% 100%;
+                background-color: transparent;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .machine_wrap [id^="effet_"] img {
+                width: 100%;
+            }
+            .machine_wrap .animated {
+                animation-fill-mode: both;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+            }
+            .machine_wrap #effet_01 {
+                width: 118px;
+                height: 116px;
+                left: 48.3%;
+                top: 15%;
+                background-image: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/drawing_item01.png);
+                animation-duration: 1.5s;
+            }
+            .machine_wrap #effet_02 {
+                left: 69px;
+                top: 89px;
+                width: 114px;
+                height: 111px;
+                background-image: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/drawing_item02.png);
+                background-position: 0;
+                animation-duration: 1.2s;
+            }
+            .machine_wrap #effet_03 {
+                left: 117px;
+                top: 170px;
+                background-image: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/drawing_item03.png);
+                animation-duration: 1.4s;
+            }
+            .machine_wrap #effet_04 {
+                left: 218px;
+                top: 171px;
+                width: 114px;
+                height: 118px;
+                background-image: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/drawing_item04.png);
+                animation-duration: 1s;
+            }
+            .machine_wrap #effet_05 {
+                left: 163px;
+                top: 244px;
+                /* bottom: 21px; */
+                background-image: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/drawing_item05.png);
+                animation-duration: 0.9s;
+            }
+            .machine_wrap #effet_06 {
+                left: 70px;
+                top: 245px;
+                background-image: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/drawing_item06.png);
+                animation-duration: 0.8s;
+            }
+            .machine_wrap #effet_07 {
+                left: 19px;
+                top: 170px;
+                height: 118px;
+                background-image: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/drawing_item07.png);
+                animation-duration: 0.9s;
+            }
+            @keyframes bounce {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-30px);
+                }
+                60% {
+                    transform: translateY(-15px);
+                }
+            }
+            .machine_wrap .bounce {
+                animation-name: bounce;
+            }
+            @keyframes bounce2 {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-60px);
+                }
+                60% {
+                    transform: translateY(-15px);
+                }
+            }
+            .machine_wrap .bounce2 {
+                animation-name: bounce2;
+            }
+            @keyframes bounce3 {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-10px);
+                }
+                60% {
+                    transform: translateY(-5px);
+                }
+            }
+            .machine_wrap .bounce3 {
+                animation-name: bounce3;
+            }
+            @keyframes bounce4 {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-50px);
+                }
+                60% {
+                    transform: translateY(-10px);
+                }
+            }
+            .machine_wrap .bounce4 {
+                animation-name: bounce4;
+            }
+            @keyframes bounce5 {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-20px);
+                }
+                60% {
+                    transform: translateY(-5px);
+                }
+            }
+            .machine_wrap .bounce5 {
+                animation-name: bounce5;
+            }
+            @keyframes bounce6 {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-40px);
+                }
+                60% {
+                    transform: translateY(-5px);
+                }
+            }
+            .machine_wrap .bounce6 {
+                animation-name: bounce6;
+            }
+            @keyframes bounce7 {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-60px);
+                }
+                60% {
+                    transform: translateY(-5px);
+                }
+            }
+            .machine_wrap .bounce7 {
+                animation-name: bounce7;
+            }
+            @keyframes bounce {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-30px);
+                }
+                60% {
+                    transform: translateY(-15px);
+                }
+            }
+            .machine_wrap .bounce {
+                animation-name: bounce;
+            }
+            @keyframes bounce2 {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-60px);
+                }
+                60% {
+                    transform: translateY(-15px);
+                }
+            }
+            .machine_wrap .bounce2 {
+                animation-name: bounce2;
+            }
+            @keyframes bounce3 {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-10px);
+                }
+                60% {
+                    transform: translateY(-5px);
+                }
+            }
+            .machine_wrap .bounce3 {
+                animation-name: bounce3;
+            }
+            @keyframes bounce4 {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-50px);
+                }
+                60% {
+                    transform: translateY(-10px);
+                }
+            }
+            .machine_wrap .bounce4 {
+                animation-name: bounce4;
+            }
+            @keyframes bounce5 {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-20px);
+                }
+                60% {
+                    transform: translateY(-5px);
+                }
+            }
+            .machine_wrap .bounce5 {
+                animation-name: bounce5;
+            }
+            @keyframes bounce6 {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-40px);
+                }
+                60% {
+                    transform: translateY(-5px);
+                }
+            }
+            .machine_wrap .bounce6 {
+                animation-name: bounce6;
+            }
+            @keyframes bounce7 {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-60px);
+                }
+                60% {
+                    transform: translateY(-5px);
+                }
+            }
+            .machine_wrap .bounce7 {
+                animation-name: bounce7;
+            }
+            .jaward .notice-wrap {
+                color: #fff;
+                background: #000;
+            }
+            .jaward .notice-wrap .tle::after {
+                border-color: #fff;
+            }
+            .jaward .notice-wrap .notice_cont li:before {
+                background-color: #fff;
+            }
+        </style>
+        <main class="jestina-detail__event jestina-sub-project__wrap tabContent2024">
+            <section class="event_sec sec_main">
+                <nav class="tabV2024 tabScrollFixed" id="tab">
+                    <ul>
+                        <li class="tab2024_1">
+                            <a href="#contentV2024_1">
+                                <img class="off w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/tab_btn01_off.png" />
+                                <img class="on w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/tab_btn01_on.png" />
+                            </a>
+                        </li>
+                        <li class="tab2024_2">
+                            <a href="#contentV2024_2">
+                                <img class="off w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/tab_btn02_off.png" />
+                                <img class="on w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/tab_btn02_on.png" />
+                            </a>
+                        </li>
+                        <li class="tab2024_3">
+                            <a href="#contentV2024_3">
+                                <img class="off w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/tab_btn03_off.png" />
+                                <img class="on w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/tab_btn03_on.png" />
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <img class="w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/sec_visual.jpg" />
+            </section>
+            <section class="jestina-detail__event-wrap event_sec-wrap">
+                <section class="event_sec sec01 end" id="contentV2024_1">
+                    <span class="event_btn-percent">???회</span>
+                    <button type="button" class="event_btn btn1" onclick="openModal('modal1')">연말 결산 쿠폰</button>
+                    <button type="button" class="event_btn btn2" onclick="openModal('modal2')">재구매 쿠폰</button>
+                    <button type="button" class="event_btn btn3" onclick="openModal('modal3')">카드사 할인 쿠폰</button>
+                    <img class="w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/sec01.jpg" />
+                </section>
+                <section class="notice-wrap">
+                    <div class="tle close">NOTICE</div>
+                    <div class="content-wrap">
+                        <ul class="notice_cont">
+                            <h2># 연말 결산 쿠폰</h2>
+                            <li>
+                                <p>본 더블 쿠폰은 금년도 누적 구매 확정 횟수에 따라 차등 지급 되며, 이벤트 기간 내 다운로드 한 고객에 한 해 마이페이지 쿠폰관리에서 확인 가능합니다.</p>
+                            </li>
+                            <li>
+                                <p>본 더블 쿠폰은 ID당 1회 다운로드가 가능하며, 2024. 12. 31(화) 까지 사용 가능합니다.</p>
+                            </li>
+                            <li>
+                                <p>본 더블 쿠폰은 0원 이상 구매 시 사용 가능하며, 일부 상품의 경우 쿠폰 적용이 불가 할 수 있습니다.</p>
+                            </li>
+                            <li>
+                                <p>사용한 쿠폰은 취소, 반품 시 재발행 되지 않으며 유효기간 내 미 사용 시 자동 소멸됩니다.</p>
+                            </li>
+                            <li>
+                                <p>본 이벤트는 당사의 사정에 의해 예고 없이 변경 또는 종료될 수 있습니다.</p>
+                            </li>
+                        </ul>
+                        <ul class="notice_cont">
+                            <h2># 재구매 쿠폰</h2>
+                            <li>
+                                <p>본 더블 쿠폰은 당월 구매 이력이 있는 고객 대상으로 이벤트 기간 내 다운로드 한 고객에 한 해 마이페이지 쿠폰관리에서 확인 가능합니다.</p>
+                            </li>
+                            <li>
+                                <p>본 더블 쿠폰은 ID당 1회 다운로드가 가능하며, 2024. 12. 31(화) 까지 사용 가능합니다.</p>
+                            </li>
+                            <li>
+                                <p>본 더블 쿠폰은 7만원 이상 구매 시 사용 가능하며, 일부 상품의 경우 쿠폰 적용이 불가 할 수 있습니다.</p>
+                            </li>
+                            <li>
+                                <p>사용한 쿠폰은 취소, 반품 시 재발행 되지 않으며 유효기간 내 미 사용 시 자동 소멸됩니다.</p>
+                            </li>
+                            <li>
+                                <p>본 이벤트는 당사의 사정에 의해 예고 없이 변경 또는 종료될 수 있습니다.</p>
+                            </li>
+                        </ul>
+                        <ul class="notice_cont">
+                            <h2># 카드사 할인</h2>
+                            <li>
+                                <p>본 카드사 즉시 할인은 선착순 혜택이며 사전 예고없이 조기 종료될 수 있습니다.</p>
+                            </li>
+                            <li>
+                                <p>본 카드사는 비씨카드, 국민카드, 신한카드, 현대카드 진행 예정입니다.</p>
+                            </li>
+                            <li>
+                                <p>본 카드사 즉시 할인은 1만원: 10만원 이상 / 2만원: 20만원 이상 / 3만원: 30만원 이상 결제 시 사용 가능합니다.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="event_sec sec02" id="contentV2024_2">
+                    <img class="w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/sec02.jpg" />
+                    <button type="button" class="event_btn btn1" id="clickEvent">start</button>
+                    <div class="machine_wrap">
+                        <div class="machine_box"></div>
+                        <div id="effet_06" class="animated bounce6"></div>
+                        <div id="effet_01" class="animated bounce"></div>
+                        <div id="effet_02" class="animated bounce2"></div>
+                        <div id="effet_03" class="animated bounce3"></div>
+                        <div id="effet_04" class="animated bounce4"></div>
+                        <div id="effet_07" class="animated bounce7"></div>
+                        <div id="effet_05" class="animated bounce5"></div>
+                    </div>
+                </section>
+                <section class="notice-wrap">
+                    <div class="tle close">NOTICE</div>
+                    <div class="content-wrap">
+                        <ul class="notice_cont">
+                            <h2># 결산 뽑기 혜택</h2>
+                            <li>
+                                <p>본 이벤트는 금년도 결제 이력이 있다면 누구나 참여 가능합니다.</p>
+                            </li>
+                            <li>
+                                <p>당첨자는 2025. 01. 09(월) Jmall 공지사항을 통해 안내됩니다.</p>
+                            </li>
+                            <li>
+                                <p>본 경품의 제세공과금 22%는 제이에스티나에서 부담합니다. (주얼리, 핸드백)</p>
+                            </li>
+                            <li>
+                                <p>당첨된 경품은 입력된 주소지로 발송되니 마이페이지 내 회원정보를 최신정보로 업데이트 바랍니다.</p>
+                            </li>
+                            <li>
+                                <p>당첨된 기프티콘은 고객님의 연락처로 발송 되니, 고객님의 회원 정보를 최신 정보로 업데이트 바랍니다.</p>
+                            </li>
+                            <li>
+                                <p>회원정보 미입력/오기재 시 경품 당첨 및 지급이 취소 될 수 있습니다.</p>
+                            </li>
+                            <li>
+                                <p>본 이벤트는 당사의 사정에 의해 사전 고지 없이 변경 또는 종료될 수 있습니다.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="event_sec sec03" id="contentV2024_3">
+                    <div class="event_link-wrap wrap01">
+                        <a href="javascript:void(0)" class="event_link"> </a>
+                        <a href="javascript:void(0)" class="event_link"> </a>
+                        <a href="javascript:void(0)" class="event_link"> </a>
+                    </div>
+                    <div class="event_link-wrap wrap02">
+                        <a href="javascript:void(0)" class="event_link"> </a>
+                        <a href="javascript:void(0)" class="event_link"> </a>
+                        <a href="javascript:void(0)" class="event_link"> </a>
+                    </div>
+                    <img class="w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/sec03.jpg" />
+                </section>
+            </section>
+        </main>
+        <a name="contentBottom" class="contentBottom"></a>
+
+        <!-- 팝업 -->
+        <div class="layerPop modal1" style="display: none">
+            <div class="content" style="opacity: 1">
+                <!-- 파일명 pop01_10 = 10% / pop01_7 = 7% / pop01_5 = 5%  -->
+                <img src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/pop01_10.jpg" />
+                <button type="button" onclick="fn_layer_close(this)">확인</button>
+            </div>
+        </div>
+        <div class="layerPop modal2" style="display: none">
+            <div class="content" style="opacity: 1">
+                <img src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/pop02.jpg" />
+                <button type="button" onclick="fn_layer_close(this)">확인</button>
+            </div>
+        </div>
+        <div class="layerPop modal3" style="display: none">
+            <div class="content" style="opacity: 1">
+                <img src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/pop03.jpg" />
+                <button type="button" onclick="fn_layer_close(this)">확인</button>
+            </div>
+        </div>
+        <div class="layerPop modal4" style="display: none">
+            <div class="content" style="opacity: 1">
+                <img src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/pop04.jpg" />
+                <button type="button" onclick="fn_layer_close(this)">확인</button>
+            </div>
+        </div>
+        <script></script>
+    </body>
+</html>

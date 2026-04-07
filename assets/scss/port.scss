@@ -1,0 +1,434 @@
+/*========================
+========  mywork ========
+========================*/
+.myPort {
+    box-sizing: border-box;
+    display: block;
+    padding-top: 56px;
+    &__inner {
+        max-width: 1500px;
+        margin: 0 auto;
+        padding: 0 52px;
+    }
+    &__ico {
+        &-close {
+            position: fixed;
+            cursor: pointer;
+            width: 32px;
+            height: 32px;
+            right: 24px;
+            top: 24px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    &__name {
+        font-size: 40px;
+        margin-bottom: 16px;
+        text-align: center;
+        &-sub {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 4px;
+            text-align: center;
+        }
+    }
+    &__head {
+        color: #292929;
+        font-size: 44px;
+        text-transform: capitalize;
+        text-align: center;
+        margin-bottom: 24px;
+        letter-spacing: -1px;
+    }
+    &__thum {
+        width: 100%;
+        max-width: 1200px;
+        height: 500px;
+        overflow-y: auto;
+        padding-top: 3vw;
+        border-radius: 10px;
+        border: 1px solid transparent;
+        background-image: url(../images/scoll_Section.png);
+        background-position: top;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        box-shadow: 3px 3px 15px rgb(170 170 170 / 20%);
+        margin-bottom: 24px;
+        box-sizing: border-box;
+        -ms-overflow-style: none; /* 인터넷 익스플로러 */
+        scrollbar-width: none; /* 파이어폭스 */
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    &__thum-img {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        overflow-y: auto;
+        border: transparent;
+        cursor: grab;
+        box-sizing: border-box;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        &::after {
+            display: block;
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(../images/ico/scroll.png);
+            background-color: rgba(135, 135, 135, 0.2);
+            background-size: 40px 40px;
+            background-repeat: no-repeat;
+            background-position: center 50%;
+            z-index: 10;
+        }
+        &:hover::after {
+            display: none;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    &__thum-doguri {
+        max-width: 320px;
+        padding-top: 0;
+        background: none;
+        box-sizing: border-box;
+        &__thum-img {
+            width: 100%;
+            height: 500px;
+        }
+    }
+    &__summary {
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 24px;
+    }
+    &__more {
+        margin-bottom: 36px;
+        &-link {
+            cursor: pointer;
+            font-size: 14px;
+            padding: 8px 16px;
+            color: #fff;
+            background: rgb(31, 97, 132);
+            border-radius: 10px;
+            margin-right: 5px;
+            box-shadow: 3px 3px 7px rgba(31, 97, 132, 0.4);
+        }
+        &-txt {
+            font-size: 14px;
+            margin-top: 16px;
+        }
+    }
+    &__tle {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 16px;
+        text-transform: capitalize;
+        color: #292929;
+    }
+    &__overView {
+        margin-bottom: 24px;
+    }
+}
+.myPort-desc {
+    &__item {
+        display: inline-block;
+        margin-bottom: 30px;
+        margin-right: 15px;
+    }
+    &__tle {
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+    &__span {
+        display: block;
+        &::before {
+            content: "-";
+            margin-right: 5px;
+        }
+    }
+    &__comment {
+        &::before {
+            content: "*";
+            vertical-align: sub;
+            margin-right: 5px;
+        }
+    }
+}
+.myPort-site {
+    &__list {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        height: 100%;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-sizing: border-box;
+        overflow: hidden;
+        &.myPort-site__pc {
+            width: calc(70% - 12px);
+        }
+        &.myPort-site__m {
+            width: calc(30% - 12px);
+            margin: 0;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
+.myPort-section {
+    &__inner {
+        width: 100%;
+    }
+    &__item {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        align-items: center;
+        &:nth-child(2n) {
+            flex-direction: row-reverse;
+            text-align: right;
+        }
+        .myPort-section__desc {
+            padding-right: 24px;
+        }
+    }
+    &__thum {
+        width: 50%;
+        border-radius: 10px;
+    }
+    &__desc {
+        color: #292929;
+        width: 50%;
+        padding-left: 24px;
+    }
+}
+.myPort-content {
+    &__inner {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 36px;
+        &.myPort-content__second {
+            padding: 0;
+            flex-direction: row-reverse;
+            .myPort-content__txt-wrap {
+                margin-right: 32px;
+            }
+        }
+    }
+    &__thum {
+        max-width: 700px;
+        width: 100%;
+        margin: 0 32px 0 0;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        &.swiper-container {
+            margin: 0 32px 0 0;
+        }
+        &-list {
+            display: flex;
+        }
+        &-item {
+            max-width: 700px;
+            width: 100%;
+        }
+        &-img {
+            max-width: 700px;
+            width: 100%;
+            margin: 0 32px 0 0;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+    }
+    &__thum-m {
+        max-width: 500px;
+    }
+
+    &__tle {
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
+    &__item {
+        margin-bottom: 24px;
+    }
+    &__txt {
+        margin: 0;
+    }
+    &__text {
+        font-size: 18px;
+        margin: 0;
+    }
+    &__skill {
+        display: block;
+        font-size: 24px;
+        font-weight: bold;
+        color: #a37a7a;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .myPort-content {
+        &__inner {
+            flex-direction: column;
+            &.myPort-content__second {
+                flex-direction: column;
+                .myPort-content__txt-wrap {
+                    margin-right: 32px;
+                    margin-left: 24px;
+                }
+            }
+        }
+        &__thum {
+            margin: 0 auto 16px;
+        }
+        &__txt {
+            width: 100%;
+        }
+    }
+    .myPort-desc {
+        &__item {
+            margin-bottom: 4px;
+        }
+    }
+}
+@media only screen and (max-width: 768px) {
+    /*========================
+========  mywork ========
+========================*/
+    .myPort {
+        padding-top: 32px;
+        overflow: hidden;
+        &__inner {
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 0 12px;
+        }
+        &__ico {
+            &-close {
+                width: 24px;
+                height: 24px;
+                right: 12px;
+                top: 12px;
+            }
+        }
+        &__name {
+            font-size: 32px;
+        }
+        &__head {
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+        &__thum {
+            padding-top: 16px;
+            height: 360px;
+        }
+        &__thum-img {
+            height: auto;
+            &::after {
+                display: none;
+            }
+        }
+        &__thum-doguri {
+            max-width: 320px;
+            padding-top: 0;
+            background: none;
+            box-sizing: border-box;
+            &__thum-img {
+                width: 100%;
+                height: 500px;
+            }
+        }
+        &__summary {
+            flex-wrap: wrap;
+            width: 100%;
+            margin-bottom: 24px;
+        }
+        &__more {
+            margin-bottom: 36px;
+            &-link {
+                cursor: pointer;
+                font-size: 14px;
+                padding: 8px 16px;
+                color: #fff;
+                background: rgb(31, 97, 132);
+                border-radius: 10px;
+                margin-right: 5px;
+                box-shadow: 3px 3px 7px rgba(31, 97, 132, 0.4);
+            }
+            &-txt {
+                font-size: 14px;
+                margin-top: 16px;
+            }
+        }
+        &__tle {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 16px;
+            text-transform: capitalize;
+            color: #292929;
+        }
+        &__overView {
+            margin-bottom: 24px;
+        }
+    }
+    .myPort-section {
+        &__item {
+            flex-direction: column;
+            margin-bottom: 32px;
+            .myPort-section__desc {
+                padding-right: 0;
+            }
+        }
+        &__thum {
+            width: 100%;
+        }
+        &__desc {
+            width: 100%;
+            padding-left: 0;
+            text-align: left;
+            margin-top: 16px;
+        }
+    }
+    .myPort-content {
+        &__thum {
+            &-list {
+                display: flex;
+            }
+            &-item {
+                max-width: 700px;
+                width: 100%;
+            }
+            &-img {
+                max-width: 700px;
+                width: 100%;
+                margin: 0 32px 0 0;
+                border-radius: 10px;
+                border: 1px solid #ddd;
+            }
+        }
+        &__tle {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        &__item {
+            margin-bottom: 16px;
+        }
+        &__skill {
+            display: block;
+            font-size: 20px;
+        }
+    }
+}

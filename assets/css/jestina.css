@@ -1,0 +1,2410 @@
+/* =====================
+  *       common
+===================== */
+html {
+    font-size: 62.5%;
+    font-size: 3.13vw;
+}
+main {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.mo {
+    display: none;
+}
+.featured_sec,
+.event_sec {
+    width: 1140px;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+/* layerPop */
+.layerPop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.5);
+}
+.layerPop > .content {
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    overflow: hidden;
+    background: transparent;
+    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+}
+.layerPop > .content img {
+    width: 100% !important;
+}
+.layerPop > .content button {
+    position: absolute;
+    top: 0;
+    right: 2%;
+    width: 28%;
+    height: 16%;
+    font: 0/0 a;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+/* notice */
+.notice-wrap {
+    position: relative;
+    width: 100%;
+    background: #e1e1e1;
+}
+.notice-wrap .tle {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: inherit;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.25s;
+    padding: 15px 0;
+    text-align: center;
+    cursor: pointer;
+}
+.notice-wrap .tle::after {
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    margin: -6px 0 0 8px;
+    border: solid #323232;
+    border-width: 0 1px 1px 0;
+    padding: 3px;
+    transform: rotate(45deg);
+    transition: all 0.25s;
+}
+.notice-wrap .content-wrap {
+    padding: 20px 0 56px;
+    display: none;
+}
+.notice-wrap .open {
+    background: transparent;
+}
+.notice-wrap .open::after {
+    margin-top: 3px;
+    transform: rotate(-135deg);
+}
+.notice-wrap .notice_cont {
+    width: 80%;
+    max-width: 100%;
+    margin: 0 auto 20px;
+}
+.notice-wrap .notice_cont h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: inherit;
+}
+.notice-wrap .notice_cont li {
+    list-style-type: none;
+    position: relative;
+    margin: 0;
+    padding-left: 15px;
+    font-weight: 400;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.7;
+    color: inherit;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+.notice-wrap .notice_cont li:before {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 6px;
+    height: 1px;
+    background-color: #323232;
+}
+
+/* tab menu */
+.tabV2024 {
+    /* display: none; */
+    position: absolute;
+    max-width: 1140px !important;
+    width: 100%;
+    left: 0;
+    z-index: 20;
+    bottom: 0;
+    background: #151628;
+}
+.tabV2024.fixed {
+    display: block;
+    position: fixed;
+    max-width: 1140px !important;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    top: 0;
+    bottom: inherit;
+    background: #151628;
+}
+.tabV2024 ul {
+    display: flex;
+    margin: 0 auto;
+}
+.tabV2024 ul.mo {
+    display: none;
+}
+.tabV2024 li {
+    text-align: center;
+    width: auto;
+    display: block;
+}
+.tabV2024 li:last-child a:after {
+    display: none;
+}
+.tabV2024 li a {
+    display: block;
+    width: 100%;
+}
+.tabV2024 li a img.on {
+    display: none;
+}
+.tabV2024 li a img.off {
+    display: block;
+}
+.tabV2024 li a.active img.on {
+    display: block;
+}
+.tabV2024 li a.active img.off {
+    display: none !important;
+}
+
+/* =====================
+  *     ballo bag
+===================== */
+.baloBag .effect_wrap {
+    position: absolute;
+    top: 14%;
+    width: 32.2%;
+    height: 40rem;
+    left: 58.7%;
+    background-position: 0 -100%;
+    animation: rolling_txt 8s cubic-bezier(0.4, 0, 1, 1) infinite;
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+    background-image: url(../../assets/images/jestina/balloBag/rolling.png);
+    text-indent: -9999px;
+    opacity: 1;
+    background-position: 0px 28rem;
+}
+@keyframes rolling_txt {
+    /* 첫번째 이미지 */
+    0% {
+        background-position: 0 600px;
+        background-position: 0 15rem;
+    }
+    20% {
+        background-position: 0px 27rem;
+    }
+    21% {
+        background-position: 0px 27rem;
+    }
+    22% {
+        background-position: 0px 28rem;
+    }
+    23% {
+        background-position: 0px 28rem;
+    }
+    24% {
+        background-position: 0px 29.5rem;
+    }
+    25% {
+        background-position: 0px 29.5rem;
+    }
+    /* 두번째 이미지 */
+    40% {
+        background-position: 0px 42rem;
+    }
+    41% {
+        background-position: 0px 42rem;
+    }
+    42% {
+        background-position: 0px 43rem;
+    }
+    43% {
+        background-position: 0px 43rem;
+    }
+    44% {
+        background-position: 0px 44rem;
+    }
+    50% {
+        background-position: 0px 44rem;
+    }
+    /* 세번째 이미지 */
+    65% {
+        background-position: 0px 56rem;
+    }
+    66% {
+        background-position: 0px 56rem;
+    }
+    67% {
+        background-position: 0px 57rem;
+    }
+    68% {
+        background-position: 0px 57rem;
+    }
+    70% {
+        background-position: 0px 58rem;
+    }
+    75% {
+        background-position: 0px 59rem;
+    }
+    /* 네번째 이미지 */
+    86% {
+        background-position: 0px 70rem;
+    }
+    87% {
+        background-position: 0px 70rem;
+    }
+    88% {
+        background-position: 0px 71rem;
+    }
+    89% {
+        background-position: 0px 71rem;
+    }
+    90% {
+        background-position: 0px 72rem;
+    }
+    100% {
+        background-position: 0px 72rem;
+    }
+}
+.baloBag .featured_gif-wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: 0 0;
+    background-size: 100% 100%;
+    animation-timing-function: ease-in-out;
+}
+.baloBag .gif01 .featured_gif-wrap {
+    animation: gitEffect1 6s steps(1) infinite forwards;
+    animation-timing-function: ease-in-out;
+}
+.baloBag .gif02 .featured_gif-wrap {
+    animation: gitEffect2 6s steps(1) infinite forwards;
+    animation-timing-function: ease-in-out;
+}
+.baloBag .featured_link-more {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    height: 85px;
+    width: 100%;
+    z-index: 10;
+}
+@keyframes gitEffect1 {
+    0% {
+        background-image: url("../../assets/images/jestina/balloBag/sec01_item01.jpg");
+    }
+    30% {
+        background-image: url("../../assets/images/jestina/balloBag/sec01_item02.jpg");
+    }
+    35% {
+        background-image: url("../../assets/images/jestina/balloBag/sec01_item02.jpg");
+    }
+    60% {
+        background-image: url("../../assets/images/jestina/balloBag/sec01_item03.jpg");
+    }
+    70% {
+        background-image: url("../../assets/images/jestina/balloBag/sec01_item03.jpg");
+    }
+    100% {
+        background-image: url("../../assets/images/jestina/balloBag/sec01_item01.jpg");
+    }
+}
+@keyframes gitEffect2 {
+    0% {
+        background-image: url("https://webimg.jestina.co.kr/UpData/jestina/2024/featured/0627_ballo_haul/sec02_item01.jpg");
+    }
+    30% {
+        background-image: url("https://webimg.jestina.co.kr/UpData/jestina/2024/featured/0627_ballo_haul/sec02_item02.jpg");
+    }
+    35% {
+        background-image: url("https://webimg.jestina.co.kr/UpData/jestina/2024/featured/0627_ballo_haul/sec02_item02.jpg");
+    }
+    60% {
+        background-image: url("https://webimg.jestina.co.kr/UpData/jestina/2024/featured/0627_ballo_haul/sec02_item03.jpg");
+    }
+    70% {
+        background-image: url("https://webimg.jestina.co.kr/UpData/jestina/2024/featured/0627_ballo_haul/sec02_item03.jpg");
+    }
+    100% {
+        background-image: url("https://webimg.jestina.co.kr/UpData/jestina/2024/featured/0627_ballo_haul/sec02_item01.jpg");
+    }
+}
+@media (max-width: 768px) {
+    .baloBag .effect_wrap {
+        position: absolute;
+        top: 45%;
+        width: 81%;
+        height: 55%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-position: 0 -100%;
+        /* animation: rolling_txt 9s linear infinite backwards; */
+        background-repeat: repeat-y;
+        background-size: 100% auto;
+        background-image: url(../../assets/images/jestina/balloBag/mo_rolling2.png);
+        text-indent: -9999px;
+        opacity: 1;
+        background-position: 0 43rem;
+    }
+    @keyframes rolling_txt {
+        /* 첫번째 이미지 */
+        0% {
+            background-position: 0 43rem;
+        }
+        5% {
+            background-position: 0 43rem;
+        }
+        7% {
+            background-position: 0 60rem;
+        }
+        15% {
+            background-position: 0 82rem;
+        }
+        16% {
+            background-position: 0 82rem;
+        }
+        17% {
+            background-position: 0 83rem;
+        }
+        18% {
+            background-position: 0 83rem;
+        }
+        22% {
+            background-position: 0 84rem;
+        }
+        23% {
+            background-position: 0 84rem;
+        }
+        /* 두번째 이미지 */
+        33% {
+            background-position: 0 113rem;
+        }
+        34% {
+            background-position: 0 113rem;
+        }
+        35% {
+            background-position: 0 115rem;
+        }
+        36% {
+            background-position: 0 115rem;
+        }
+        37% {
+            background-position: 0 119rem;
+        }
+        38% {
+            background-position: 0 123rem;
+        }
+        40% {
+            background-position: 0 123rem;
+        }
+        44% {
+            background-position: 0 123rem;
+        }
+        45% {
+            background-position: 0 123rem;
+        }
+        /* 세번째 이미지 */
+        58% {
+            background-position: 0 157rem;
+        }
+        60% {
+            background-position: 0 157rem;
+        }
+        61% {
+            background-position: 0 159rem;
+        }
+        62% {
+            background-position: 0 159rem;
+        }
+        63% {
+            background-position: 0 161rem;
+        }
+        64% {
+            background-position: 0 161rem;
+        }
+        65% {
+            background-position: 0 163rem;
+        }
+        70% {
+            background-position: 0 163rem;
+        }
+        /* 네번째 이미지 */
+        80% {
+            background-position: 0 190rem;
+        }
+        81% {
+            background-position: 0 190rem;
+        }
+        82% {
+            background-position: 0 192rem;
+        }
+        83% {
+            background-position: 0 192rem;
+        }
+        84% {
+            background-position: 0 194rem;
+        }
+        85% {
+            background-position: 0 194rem;
+        }
+        86% {
+            background-position: 0 196rem;
+        }
+        87% {
+            background-position: 0 196rem;
+        }
+        88% {
+            background-position: 0 198rem;
+        }
+        100% {
+            background-position: 0 198rem;
+        }
+    }
+    .baloBag .featured_sec {
+        max-width: 960px;
+        min-width: 280px;
+    }
+    .baloBag .gif01.featured_sec,
+    .baloBag .gif02.featured_sec {
+        height: 61.5rem;
+    }
+    .baloBag .gif01.featured_sec img,
+    .baloBag .gif02.featured_sec img {
+        position: relative;
+        z-index: -1;
+    }
+    .baloBag .featured_gif-wrap {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-position: 0 0;
+        background-size: 100% 100%;
+        z-index: 9;
+    }
+    .baloBag .gif01 .featured_gif-wrap {
+        animation: gitEffect1 7s steps(1) infinite forwards;
+        animation-timing-function: ease-in-out;
+    }
+    .baloBag .gif02 .featured_gif-wrap {
+        animation: gitEffect2 5s steps(1) infinite forwards;
+        animation-timing-function: ease-in-out;
+    }
+    .baloBag .featured_link-more {
+        height: 7.5%;
+    }
+    @keyframes gitEffect1 {
+        0% {
+            background-image: url("../../assets/images/jestina/balloBag/m_sec01_item01.jpg");
+        }
+        30% {
+            background-image: url("../../assets/images/jestina/balloBag/m_sec01_item02.jpg");
+        }
+        35% {
+            background-image: url("../../assets/images/jestina/balloBag/m_sec01_item02.jpg");
+        }
+        60% {
+            background-image: url("../../assets/images/jestina/balloBag/m_sec01_item03.jpg");
+        }
+        70% {
+            background-image: url("../../assets/images/jestina/balloBag/m_sec01_item03.jpg");
+        }
+        100% {
+            background-image: url("../../assets/images/jestina/balloBag/m_sec01_item01.jpg");
+        }
+    }
+    @keyframes gitEffect2 {
+        0% {
+            background-image: url("../../assets/images/jestina/balloBag/m_sec02_item01.jpg");
+        }
+        30% {
+            background-image: url("../../assets/images/jestina/balloBag/m_sec02_item02.jpg");
+        }
+        35% {
+            background-image: url("../../assets/images/jestina/balloBag/m_sec02_item02.jpg");
+        }
+        60% {
+            background-image: url("../../assets/images/jestina/balloBag/m_sec02_item03.jpg");
+        }
+        70% {
+            background-image: url("../../assets/images/jestina/balloBag/m_sec02_item03.jpg");
+        }
+        100% {
+            background-image: url("../../assets/images/jestina/balloBag/m_sec02_item01.jpg");
+        }
+    }
+}
+
+/* =====================
+  *    womensWatch
+===================== */
+.womensWatch .watch_progressbar {
+    position: absolute;
+    bottom: 19px;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 96.5%;
+    height: 2.5px;
+    background: #ffffff3d;
+    border-radius: 7px;
+    overflow: hidden;
+    z-index: 100;
+}
+.womensWatch .watch_progressbar span {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform-origin: left center;
+    background: #fff;
+    border-radius: 7px;
+    transform: scaleX(0);
+    transition-timing-function: linear;
+}
+.womensWatch .watch_mainSildeItem {
+    width: 100%;
+}
+.womensWatch .featured_btn-wrap {
+    position: absolute;
+    display: flex;
+    bottom: 10%;
+    right: 7%;
+    max-width: 48%;
+    width: 100%;
+    height: 19%;
+}
+.womensWatch .featured-link {
+    position: absolute;
+    display: block;
+    width: 20%;
+    height: 10%;
+    z-index: 100;
+}
+.womensWatch .sec02 .featured-link_wrap {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 940px;
+    height: 474px;
+}
+.womensWatch .sec02 .featured-link {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: url(../../assets/images/jestina/watch/btn.png) no-repeat;
+    background-size: 100% 100%;
+    border-radius: 20px;
+}
+.womensWatch .sec02 .featured-link_wrap.link_wrap01 {
+    top: 80px;
+}
+.womensWatch .sec02 .link_wrap01 .featured-link.link01 {
+    top: 97px;
+    left: 651px;
+}
+.womensWatch .sec02 .link_wrap01 .featured-link.link02 {
+    top: 277px;
+    left: 564px;
+}
+.womensWatch .sec02 .link_wrap01 .featured-link.link03 {
+    top: 182px;
+    right: 154px;
+}
+.womensWatch .sec02 .featured-link_wrap.link_wrap02 {
+    top: 594px;
+}
+.womensWatch .sec02 .link_wrap02 .featured-link.link01 {
+    top: 143px;
+    left: 135px;
+}
+.womensWatch .sec02 .link_wrap02 .featured-link.link02 {
+    top: 315px;
+    left: 323px;
+}
+.womensWatch .sec02 .featured-link_wrap.link_wrap03 {
+    top: 1108px;
+}
+.womensWatch .sec02 .link_wrap03 .featured-link.link01 {
+    top: 279px;
+    left: 567px;
+}
+.womensWatch .sec02 .link_wrap03 .featured-link.link02 {
+    top: 227px;
+    left: 742px;
+}
+
+/* =====================
+  *    IU Magazine
+===================== */
+.IU-Magazine .tlt {
+    animation: fadeIn ease-in 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+.IU-Magazine .tlt img {
+    width: 100%;
+}
+.IU-Magazine .tlt01 {
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 342px;
+}
+.IU-Magazine .tlt02 {
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-delay: 0.8s;
+}
+.IU-Magazine .tlt03 {
+    position: absolute;
+    top: 40.5%;
+    left: 64.5%;
+    animation-delay: 1.5s;
+}
+.IU-Magazine .rotate {
+    position: absolute;
+    right: 1.5%;
+    top: 10.5%;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: rotate_txt;
+}
+.IU-Magazine .rolling {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    animation: textSlide 60s linear 0s infinite;
+    background-image: url(../assets/images/jestina/iu_magazine/rolling02.png);
+    background-repeat: repeat-x;
+    background-position: 0 0%;
+}
+.IU-Magazine .event_link {
+    position: absolute;
+    bottom: 30%;
+    right: 22%;
+    width: 30%;
+    height: 10%;
+}
+.IU-Magazine .event_link .icon {
+    position: absolute;
+    right: 13%;
+    top: 38%;
+}
+.IU-Magazine .featured-link__wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.IU-Magazine .featured-link__list {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.IU-Magazine .featured-link__item {
+    position: absolute;
+}
+.IU-Magazine .featured-link {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.IU-Magazine .icon {
+    position: absolute;
+    animation-duration: 1.5s;
+}
+.IU-Magazine .sec03 .item01 {
+    width: 45%;
+    height: 17%;
+    right: 4%;
+    top: 16%;
+}
+.IU-Magazine .sec03 .item02 {
+    width: 45%;
+    height: 19%;
+    left: 4%;
+    top: 43.8%;
+}
+.IU-Magazine .sec03 .item03 {
+    width: 43%;
+    height: 19%;
+    right: 1%;
+    top: 75%;
+}
+.IU-Magazine .sec03 .item01 .icon {
+    right: 20%;
+    top: 56.5%;
+}
+.IU-Magazine .sec03 .item02 .icon {
+    right: 46%;
+    top: 54%;
+}
+.IU-Magazine .sec03 .item03 .icon {
+    right: 51%;
+    top: 91%;
+}
+.IU-Magazine .sec04 .item01 {
+    width: 36%;
+    height: 26%;
+    right: 12%;
+    top: 41%;
+}
+.IU-Magazine .sec04 .item02 {
+    width: 36%;
+    height: 17%;
+    right: 12%;
+    top: 71%;
+}
+.IU-Magazine .sec04 .item01 .icon {
+    top: 91%;
+    left: 24%;
+}
+.IU-Magazine .sec04 .item02 .icon {
+    top: 90%;
+    left: 33%;
+}
+.IU-Magazine .sec05 .item01 {
+    width: 39%;
+    height: 13.6%;
+    left: 8%;
+    top: 28%;
+}
+.IU-Magazine .sec05 .item02 {
+    width: 39%;
+    height: 24%;
+    left: 58%;
+    top: 62%;
+}
+.IU-Magazine .sec05 .item01 .icon {
+    top: 60%;
+    left: 86%;
+}
+.IU-Magazine .sec05 .item02 .icon {
+    top: 45%;
+    left: 52%;
+}
+.IU-Magazine .sec06 .item01 {
+    width: 45%;
+    height: 4%;
+    left: 49%;
+    top: 80%;
+}
+.IU-Magazine .sec06 .item02 {
+    width: 39%;
+    height: 4%;
+    left: 53%;
+    top: 84%;
+}
+.IU-Magazine .sec06 .item01 .icon {
+    top: 48%;
+    right: 5%;
+}
+.IU-Magazine .sec06 .item02 .icon {
+    top: 30%;
+    right: 14%;
+}
+
+.IU-Magazine .sec07 .item01 {
+    width: 36%;
+    height: 26%;
+    right: 11%;
+    top: 24%;
+}
+.IU-Magazine .sec07 .item02 {
+    width: 36%;
+    height: 17.5%;
+    right: 54%;
+    top: 64.3%;
+}
+.IU-Magazine .sec07 .item01 .icon {
+    top: 88%;
+    left: 31%;
+}
+.IU-Magazine .sec07 .item02 .icon {
+    top: 87%;
+    left: 43%;
+}
+.IU-Magazine .videoArea {
+    position: absolute;
+    top: 18.5%;
+    left: 51.8%;
+    width: 40.5%;
+    height: 59.3%;
+    z-index: 1;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes rotate_txt {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes textSlide {
+    0% {
+        background-position-x: 1000%;
+    }
+    100% {
+        background-position-x: 0%;
+    }
+}
+
+/* =====================
+  *      poshe
+===================== */
+section .inner {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.poche .cursor_blink {
+    position: absolute;
+    top: 10%;
+    right: 30.5%;
+    animation: cursor 1s steps(1) infinite;
+    opacity: 0;
+}
+.poche .cursor_blink img {
+    width: 100%;
+}
+/* 상품 미선택 시 gif */
+.poche .cont_top .imgWrap {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 519px;
+}
+.poche .cont_top .imgWrap img.first {
+    animation-delay: 7s;
+    animation-timing-function: ease-in-out;
+}
+.poche .cont_top .imgWrap img.second {
+    animation-delay: 5s;
+    animation-timing-function: ease-in-out;
+}
+.poche .cont_top .imgWrap img.third {
+    animation-delay: 3s;
+    animation-timing-function: ease-in-out;
+}
+.poche .cont_top .imgWrap img.fourth {
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+}
+.poche .cont_top .imgWrap img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%; /* transform: translate(-50%); */
+    animation-name: poche;
+    animation-duration: 11s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+/* 선택 result */
+#result_box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 14.2rem;
+}
+#result_box img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+#result_box .mo {
+    height: 0;
+}
+/* 체크부분 */
+.poche .select_box {
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 78%;
+    height: 57%;
+}
+.poche .select_box ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.poche .select_box ul li {
+    width: 100%;
+    height: 100%;
+}
+.poche .select_box .check {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.poche .select_box .check input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 1;
+}
+.poche .check input + label {
+    padding-left: 0 !important;
+}
+.poche .select_box .check input[type="radio"]:checked + label {
+    position: absolute;
+    left: 51%;
+    transform: translate(-50%);
+    bottom: 11%;
+    width: 17%;
+    height: 19%;
+    background: url(../../assets/images/jestina/poche/check_icon.png) no-repeat;
+    background-position: center center;
+    background-size: 100% auto;
+    padding: 0;
+    margin: 0;
+}
+#complete_btn {
+    position: absolute;
+    bottom: 16%;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: transparent;
+    width: 39%;
+    height: 15%;
+    font-size: 0 !important;
+    border: none;
+    cursor: pointer;
+}
+#jestina_renewal input:read-only {
+    background-color: transparent !important;
+}
+
+.poche .notice-wrap {
+    position: relative;
+    width: 100%;
+    background-color: #dfdcf5;
+    border-top: 1px solid #7c72c7;
+}
+.poche .notice-wrap .tle {
+    color: #6a5fb8;
+}
+.poche .notice-wrap .tle::after {
+    border: solid #6a5fb8;
+    border-width: 0 1px 1px 0;
+}
+.poche .notice-wrap .notice_cont li {
+    color: #6a5fb8;
+}
+.poche .notice_cont h2 {
+    color: #6a5fb8;
+}
+.poche .notice-wrap .notice_cont li:before {
+    background-color: #6a5fb8;
+}
+@keyframes cursor {
+    50% {
+        opacity: 1;
+    }
+}
+@keyframes poche {
+    0% {
+        opacity: 1;
+    }
+    17% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* =====================
+  *     risingBag
+===================== */
+.risingBag main {
+    overflow: visible;
+}
+.risingBag .sticky_box {
+    width: 100%;
+    position: sticky;
+    top: 0%;
+    left: 0;
+    z-index: 100;
+}
+.risingBag .featured-item__wrap {
+    position: absolute;
+    top: 0.2%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 53%;
+    height: 97.7%;
+}
+.risingBag .featured-item__list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1.2rem 0;
+}
+.risingBag .featured-item {
+    width: 48%;
+    height: 15.4%;
+}
+.risingBag .featured_link {
+    position: relative;
+    display: block;
+    height: 100%;
+}
+.risingBag .arrow {
+    position: absolute;
+    bottom: 5.4%;
+    left: 27%;
+}
+.risingBag .featured-item:hover .arrow {
+    transform: translateX(12px);
+    transition: all 0.3s ease-in-out;
+}
+/* =====================
+  *       jAward
+===================== */
+
+/* main */
+.jaward .event_sec-wrap {
+    position: relative;
+}
+.jaward .event_btn {
+    position: absolute;
+    display: block;
+    width: 23%;
+    height: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0;
+}
+.jaward .event_sec.sec01 .event_btn.btn1 {
+    top: 24.3%;
+}
+.jaward .event_sec.sec01 .event_btn.btn2 {
+    top: 52.8%;
+}
+.jaward .event_sec.sec01 .event_btn.btn3 {
+    top: 88.8%;
+}
+.jaward .event_sec.sec02 .event_btn {
+    top: 50%;
+    left: 12.7%;
+    width: 24%;
+    height: 10%;
+    transform: initial;
+}
+.jaward .event_btn-percent {
+    position: absolute;
+    font-family: "GmarketSans" !important;
+    font-size: 16px;
+    font-weight: 500;
+    color: #3c3c3c;
+    left: 55%;
+    top: 11.9%;
+}
+@keyframes download {
+    0% {
+        right: 22%;
+    }
+    100% {
+        right: 17%;
+    }
+}
+.jaward .event_link-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 607px;
+    height: 240px;
+}
+.jaward .event_link-wrap.wrap01 {
+    top: 31.5%;
+}
+.jaward .event_link {
+    width: 32%;
+}
+.jaward .event_link-wrap.wrap02 {
+    top: 69%;
+}
+.machine_wrap {
+    position: absolute;
+    top: 12.4%;
+    left: 56.87%;
+    width: 9.3rem;
+    height: 14rem;
+}
+.machine_box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/drawing_machine.png);
+    z-index: 19;
+    background-size: 100% 100%;
+}
+.machine_wrap [id^="effet_"] {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    display: block;
+    background-size: 100% 100%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.machine_wrap [id^="effet_"] img {
+    width: 100%;
+}
+.machine_wrap .animated {
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+.machine_wrap #effet_01 {
+    left: 48.3%;
+    top: 15%;
+    background-image: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/drawing_item01.png);
+    animation-duration: 1.5s;
+}
+.machine_wrap #effet_02 {
+    left: 19%;
+    top: 16.8%;
+    background-image: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/drawing_item02.png);
+    background-position: 0;
+    animation-duration: 1.2s;
+}
+.machine_wrap #effet_03 {
+    left: 33.5%;
+    top: 32%;
+    background-image: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/drawing_item03.png);
+    animation-duration: 1.4s;
+}
+.machine_wrap #effet_04 {
+    left: 62%;
+    top: 32%;
+    background-image: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/drawing_item04.png);
+    animation-duration: 1s;
+}
+.machine_wrap #effet_05 {
+    left: 47%;
+    top: 46%;
+    background-image: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/drawing_item05.png);
+    animation-duration: 0.9s;
+}
+.machine_wrap #effet_06 {
+    left: 20%;
+    top: 46.5%;
+    background-image: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/drawing_item06.png);
+    animation-duration: 0.8s;
+}
+.machine_wrap #effet_07 {
+    left: 6%;
+    top: 32.5%;
+    background-image: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/drawing_item07.png);
+    animation-duration: 0.9s;
+}
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+.machine_wrap .bounce {
+    animation-name: bounce;
+}
+@keyframes bounce2 {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-60px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+.machine_wrap .bounce2 {
+    animation-name: bounce2;
+}
+@keyframes bounce3 {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+.machine_wrap .bounce3 {
+    animation-name: bounce3;
+}
+@keyframes bounce4 {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-50px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+.machine_wrap .bounce4 {
+    animation-name: bounce4;
+}
+@keyframes bounce5 {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+.machine_wrap .bounce5 {
+    animation-name: bounce5;
+}
+@keyframes bounce6 {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-40px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+.machine_wrap .bounce6 {
+    animation-name: bounce6;
+}
+@keyframes bounce7 {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-60px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+.machine_wrap .bounce7 {
+    animation-name: bounce7;
+}
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.jaward .notice-wrap {
+    color: #fff;
+    background: #000;
+}
+.jaward .notice-wrap .tle::after {
+    border-color: #fff;
+}
+.jaward .notice-wrap .notice_cont li:before {
+    background-color: #fff;
+}
+/* ==================================
+* ==========  responsive  =========
+================================== */
+
+@media (max-width: 768px) {
+    /* =====================
+    *    IU Magazine
+    ===================== */
+    .IU-Magazine .tlt01 {
+        top: 33%;
+        width: 45%;
+    }
+    .IU-Magazine .tlt02 {
+        width: 41%;
+    }
+    .IU-Magazine .tlt03 {
+        top: 42%;
+        left: 71%;
+        width: 22.5% !important;
+    }
+    .IU-Magazine .rotate {
+        top: 20%;
+        width: 13% !important;
+    }
+    .IU-Magazine .rolling {
+        height: 1rem;
+        animation: textSlide 30s linear 0s infinite;
+        background-image: url(/../assets/images/jestina/iu_magazine/m_rolling02.png);
+        background-size: auto 50%;
+    }
+    .IU-Magazine .event_link {
+        bottom: 24%;
+        right: 17%;
+        width: 22%;
+        height: 10%;
+    }
+    .IU-Magazine .event_link .icon {
+        right: 13%;
+        top: 38%;
+    }
+    .IU-Magazine .featured-link__item .icon {
+        animation-duration: 1.5s;
+        /* width: 5% !important; */
+    }
+    .IU-Magazine .sec03 .item01 {
+        position: absolute;
+        width: 95%;
+        height: 9%;
+        left: 50%;
+        transform: translate(-50%);
+        top: 32%;
+    }
+    .IU-Magazine .sec03 .item02 {
+        position: absolute;
+        width: 95%;
+        height: 13%;
+        left: 50%;
+        transform: translate(-50%);
+        top: 52%;
+    }
+    .IU-Magazine .sec03 .item03 {
+        position: absolute;
+        width: 100%;
+        height: 11%;
+        left: 50%;
+        transform: translate(-50%);
+        top: 86%;
+    }
+    .IU-Magazine .sec03 .item01 .icon {
+        left: 19%;
+        top: 53.5%;
+    }
+    .IU-Magazine .sec03 .item02 .icon {
+        right: 18%;
+        top: 76.5%;
+    }
+    .IU-Magazine .sec03 .item03 .icon {
+        right: 29%;
+        top: 58.5%;
+    }
+    .IU-Magazine .sec04 .item01 {
+        width: 40%;
+        height: 30.5%;
+        right: 0;
+        top: 40%;
+    }
+    .IU-Magazine .sec04 .item02 {
+        width: 56%;
+        height: 16%;
+        right: 3%;
+        top: 79%;
+    }
+    .IU-Magazine .sec04 .item01 .icon {
+        top: 92.8%;
+        left: 35%;
+    }
+    .IU-Magazine .sec04 .item02 .icon {
+        top: 85%;
+        left: 27%;
+    }
+    .IU-Magazine .sec05 .item01 {
+        width: 73%;
+        height: 10%;
+        left: 15%;
+        top: 40%;
+    }
+    .IU-Magazine .sec05 .item02 {
+        width: 39%;
+        width: 78%;
+        height: 22%;
+        left: 10%;
+        top: 75%;
+    }
+    .IU-Magazine .sec05 .item01 .icon {
+        top: 60%;
+        left: 86%;
+    }
+    .IU-Magazine .sec05 .item02 .icon {
+        top: 50.5%;
+        left: 54%;
+    }
+
+    .IU-Magazine .sec06 .item01 {
+        width: 87%;
+        height: 3.5%;
+        left: 9%;
+        top: 88%;
+    }
+    .IU-Magazine .sec06 .item02 {
+        width: 87%;
+        height: 3.5%;
+        left: 9%;
+        top: 91.7%;
+    }
+    .IU-Magazine .sec06 .item01 .icon {
+        top: 48%;
+        right: 5%;
+    }
+    .IU-Magazine .sec06 .item02 .icon {
+        top: 30%;
+        right: 14%;
+    }
+    .IU-Magazine .sec07 .item01 {
+        width: 39%;
+        height: 34%;
+        right: 2%;
+        top: 21.5%;
+    }
+    .IU-Magazine .sec07 .item02 {
+        width: 45%;
+        height: 24%;
+        right: 51%;
+        top: 65%;
+    }
+    .IU-Magazine .sec07 .item01 .icon {
+        top: 93%;
+        left: 46%;
+    }
+    .IU-Magazine .sec07 .item02 .icon {
+        top: 89%;
+        left: 39%;
+    }
+    .IU-Magazine .videoArea {
+        top: 26.5%;
+        left: 50.5%;
+        transform: translateX(-50%);
+        width: 77.7%;
+        /* height: 50.3%; */
+    }
+    .sweet_day .notice-wrap {
+        background: linear-gradient(70deg, #fedff1, #fcd6ee);
+    }
+}
+/* 
+* common
+*/
+@media (max-width: 768px) {
+    .mo {
+        display: block;
+    }
+    .pc {
+        display: none;
+    }
+    /* notice */
+    .notice-wrap .tle {
+        padding: 1rem 0 !important;
+        font-size: 1.1rem;
+    }
+    .notice-wrap .content-wrap {
+        padding: 1rem 0 2rem;
+    }
+    .notice-wrap .notice_cont {
+        width: 90%;
+    }
+    .notice-wrap .tle::after {
+        margin: -6px 0 0 6px;
+        padding: 2.5px;
+    }
+    .notice-wrap .notice_cont h2 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    .notice-wrap .notice_cont li {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+    .notice-wrap .notice_cont li:before {
+        top: 23%;
+        width: 1%;
+        height: 0.1rem;
+    }
+    .tabV2024 {
+        position: absolute;
+        max-width: 960px !important;
+        width: 100%;
+        left: 0;
+        /* transform: translateX(50%) !important; */
+        z-index: 20;
+        bottom: 0px;
+        display: none !important;
+    }
+    .tabV2024.fixed {
+        display: block !important;
+        position: fixed;
+        max-width: 960px !important;
+        left: 0;
+        z-index: 20;
+        top: 0;
+        transform: translateX(0);
+        bottom: inherit;
+    }
+    .tabV2024 ul.mo {
+        display: flex;
+    }
+    .tabV2024 ul.pc {
+        display: none;
+    }
+    .tabV2024 li {
+        text-align: center;
+        max-width: 33.3333%;
+        width: 100%;
+    }
+    .tabV2024 li:last-child a:after {
+        display: none;
+    }
+    .tabV2024 li a {
+        display: block;
+        width: 100%;
+    }
+    .tabV2024 li img {
+        width: 100%;
+    }
+    .tabV2024 li a img.on {
+        display: none;
+    }
+    .tabV2024 li a img.off {
+        display: block;
+    }
+    .tabV2024 li a.active img.on {
+        display: block;
+    }
+    .tabV2024 li a.active img.off {
+        display: none !important;
+    }
+
+    /* =====================
+     *    womensWatch
+    ===================== */
+    .m_watch_item_swiper {
+        position: absolute;
+        width: 84%;
+        height: 83%;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 7%;
+    }
+    .wacth_item-slide {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    .wacth_item-link {
+        position: absolute;
+        width: 2.5rem;
+        height: 2.5rem;
+        background: url(../assets/images/jestina/watch/m_btn-more.png) no-repeat;
+        background-size: 100% 100%;
+        border-radius: 50%;
+        opacity: 1;
+    }
+    .wacth_slide01 .wacth_item-link.link01 {
+        top: 49.2%;
+        left: 10.3%;
+    }
+    .wacth_slide01 .wacth_item-link.link02 {
+        top: 48.55%;
+        left: 85.2%;
+    }
+    .wacth_slide02 .wacth_item-link.link01 {
+        top: 33.6%;
+        left: 20%;
+    }
+    .wacth_slide02 .wacth_item-link.link02 {
+        top: 55.9%;
+        left: 75%;
+    }
+    .wacth_slide03 .wacth_item-link.link01 {
+        top: 29.3%;
+        left: 12%;
+    }
+    .wacth_slide03 .wacth_item-link.link02 {
+        top: 68%;
+        left: 73.3%;
+    }
+    .womensWatch .sec02 .swiper-pagination {
+        position: absolute;
+        text-align: center;
+        transition: 0.3s opacity;
+        transform: translate3d(0, 0, 0);
+        z-index: 10;
+        bottom: 3.8rem;
+        left: 50%;
+        width: 15%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateX(-50%);
+    }
+    .womensWatch .sec02 .swiper-pagination-bullet {
+        background: #7d818f !important;
+        opacity: 1;
+    }
+    .womensWatch .sec02 .swiper-pagination-bullet-active {
+        background: #ffffff !important;
+    }
+    /* =====================
+     *      poshe
+    ===================== */
+    .poche .jestina-sub-project__wrap {
+        width: 100%;
+        max-width: 960px;
+        min-width: 280px;
+        margin: 0 auto;
+    }
+    .poche .jestina-sub-project__wrap section {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    section .inner {
+        width: 100%;
+        height: auto;
+    }
+    .poche .w100 {
+        width: 100%;
+        vertical-align: middle;
+    }
+    .poche .contentBottom {
+        display: block;
+        width: 100%;
+        height: 1px;
+    }
+
+    .poche .cursor_blink {
+        position: absolute;
+        top: 14%;
+        right: 16%;
+        width: 5.5%;
+        height: auto;
+        animation: cursor 1s steps(1) infinite;
+        opacity: 0;
+    }
+    .poche .cursor_blink img {
+        width: 100%;
+    }
+    /* 상품 미선택 시 gif */
+    .poche .cont_top .imgWrap {
+        position: absolute;
+        bottom: -0.5%;
+        left: 0;
+        width: 100%;
+        height: 57%;
+    }
+    .poche .cont_top .imgWrap img.first {
+        animation-delay: 7s;
+        animation-timing-function: ease-in-out;
+    }
+    .poche .cont_top .imgWrap img.second {
+        animation-delay: 5s;
+        animation-timing-function: ease-in-out;
+    }
+    .poche .cont_top .imgWrap img.third {
+        animation-delay: 3s;
+        animation-timing-function: ease-in-out;
+    }
+    .poche .cont_top .imgWrap img.fourth {
+        animation-delay: 0s;
+        animation-timing-function: ease-in-out;
+    }
+    .poche .cont_top .imgWrap img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%; /* transform: translate(-50%); */
+        animation-name: poche;
+        animation-duration: 11s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+    /* 선택 result */
+    #result_box {
+        position: absolute;
+        bottom: -0.5%;
+        left: 0;
+        width: 100%;
+        height: 57%;
+    }
+    #result_box img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+    #result_box .pc {
+        height: 0;
+    }
+    #result_box .mo {
+        display: none;
+        height: 100%;
+    }
+    /* 체크부분 */
+    .poche .select_box {
+        position: absolute;
+        top: 3%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 72%;
+    }
+    .poche .select_box ul {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .poche .select_box ul li {
+        width: 50%;
+        height: 50%;
+        display: flex;
+        flex-direction: row;
+        align-content: space-around;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+    .poche .select_box .check {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    .poche .select_box .check input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .poche .select_box .check input[type="radio"]:checked + label {
+        position: absolute;
+        left: 15%;
+        top: 0%;
+        width: 17%;
+        height: 19%;
+        background: url(../../assets/images/jestina/poche/m_check_icon.png) no-repeat;
+        background-position: center center;
+        background-size: 100% auto;
+        padding: 0;
+        margin: 0;
+    }
+    #complete_btn {
+        position: absolute;
+        bottom: 13%;
+        left: 50%;
+        transform: translate(-50%);
+        background-color: transparent;
+        width: 77%;
+        height: 11%;
+        font-size: 0 !important;
+        border: none;
+    }
+    #jestina_renewal input:read-only {
+        background-color: transparent !important;
+    }
+
+    @keyframes cursor {
+        50% {
+            opacity: 1;
+        }
+    }
+    @keyframes poche {
+        0% {
+            opacity: 1;
+        }
+        17% {
+            opacity: 1;
+        }
+        25% {
+            opacity: 0;
+        }
+        80% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    /* =====================
+  *     risingBag
+===================== */
+    .risingBag .featured-item__wrap {
+        top: 0.5%;
+        width: 92%;
+        height: 97.5%;
+    }
+    .risingBag .featured-item {
+        width: 48%;
+        height: calc(100% / 6 - 1.5%);
+        margin-bottom: 9.5%;
+        border: 1px solid rgba(0, 0, 0, 0);
+    }
+    .risingBag .arrow {
+        bottom: 5.4%;
+        left: 27%;
+        width: 10% !important;
+        animation: arrow 1.1s ease-in-out infinite;
+    }
+    @keyframes arrow {
+        0% {
+            transform: translateX(0);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(10px);
+            opacity: 1;
+        }
+    }
+    /* =====================
+     *      jaward
+    ===================== */
+
+    .jaward .event_btn {
+        position: absolute;
+        display: block;
+        width: 70%;
+        height: 4.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0;
+    }
+    .jaward .event_sec.sec01 .event_btn.btn1 {
+        top: 25.5%;
+    }
+    .jaward .event_sec.sec01 .event_btn.btn2 {
+        top: 54%;
+    }
+    .jaward .event_sec.sec01 .event_btn.btn3 {
+        top: 90.2%;
+    }
+    .jaward .event_sec.sec02 .event_btn {
+        top: 77.5%;
+    }
+    .jaward .event_btn-percent {
+        font-size: 1.2rem;
+        left: 63%;
+        top: 11.35%;
+    }
+    .event_btnMore.btn1 {
+        top: 44.9%;
+    }
+    .event_btnMore.btn2 {
+        top: 89.5%;
+    }
+    /* m_swiper__holiday */
+    .m_swiper__holiday1,
+    .m_swiper__holiday2 {
+        position: absolute;
+        left: 6%;
+        /* transform: translateX(-50%); */
+        width: 100%;
+    }
+    .m_swiper__holiday1 {
+        top: 15.6%;
+    }
+    .m_swiper__holiday2 {
+        top: 60.3%;
+    }
+    .holiday_item {
+        width: 20%;
+    }
+    .holiday_item-link {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .holiday_item-link img {
+        width: 100%;
+    }
+    .item__sale-per {
+        position: absolute;
+        display: block;
+        width: 3.8rem;
+        height: 2.2rem;
+        line-height: 2.4rem;
+        top: 3%;
+        right: 6%;
+        border-radius: 20px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #fff;
+        text-align: center;
+        background: #e54837;
+    }
+    .item__sale-price {
+        position: absolute;
+        display: block;
+        width: 9rem;
+        height: 30px;
+        top: 86%;
+        left: 8%;
+        font-size: 1.3rem;
+        color: #f43e31;
+        text-align: left;
+    }
+    .swiper-pagination {
+        position: absolute;
+        text-align: center;
+        transition: 0.3s opacity;
+        transform: translate3d(0, 0, 0);
+        z-index: 10;
+        top: 42.5%;
+        left: 50%;
+        width: 100px;
+        display: flex;
+        justify-content: space-between;
+        transform: translateX(-50%);
+    }
+    .m_swiper__holiday1 ~ .swiper-pagination1 {
+        top: 41%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 21%;
+    }
+    .m_swiper__holiday2 ~ .swiper-pagination2 {
+        top: 85.5%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 21%;
+    }
+    .swiper_btn {
+        position: absolute;
+        display: none;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        background-position: center;
+        background-size: 100% 100%;
+    }
+    .common-dott-paging > .swiper-pagination-bullet {
+        width: 0.6rem;
+        height: 0.6rem;
+        background: #b4bfd1 !important;
+        opacity: 1;
+    }
+    .common-dott-paging > .swiper-pagination-bullet-active {
+        width: 0.6rem;
+        height: 0.6rem;
+        background: #e24532 !important;
+    }
+    .swiper_btn--prev {
+        left: 5.1%;
+        background-image: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/1111_holiday_11/swiper_arrow_prev.png);
+    }
+    .swiper_btn--next {
+        left: 91.5%;
+        background-image: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/1111_holiday_11/swiper_arrow_next.png);
+    }
+    .swiper_btn-prev1 {
+        top: 26.4%;
+    }
+    .swiper_btn-next1 {
+        top: 26.4%;
+    }
+    .swiper_btn-prev2 {
+        top: 70.25%;
+    }
+    .swiper_btn-next2 {
+        top: 70.25%;
+    }
+
+    /* 노티스 */
+    .notice_wrap {
+        position: relative;
+        top: 0;
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto !important;
+        color: #fff;
+        background: #000;
+    }
+    .notice_wrap .notice_list dt a::before {
+        display: inline-block;
+        content: "";
+        width: 24%;
+        height: 58%;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .notice_wrap .notice_list dt {
+        text-align: center;
+    }
+    .notice_wrap .notice_list dt a {
+        position: relative;
+        display: block;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: inherit;
+        text-decoration: none;
+        text-transform: uppercase;
+        -webkit-transition: all 0.25s;
+        transition: all 0.25s;
+        padding: 1rem 0 !important;
+    }
+    .notice_wrap .notice_list dt a::after {
+        display: inline-block;
+        content: "";
+        margin: -6px 0 0 8px;
+        padding: 0.35rem;
+        border: solid #fff;
+        border-width: 0 1px 1px 0;
+        vertical-align: middle;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -webkit-transition: all 0.25s;
+        transition: all 0.25s;
+    }
+    .notice_wrap.notice_wrap2 .notice_list dt a::after {
+        border: solid #fff;
+    }
+    .notice_wrap .notice_list dd {
+        padding: 1rem 0;
+        margin: 0 20px;
+        display: none;
+    }
+    .notice_wrap .notice_list dd h3 {
+        width: 100%;
+        max-width: 940px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 32px;
+        color: inherit;
+    }
+    .notice_wrap .notice_list .open {
+        background: transparent;
+    }
+    .notice_wrap .notice_list .open::after {
+        margin-top: 3px;
+        -webkit-transform: rotate(-135deg);
+        transform: rotate(-135deg);
+    }
+    .notice_wrap .notice_list .notice_cont {
+        margin: 0 auto 1.5rem;
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+    .notice_wrap .notice_list .notice_cont li {
+        list-style: none;
+    }
+    .notice_wrap .notice_list .notice_cont li + li {
+        margin-top: 0.85rem;
+    }
+    .notice_wrap .notice_list .notice_cont li h2 {
+        margin: 0;
+        font-size: 1.2rem;
+        font-weight: 700;
+        line-height: 1.5;
+        margin-bottom: 0.3rem;
+        color: inherit;
+        text-align: left;
+        font-family: "Noto Sans KR", sans-serif !important;
+    }
+    .notice_wrap .notice_list .notice_cont li h3 {
+        margin: 0;
+        font-size: 1.05rem;
+        font-weight: 600;
+        line-height: 1.35;
+        margin-bottom: 5px;
+        color: inherit;
+        text-align: left;
+        font-family: "Noto Sans KR", sans-serif !important;
+    }
+    .notice_wrap .notice_list .notice_cont li p {
+        position: relative;
+        margin: 0;
+        padding-left: 1rem;
+        font-weight: 400;
+        text-align: left;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        color: inherit;
+        word-break: keep-all;
+        word-wrap: break-word;
+    }
+    .notice_wrap .notice_list .notice_cont li p:before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        content: "-";
+        width: 4px;
+        height: 1px;
+        background-color: inherit;
+    }
+    .event_link-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 90%;
+        height: 12.5rem;
+    }
+    .event_link-wrap.wrap01 {
+        top: 30%;
+    }
+    .event_link {
+        width: 32%;
+    }
+    .event_link-wrap.wrap02 {
+        top: 67%;
+    }
+    /* 팝업 */
+    .layerPop {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        z-index: 10000;
+        background: rgba(0, 0, 0, 0.7);
+    }
+    .layerPop > .content {
+        display: inline-block;
+        position: relative;
+        width: 85%;
+        /* height: 100%; */
+        max-width: 340px;
+        top: 50%;
+        overflow-x: auto;
+        background: transparent;
+        transform: translate(0, -50%) !important;
+        -webkit-transform: translate(0, -50%) !important;
+        -moz-transform: translate(0, -50%) !important;
+    }
+    .layerPop > .content img {
+        width: 100% !important;
+    }
+    .layerPop > .content button {
+        position: absolute;
+        top: 2%;
+        right: 2%;
+        width: 11%;
+        height: 2rem;
+        font: 0 / 0 a;
+        outline: none;
+        background: none;
+        cursor: pointer;
+        border: none;
+        background-size: 100% 100%;
+    }
+    .rolling_coupon {
+        position: absolute;
+        left: 0;
+        top: 14.2%;
+        animation: rolling_coupon 60s linear infinite;
+        background: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/m_rolling_coupon.png);
+        width: 100%;
+        height: 12.5rem;
+        background-size: auto 100%;
+        text-indent: -9999px;
+    }
+    .coupon_wrap {
+        position: absolute;
+        left: 0;
+        top: 75.5%;
+        animation: rolling_coupon 60s linear infinite;
+        background: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/m_rolling_coupon2.png);
+        width: 100%;
+        height: 12.45rem;
+        background-size: auto 100%;
+        text-indent: -9999px;
+    }
+    @keyframes rolling_coupon {
+        0% {
+            background-position: 0 center;
+        }
+        100% {
+            background-position: -4000px center;
+        }
+    }
+    .machine_wrap {
+        top: 22.5%;
+        left: 17%;
+        width: 66%;
+        height: 32.5rem;
+    }
+    .machine_wrap .machine_box {
+        background-image: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/m_drawing_machine.png);
+        backdrop-filter: none;
+    }
+    .machine_wrap [id^="effet_"] {
+        width: 6.2rem;
+        height: 6rem;
+    }
+    .machine_wrap #effet_01 {
+        left: 48%;
+        top: 15.5%;
+        background-image: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/m_drawing_item01.png);
+    }
+    .machine_wrap #effet_02 {
+        left: 19%;
+        top: 16%;
+        background-image: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/m_drawing_item02.png);
+        background-position: 0;
+    }
+    .machine_wrap #effet_03 {
+        left: 31.5%;
+        top: 31.5%;
+        background-image: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/m_drawing_item03.png);
+    }
+    .machine_wrap #effet_04 {
+        left: 61%;
+        top: 32%;
+        background-image: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/m_drawing_item04.png);
+    }
+    .machine_wrap #effet_05 {
+        left: 46%;
+        top: 46%;
+        background-image: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/m_drawing_item05.png);
+    }
+    .machine_wrap #effet_06 {
+        left: 18%;
+        top: 45.5%;
+        background-image: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/m_drawing_item06.png);
+    }
+    .machine_wrap #effet_07 {
+        left: 3.5%;
+        top: 32%;
+        background-image: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/m_drawing_item07.png);
+    }
+}

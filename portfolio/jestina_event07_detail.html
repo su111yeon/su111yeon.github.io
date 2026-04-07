@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" sec0ent="IE=edge" />
+        <meta name="viewport" sec0ent="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="../assets/css/reset.css" />
+        <link rel="stylesheet" href="../assets/css/jestina.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="../assets/css/default/animate.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
+        <script src="../assets/js/jestina.js"></script>
+        <script src="../assets/js/swiper.js"></script>
+    </head>
+    <body class="jaward">
+        <style>
+            .jestina-sub-project__wrap .project {
+                position: relative;
+                width: 1140px;
+                overflow: hidden;
+            }
+            .jAwards_2024 {
+                position: relative;
+                width: 1140px;
+                overflow: hidden;
+            }
+            /*뽑기*/
+            .candy_machine {
+                position: absolute;
+                top: 8.5%;
+                right: 8%;
+                width: 523px;
+                height: 523px;
+                border-radius: 100%;
+                overflow: hidden;
+            }
+            .candy_machine .glass {
+                position: absolute;
+                left: 0;
+                top: 0;
+                background-image: url("http://webimg.jestina.co.kr/UpData/jestina/event/230615_first_half/glass.png");
+                background-position: center 0;
+                background-repeat: no-repeat;
+                background-color: transparent;
+                background-size: auto auto;
+                height: 523px;
+                width: 523px;
+                z-index: 10;
+            }
+            .candy_machine .bg_balls {
+                -background-image: url("http://webimg.jestina.co.kr/UpData/jestina/event/230615_first_half/bg_balls.png");
+                background-position: center bottom;
+                background-repeat: no-repeat;
+                background-color: transparent;
+                background-size: 100% auto;
+                height: 80%;
+                width: 80%;
+                margin: 10% auto 0;
+            }
+            .candy_machine [id^="effet_"] {
+                position: absolute;
+                width: 139px;
+                height: 139px;
+                display: block;
+            }
+            .candy_machine [id^="effet_"] img {
+                width: 100%;
+            }
+            .candy_machine .prize1 {
+                transform: rotate(-5deg);
+            }
+            .candy_machine .prize2 {
+                transform: rotate(10deg);
+            }
+            .candy_machine .prize3 {
+                transform: rotate(10deg);
+            }
+            .candy_machine .prize4 {
+                transform: rotate(-7deg);
+            }
+            .candy_machine .prize5 {
+                transform: rotate(-5deg);
+            }
+            .candy_machine .prize6 {
+                transform: rotate(5deg);
+            }
+            .candy_machine .deco7 {
+                transform: rotate(5deg);
+            }
+            .candy_machine .deco8 {
+                transform: rotate(-8deg);
+            }
+            .candy_machine .deco9 {
+                transform: rotate(15deg);
+            }
+            .candy_machine .deco10 {
+                transform: rotate(-5deg);
+            }
+            .candy_machine #effet_01 {
+                left: 93px;
+                bottom: 59px;
+                background-image: url("https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/drawing_item01.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-color: transparent;
+                background-size: auto 139px;
+                animation-duration: 1.5s;
+            }
+            .candy_machine #effet_02 {
+                left: 172px;
+                bottom: 106px;
+                background-image: url("https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/drawing_item02.png");
+                background-position: 0;
+                background-repeat: no-repeat;
+                background-color: transparent;
+                background-size: auto 139px;
+                animation-duration: 1.2s;
+            }
+            .candy_machine #effet_03 {
+                left: 290px;
+                bottom: 115px;
+                background-image: url("https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/drawing_item03.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-color: transparent;
+                background-size: auto 139px;
+                animation-duration: 1.4s;
+            }
+            .candy_machine #effet_04 {
+                left: 178px;
+                bottom: -6px;
+                background-image: url("https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/drawing_item04.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-color: transparent;
+                background-size: auto 139px;
+                animation-duration: 1s;
+            }
+            .candy_machine #effet_05 {
+                right: 106px;
+                bottom: 21px;
+                background-image: url("https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/drawing_item05.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-color: transparent;
+                background-size: auto 139px;
+                animation-duration: 0.9s;
+            }
+            .candy_machine #effet_06 {
+                right: 304px;
+                bottom: 139px;
+                background-image: url("https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/drawing_item06.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-color: transparent;
+                background-size: auto 139px;
+                animation-duration: 0.8s;
+            }
+            .candy_machine #effet_07 {
+                right: 151px;
+                bottom: -42px;
+                background-image: url("https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/drawing_item07.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-color: transparent;
+                background-size: auto 50px;
+                animation-duration: 0.9s;
+            }
+            .candy_machine .animated {
+                animation-fill-mode: both;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+            }
+            @keyframes bounce {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-30px);
+                }
+                60% {
+                    transform: translateY(-15px);
+                }
+            }
+            .candy_machine .bounce {
+                animation-name: bounce;
+            }
+            @keyframes bounce2 {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-60px);
+                }
+                60% {
+                    transform: translateY(-15px);
+                }
+            }
+            .candy_machine .bounce2 {
+                animation-name: bounce2;
+            }
+            @keyframes bounce3 {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-10px);
+                }
+                60% {
+                    transform: translateY(-5px);
+                }
+            }
+            .candy_machine .bounce3 {
+                animation-name: bounce3;
+            }
+            @keyframes bounce4 {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-50px);
+                }
+                60% {
+                    transform: translateY(-10px);
+                }
+            }
+            .candy_machine .bounce4 {
+                animation-name: bounce4;
+            }
+            @keyframes bounce5 {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-20px);
+                }
+                60% {
+                    transform: translateY(-5px);
+                }
+            }
+            .candy_machine .bounce5 {
+                animation-name: bounce5;
+            }
+            @keyframes bounce6 {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-40px);
+                }
+                60% {
+                    transform: translateY(-5px);
+                }
+            }
+            .candy_machine .bounce6 {
+                animation-name: bounce6;
+            }
+            @keyframes bounce7 {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-60px);
+                }
+                60% {
+                    transform: translateY(-5px);
+                }
+            }
+            .candy_machine .bounce7 {
+                animation-name: bounce7;
+            }
+            @keyframes bounce8 {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-40px);
+                }
+                60% {
+                    transform: translateY(-5px);
+                }
+            }
+            .candy_machine .bounce8 {
+                animation-name: bounce8;
+            }
+            @keyframes bounce9 {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-40px);
+                }
+                60% {
+                    transform: translateY(-5px);
+                }
+            }
+            .candy_machine .bounce9 {
+                animation-name: bounce9;
+            }
+            @keyframes bounce10 {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-40px);
+                }
+                60% {
+                    transform: translateY(-5px);
+                }
+            }
+            .candy_machine .bounce10 {
+                animation-name: bounce10;
+            }
+            @keyframes bounceOutDown {
+                0% {
+                    transform: translateY(0);
+                }
+                20% {
+                    opacity: 1;
+                    transform: translateY(-50px);
+                }
+                100% {
+                    opacity: 0;
+                    transform: translateY(2000px);
+                }
+            }
+            .candy_machine .bounceOutDown {
+                animation-name: bounceOutDown;
+                animation-duration: 1s;
+                animation-fill-mode: both;
+                animation-timing-function: ease-in-out;
+                animation-delay: 0.5s;
+            }
+
+
+            .jAwards_2024 .machine_wrap {
+                position: absolute;
+                top: 12.4%;
+                left: 56.87%;
+                width: 346px;
+                height: 546px;
+                overflow: hidden;
+            }
+            .jAwards_2024 .machine_wrap .glass {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-image: url(https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/drawing_machine.png);
+                z-index: 20;
+                background-size: 100% 100%;
+            }
+            .machine_wrap [id^="effet_"] {
+                position: absolute;
+                width: 114px;
+                height: 114px;
+                display: block;
+                background-size: 100% 100%;
+                background-color: transparent;
+                background-repeat: no-repeat;
+            }
+            .machine_wrap [id^="effet_"] img {
+                width: 100%;
+            }
+            .machine_wrap .animated {
+                animation-fill-mode: both;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+            }
+            .jAwards_2024 .machine_wrap #effet_01 {
+                left: 93px;
+                bottom: 59px;
+                background-image: url("https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/drawing_item01.png");
+                background-position: center;
+                background-repeat: no-repeat;
+
+                animation-duration: 1.5s;
+            }
+            .jAwards_2024 .machine_wrap #effet_02 {
+                left: 172px;
+                bottom: 106px;
+                background-image: url("https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/drawing_item02.png");
+                background-position: 0;
+
+                animation-duration: 1.2s;
+            }
+            .jAwards_2024 .machine_wrap #effet_03 {
+                left: 290px;
+                bottom: 115px;
+                background-image: url("https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/drawing_item03.png");
+                background-position: center;
+
+                animation-duration: 1.4s;
+            }
+            .jAwards_2024 .machine_wrap #effet_04 {
+                left: 178px;
+                bottom: -6px;
+                background-image: url("https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/drawing_item04.png");
+                background-position: center;
+                animation-duration: 1s;
+            }
+            .jAwards_2024 .machine_wrap #effet_05 {
+                right: 106px;
+                bottom: 21px;
+                background-image: url("https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/drawing_item05.png");
+                background-position: center;
+
+                animation-duration: 0.9s;
+            }
+            .jAwards_2024 .machine_wrap #effet_06 {
+                right: 304px;
+                bottom: 139px;
+                background-image: url("https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/drawing_item06.png");
+                background-position: center;
+                animation-duration: 0.8s;
+            }
+            .jAwards_2024 .machine_wrap #effet_07 {
+                right: 151px;
+                bottom: -42px;
+                background-image: url("https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/drawing_item07.png");
+                background-position: center;
+                animation-duration: 0.9s;
+            }
+
+            @keyframes bounce {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-30px);
+                }
+                60% {
+                    transform: translateY(-15px);
+                }
+            }
+            /* .machine_wrap .bounce {
+                animation-name: bounce;
+            } */
+            @keyframes bounce2 {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-60px);
+                }
+                60% {
+                    transform: translateY(-15px);
+                }
+            }
+            /* .machine_wrap .bounce2 {
+                animation-name: bounce2;
+            } */
+            @keyframes bounce3 {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-10px);
+                }
+                60% {
+                    transform: translateY(-5px);
+                }
+            }
+            /* .machine_wrap .bounce3 {
+                animation-name: bounce3;
+            } */
+            @keyframes bounce4 {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-50px);
+                }
+                60% {
+                    transform: translateY(-10px);
+                }
+            }
+            /* .machine_wrap .bounce4 {
+                animation-name: bounce4;
+            } */
+            @keyframes bounce5 {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-20px);
+                }
+                60% {
+                    transform: translateY(-5px);
+                }
+            }
+            /* .machine_wrap .bounce5 {
+                animation-name: bounce5;
+            } */
+            @keyframes bounce6 {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-40px);
+                }
+                60% {
+                    transform: translateY(-5px);
+                }
+            }
+            /* .machine_wrap .bounce6 {
+                animation-name: bounce6;
+            } */
+            @keyframes bounce7 {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-60px);
+                }
+                60% {
+                    transform: translateY(-5px);
+                }
+            }
+            /* .machine_wrap .bounce7 {
+                animation-name: bounce7;
+            } */
+            @keyframes bounce8 {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-40px);
+                }
+                60% {
+                    transform: translateY(-5px);
+                }
+            }
+            /* .machine_wrap .bounce8 {
+                animation-name: bounce8;
+            } */
+            @keyframes bounce9 {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-40px);
+                }
+                60% {
+                    transform: translateY(-5px);
+                }
+            }
+            /* .machine_wrap .bounce9 {
+                animation-name: bounce9;
+            } */
+            @keyframes bounce10 {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-40px);
+                }
+                60% {
+                    transform: translateY(-5px);
+                }
+            }
+            /* .machine_wrap .bounce10 {
+                animation-name: bounce10;
+            } */
+            @keyframes bounceOutDown {
+                0% {
+                    transform: translateY(0);
+                }
+                20% {
+                    opacity: 1;
+                    transform: translateY(-50px);
+                }
+                100% {
+                    opacity: 0;
+                    transform: translateY(2000px);
+                }
+            }
+            /* .machine_wrap .bounceOutDown {
+                animation-name: bounceOutDown;
+                animation-duration: 1s; */
+                animation-fill-mode: both;
+                animation-timing-function: ease-in-out;
+                animation-delay: 0.5s;
+            }
+
+            @keyframes download {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-17px);
+                }
+                60% {
+                    transform: translateY(-7px);
+                }
+            }
+        </style>
+
+        <div class="jestina-sub-project__wrap">
+            <section class="jestina-sub-project-03 project" id="contentV32">
+                <img src="http://webimg.jestina.co.kr/UpData/jestina/event/230615_first_half/section03.jpg" />
+                <div class="candy_machine">
+                    <div class="glass"></div>
+                    <div class="bg_balls"></div>
+                    <div class="prize6">
+                        <div id="effet_06" class="animated bounce6"></div>
+                    </div>
+                    <div class="prize1">
+                        <div id="effet_01" class="animated bounce"></div>
+                    </div>
+                    <div class="prize2">
+                        <div id="effet_02" class="animated bounce2"></div>
+                    </div>
+                    <div class="prize3">
+                        <div id="effet_03" class="animated bounce3"></div>
+                    </div>
+                    <div class="prize4">
+                        <div id="effet_04" class="animated bounce4"></div>
+                    </div>
+                    <div class="deco7">
+                        <div id="effet_07" class="animated bounce7"></div>
+                    </div>
+                    <div class="prize5">
+                        <div id="effet_05" class="animated bounce5"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="jAwards_2024">
+                <img class="w100" style="mix-blend-mode: color-burn; opacity: 0.7" src="https://webimg.jestina.co.kr/UpData/jestina/2024/event/1122_j_awards_24/sec02Bg.jpg" />
+                <div class="machine_wrap">
+                    <!-- <div class="glass"></div> -->
+                    <div id="effet_06" class="animated bounce6"></div>
+                    <div id="effet_01" class="animated bounce"></div>
+                    <div id="effet_02" class="animated bounce2"></div>
+                    <div id="effet_03" class="animated bounce3"></div>
+                    <div id="effet_04" class="animated bounce4"></div>
+                    <div id="effet_07" class="animated bounce7"></div>
+                    <div id="effet_05" class="animated bounce5"></div>
+                </div>
+            </section>
+        </div>
+        <a name="contentBottom" class="contentBottom"></a>
+
+        <script>
+            const vacance_8_eventId = "${event.eventId}"; //이벤트 키값
+            // let startEndDT          = getStartEndDT();
+            // let startDate           = startEndDT[0];
+            // let endDate             = startEndDT[1];
+            const ticketCountSpan = document.getElementById("ticket_count"); //비행기 출발 티켓 span
+            const vacance_8_startBtn = document.getElementById("startBtn"); //시작버튼
+            const vacance_8_closeBtn = document.getElementById("closeBtn"); //팝업닫기버튼
+            const ca = /\+/g;
+            //기준값 처리
+            function fnLateVacanceDefault() {
+                let isClick = false;
+
+                return {
+                    setDefault: (type, value) => {
+                        if (type === "isClick") {
+                            isClick = value;
+                        }
+                    },
+                    getDefault: (type) => {
+                        if (type === "isClick") {
+                            return isClick;
+                        }
+                    },
+                };
+            }
+            const lateVacanceDefault = fnLateVacanceDefault();
+
+            //[0]문서 시작
+            document.addEventListener("DOMContentLoaded", (event) => {
+                //[0-1]비행기 출발티켓 개수
+                if (!Common.isLogin()) {
+                    ticketCountSpan.innerText = "??";
+                } else {
+                    $.ajax({
+                        type: "get",
+                        url: Shop.url("/event/getLateVacanceTicketCount"),
+                        dataType: "json",
+                        data: { eventId: vacance_8_eventId },
+                        success: function (response) {
+                            console.log("response.isSuccess: ", response.isSuccess);
+                            if (!response.isSuccess) {
+                                console.log("getLateVacanceTicketCount done error: ", response.errorMessage);
+                                ticketCountSpan.innerText = "??";
+                                return false;
+                            }
+                            let rData = JSON.parse(response.data.replace(ca, " "));
+                            console.log("rData: ", rData);
+                            console.log("getLateVacanceTicketCount > eventTicketCount: ", rData.eventTicketCount);
+                            ticketCountSpan.innerText = rData.eventTicketCount;
+                        },
+                        error: function (data, textStatus, errorThrown) {
+                            console.log("getLateVacanceTicketCount error: ", data);
+                            ticketCountSpan.innerText = "??";
+                        },
+                    });
+                }
+            });
+            //[1]경품받기 이벤트(비행기 출발)
+            vacance_8_startBtn.addEventListener("click", async (event) => {
+                //[1-0]중복 클릭
+                if (lateVacanceDefault.getDefault("isClick") === true) {
+                    alert("당첨 확인 중입니다.");
+                    return false;
+                }
+                //[1-1]로그인 체크
+                if (!Common.isLogin()) {
+                    if (confirm("로그인 후 참여 가능합니다.")) {
+                        window.location.href = Shop.url("/users/login?target=/event/pages/vacance_8");
+                    }
+                    return false;
+                }
+                if (ticketCountSpan.innerText === "??" || ticketCountSpan.innerText === "0") {
+                    alert("보유한 티켓이 없습니다.");
+                    return false;
+                }
+                //[1-2]경품 받기 로직
+                try {
+                    lateVacanceDefault.setDefault("isClick", true); //경품받기 클릭여부
+                    //[1-3]로직 결과값 -> 남은 티켓 개수, 당첨경품
+                    let response = await startLateVacance(); //경품 뽑기
+                    let rData = JSON.parse(response.data.replace(ca, " "));
+                    console.log("rData: ", rData);
+                    ticketCountSpan.innerText = rData.eventTicketCount; //남은 티켓수
+
+                    if (rData.eventTicketResult === "꽝") {
+                        await makePlaneAnimation("N");
+                        alert("꽝입니다. 다시 참여해주세요.");
+                        ticketCountSpan.innerText = rData.eventTicketCount; //남은 티켓수
+                        lateVacanceDefault.setDefault("isClick", false);
+                        return false;
+                    } else {
+                        //[1-4]팝업 이미지 변경
+                        let imgFileName = "";
+                        let imgUrl = "https://webimg.jestina.co.kr/UpData/jestina/event/230804_vacance_8/";
+                        if ("1천포인트" === rData.eventTicketResult) {
+                            imgFileName = "m_pop08.jpg";
+                        } else if ("3천포인트" === rData.eventTicketResult) {
+                            imgFileName = "m_pop09.jpg";
+                        } else if ("5천포인트" === rData.eventTicketResult) {
+                            imgFileName = "m_pop10.jpg";
+                        } else if ("7천포인트" === rData.eventTicketResult) {
+                            imgFileName = "m_pop11.jpg";
+                        } else if ("박카스" === rData.eventTicketResult) {
+                            imgFileName = "m_pop01.jpg";
+                        } else if ("베라" === rData.eventTicketResult) {
+                            imgFileName = "m_pop02.jpg";
+                        } else if ("스벅" === rData.eventTicketResult) {
+                            imgFileName = "m_pop04.jpg";
+                        } else if ("올리브영" === rData.eventTicketResult) {
+                            imgFileName = "m_pop05.jpg";
+                        } else if ("왓챠" === rData.eventTicketResult) {
+                            imgFileName = "m_pop06.jpg";
+                        } else if ("비치타올" === rData.eventTicketResult) {
+                            imgFileName = "m_pop03.jpg";
+                        } else {
+                            await makePlaneAnimation("N");
+                            alert("꽝입니다. 다시 참여해주세요.");
+                            ticketCountSpan.innerText = rData.eventTicketCount; //남은 티켓수
+                            lateVacanceDefault.setDefault("isClick", false);
+                            return false;
+                        }
+                        imgUrl += imgFileName;
+                        document.getElementById("layerPopup").querySelector("img").src = imgUrl;
+                        //[1-5]애니메이션 및 당첨레이어팝업 이미지변경
+                        await makePlaneAnimation("Y");
+                        lateVacanceDefault.setDefault("isClick", false);
+                    }
+                } catch (e) {
+                    console.log("getServiceList - e : ", e);
+                    lateVacanceDefault.setDefault("isClick", false);
+                    alert("오류가 발생했습니다.\n잠시 후 다시 시도해주세요.");
+                    return false;
+                }
+            });
+            //[2]경품확인화면 닫기
+            vacance_8_closeBtn.addEventListener("click", (event) => {
+                $("#layerPopup").fadeOut(function () {
+                    $("body").css("overflow", "auto");
+                    $(".icon").css({ top: "-7%", left: "3%", opacity: "1" });
+                    $(".m_icon").css({ top: "-7%", left: "3%", opacity: "1" });
+                });
+            });
+            //[3]경품 받기 로직
+            function startLateVacance() {
+                return new Promise((resolve, reject) => {
+                    let param = { eventId: vacance_8_eventId };
+                    $.post(Shop.url("/event/useLateVacanceTicket"), param, function (response) {
+                        if (!response.isSuccess) {
+                            reject(response);
+                        }
+                        resolve(response);
+                    }).fail((xhr, textStatus, errorThrown) => {
+                        reject(textStatus);
+                    });
+                });
+            }
+            //[4]애니메이션 처리
+            function makePlaneAnimation(hasReward) {
+                return new Promise((resolve, reject) => {
+                    const m_icon = $(".m_icon"); //mo
+                    m_icon.animate({ left: "83%" }, 160);
+                    m_icon.animate({ top: "93%" }, 210);
+                    m_icon.animate({ left: "3%" }, 260);
+                    m_icon.animate({ top: "-7%" }, 320);
+                    m_icon.animate({ left: "83%" }, 400);
+                    m_icon.animate({ top: "93%" }, 470);
+                    m_icon.animate({ left: "-3%", opacity: 0.5 }, 570);
+                    m_icon.animate({ top: "-7%", opacity: 0 }, 640, function () {
+                        //당첨
+                        if ("Y" === hasReward) {
+                            $("#layerPopup").fadeIn(function () {
+                                $("body").css("overflow", "hidden");
+                                resolve("success");
+                            });
+                        } else {
+                            resolve("success");
+                        }
+                    });
+                });
+            }
+        </script>
+    </body>
+</html>

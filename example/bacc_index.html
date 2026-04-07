@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="../swiper.css" />
+        <link rel="stylesheet" href="../local.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://m.jestina.co.kr/content/ux_renewal/src/mo/content/css/common.css?v=20231013140903" />
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://webimg.jestina.co.kr/UpData/jestina/event/@assets/owl/animate.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        <script src="https://www.jestina.co.kr/content/js/TweenMax.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+        <script src="../swiper.js"></script>
+        <script src="../featured.js"></script>
+    </head>
+    <body>
+        <style>
+            .jestina-sub-project__wrap {
+                margin: 0 auto;
+                width: 1140px;
+                min-width: 280px;
+                overflow: hidden;
+            }
+            .jestina-sub-project__wrap * {
+                margin: 0;
+                padding: 0;
+                border: none;
+            }
+            .w100 {
+                width: 100%;
+                vertical-align: middle;
+            }
+            .featured_sec {
+                position: relative;
+            }
+            .featured_sec-visual {
+                position: absolute;
+                top: 347px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .featured_sec-tle {
+                position: absolute;
+                display: none;
+            }
+            .featured_sec-tle-sub {
+                display: none;
+                position: absolute;
+            }
+            .link_list {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+            .link_item {
+                position: absolute;
+                width: 200px;
+                height: 100px;
+                z-index: 2;
+            }
+            .sec1 .featured_sec-visual {
+                top: 347px;
+            }
+            .sec1 .link_item {
+                border-radius: 15px;
+            }
+            .sec2 .featured_sec-visual {
+                top: 321px;
+            }
+            .sec2 .link_item {
+                /* background: #ddd;
+                        border: 2px solid; */
+                border-radius: 15px;
+                opacity: 0.5;
+            }
+            .sec3 .featured_sec-visual {
+                top: 347px;
+            }
+            .sec3 .link_item {
+                border-radius: 15px;
+            }
+            .sec4 .featured_sec-visual {
+                top: 321px;
+            }
+            .sec4 .link_item {
+                /* background: #ddd;
+                        border: 2px solid; */
+                border-radius: 15px;
+                opacity: 0.5;
+            }
+            .link_more {
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+            .sec1 .item01 {
+                top: 468px;
+                left: 66px;
+                width: 278px;
+                height: 300px;
+            }
+            .sec1 .item02 {
+                top: 319px;
+                right: 21px;
+                width: 278px;
+                height: 300px;
+            }
+            .sec1 .item03 {
+                top: 843px;
+                left: 278px;
+                width: 278px;
+                height: 300px;
+            }
+            .sec1 .item04 {
+                top: 667px;
+                left: 682px;
+                width: 278px;
+                height: 300px;
+            }
+
+            .sec2 .item01 {
+                top: 775px;
+                left: 131px;
+                width: 384px;
+                height: 356px;
+            }
+            .sec2 .item02 {
+                top: 596px;
+                right: 142px;
+                width: 286px;
+                height: 420px;
+            }
+            .sec3 .item01 {
+                top: 328px;
+                left: 108px;
+                width: 469px;
+                height: 34%;
+            }
+            .sec3 .item02 {
+                top: 38.5%;
+                right: 4.3%;
+                width: 24.5%;
+                height: 30%;
+            }
+
+            .sec4 .item01 {
+                top: 60%;
+                right: 9.5%;
+                width: 24.5%;
+                height: 19%;
+            }
+            .sec4 .item02 {
+                top: 70.5%;
+                left: 44%;
+                width: 24.5%;
+                height: 19%;
+            }
+            .sec4 .item03 {
+                top: 63.7%;
+                left: 3%;
+                width: 24.3%;
+                height: 19%;
+            }
+            .sec4 .item04 {
+                top: 35%;
+                left: 59%;
+                width: 34%;
+                height: 18.5%;
+            }
+        </style>
+        <main class="jestina-sub-project__wrap">
+            <section class="featured_sec"><img class="w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/featured/0405_bagacc/main.jpg" alt="Daily + 백꾸미기 메인" /></section>
+            <section class="featured_sec sec1">
+                <h3 class="featured_sec-tle">신예은의 백꾸 알아보기</h3>
+                <h3 class="featured_sec-tle-sub">뮤즈 신예은이 PICK 한 백꾸 아이템 4종 세트</h3>
+                <h3 class="featured_sec-tle-sub">미뇽 인형부터 스트랩까지 다양하게 활용한 센스있는 그녀</h3>
+                <ul class="link_list">
+                    <li class="link_item item01">
+                        <a href="https://www.jestina.co.kr/products/view/G2000026772" class="link_more"
+                            ><img src="https://webimg.jestina.co.kr/UpData/jestina/2024/featured/0405_bagacc/section01_item01.png" alt=""
+                        /></a>
+                    </li>
+                    <li class="link_item item02">
+                        <a href="https://www.jestina.co.kr/products/view/G2000026634" class="link_more"
+                            ><img src="https://webimg.jestina.co.kr/UpData/jestina/2024/featured/0405_bagacc/section01_item02.png" alt=""
+                        /></a>
+                    </li>
+                    <li class="link_item item03">
+                        <a href="https://www.jestina.co.kr/products/view/G2000025716" class="link_more"
+                            ><img src="https://webimg.jestina.co.kr/UpData/jestina/2024/featured/0405_bagacc/section01_item03.png" alt=""
+                        /></a>
+                    </li>
+                    <li class="link_item item04">
+                        <a href="https://www.jestina.co.kr/products/view/G2000026465" class="link_more"
+                            ><img src="https://webimg.jestina.co.kr/UpData/jestina/2024/featured/0405_bagacc/section01_item04.png" alt=""
+                        /></a>
+                    </li>
+                </ul>
+                <div class="featured_sec-visual">
+                    <img class="w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/featured/0405_bagacc/section01_visual.png" alt="" />
+                </div>
+                <img class="w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/featured/0405_bagacc/section01Bg.jpg" alt="신예은의 백꾸 알아보기" />
+            </section>
+            <section class="featured_sec sec2">
+                <ul class="link_list">
+                    <li class="link_item item01">
+                        <a href="https://www.jestina.co.kr/products/view/G2000026701" class="link_more"
+                            ><img src="https://webimg.jestina.co.kr/UpData/jestina/2024/featured/0405_bagacc/section02_item01.png" alt=""
+                        /></a>
+                    </li>
+                    <li class="link_item item02">
+                        <a href="https://www.jestina.co.kr/products/view/G2000026768" class="link_more"
+                            ><img src="https://webimg.jestina.co.kr/UpData/jestina/2024/featured/0405_bagacc/section02_item02.png" alt=""
+                        /></a>
+                    </li>
+                    <div class="featured_sec-visual">
+                        <img class="w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/featured/0405_bagacc/section02_visual.png" alt="" />
+                    </div>
+                </ul>
+
+                <img class="w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/featured/0405_bagacc/section02Bg.jpg" alt="Best Matching #01" />
+            </section>
+
+            <section class="featured_sec sec3">
+                <ul class="link_list">
+                    <li class="link_item item01">
+                        <a href="https://www.jestina.co.kr/products/view/G2000026767" class="link_more"
+                            ><img src="https://webimg.jestina.co.kr/UpData/jestina/2024/featured/0405_bagacc/section03_item01.png" alt=""
+                        /></a>
+                    </li>
+                    <li class="link_item item02">
+                        <a href="https://www.jestina.co.kr/products/view/G2000026772" class="link_more"
+                            ><img src="https://webimg.jestina.co.kr/UpData/jestina/2024/featured/0405_bagacc/section03_item02.png" alt=""
+                        /></a>
+                    </li>
+                </ul>
+                <div class="featured_sec-visual">
+                    <img class="w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/featured/0405_bagacc/section03_visual.png" alt="" />
+                </div>
+                <img class="w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/featured/0405_bagacc/section03.jpg" alt="Best Matching #02" />
+            </section>
+            <section class="featured_sec sec4">
+                <ul class="link_list">
+                    <li class="link_item item01">
+                        <a href="https://www.jestina.co.kr/products/view/G2000026634" class="link_more"
+                            ><img src="https://webimg.jestina.co.kr/UpData/jestina/2024/featured/0405_bagacc/section04_item01.png" alt=""
+                        /></a>
+                    </li>
+                    <li class="link_item item02">
+                        <a href="https://www.jestina.co.kr/products/view/G2000027053" class="link_more"
+                            ><img src="https://webimg.jestina.co.kr/UpData/jestina/2024/featured/0405_bagacc/section04_item01.png" alt=""
+                        /></a>
+                    </li>
+                    <li class="link_item item03">
+                        <a href="https://www.jestina.co.kr/products/view/G2000027051" class="link_more"
+                            ><img src="https://webimg.jestina.co.kr/UpData/jestina/2024/featured/0405_bagacc/section04_item01.png" alt=""
+                        /></a>
+                    </li>
+                    <li class="link_item item04">
+                        <a href="https://www.jestina.co.kr/products/view/G2000027055" class="link_more"
+                            ><img src="https://webimg.jestina.co.kr/UpData/jestina/2024/featured/0405_bagacc/section04_item01.png" alt=""
+                        /></a>
+                    </li>
+                </ul>
+                <div class="featured_sec-visual">
+                    <img class="w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/featured/0405_bagacc/section04_visual.png" alt="" />
+                </div>
+                <img class="w100" src="https://webimg.jestina.co.kr/UpData/jestina/2024/featured/0405_bagacc/section04.jpg" alt="New 백꾸 item" />
+            </section>
+        </main>
+        <a name="contentBottom" class="contentBottom"></a>
+
+        <script>
+            gsap.registerPlugin(ScrollTrigger);
+
+            const itemsSec1 = [".sec1 .item01", ".sec1 .item02", ".sec1 .item03", ".sec1 .item04"];
+            const itemsSec2 = [".sec2 .item01", ".sec2 .item02"];
+
+            // sec1 아이템 애니메이션
+            itemsSec1.forEach((item, index) => {
+                gsap.fromTo(
+                    item,
+                    {
+                        y: 100, // 아래에서 시작
+                        opacity: 0, // 투명하게 시작
+                    },
+                    {
+                        scrollTrigger: {
+                            trigger: ".sec1",
+                            start: `${index * 20}% 70%`, // 각 아이템이 스크롤에 따라 차례대로 시작
+                            end: "100% 80%",
+                            scrub: 1,
+                            // markers: true,
+                        },
+                        y: 0, // 제자리로 올라옴
+                        opacity: 1, // 완전히 보이게 됨
+                        duration: 1, // 애니메이션 지속 시간
+                    }
+                );
+            });
+
+            // sec2 아이템 애니메이션 (좌우 이동 추가)
+            itemsSec2.forEach((item, index) => {
+                const xFrom = index === 0 ? -200 : 200; // item01은 왼쪽에서, item02는 오른쪽에서 시작
+                gsap.fromTo(
+                    item,
+                    {
+                        x: xFrom, // 시작 위치 설정 (좌우 방향)
+                        opacity: 0, // 투명하게 시작
+                    },
+                    {
+                        scrollTrigger: {
+                            trigger: ".sec2",
+                            start: `${index * 20}% 70%`,
+                            end: "100% 80%",
+                            scrub: 1,
+                            // markers: true,
+                        },
+                        x: 0, // 정상 위치로 이동
+                        opacity: 1, // 완전히 보이게 됨
+                        duration: 1, // 애니메이션 지속 시간
+                    }
+                );
+            });
+        </script>
+    </body>
+</html>
