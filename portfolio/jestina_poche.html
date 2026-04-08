@@ -1,153 +1,153 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" sec0ent="IE=edge" />
-    <meta name="viewport" sec0ent="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../assets/css/reset.css" />
-    <link rel="stylesheet" href="../assets/css/jestina.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="../assets/css/default/animate.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
-    <script src="../assets/js/jestina.js"></script>
-    <script src="../assets/js/swiper.js"></script>
-  </head>
-  <body class="poche">
-    <main>
-      <section class="event_sec cont_top">
-        <div class="inner">
-          <img class="pc w100" src="../assets/images/jestina/poche/header.jpg" alt="헤더bg" />
-          <img class="mo" src="../assets/images/jestina/poche/m_header.jpg" alt="헤더bg" />
-          <div class="cursor_blink">
-            <img class="pc" src="../assets/images/jestina/poche/arrow.png" alt="커서icon" />
-            <img class="mo" src="../assets/images/jestina/poche/m_arrow.png" alt="커서icon" />
-          </div>
-          <!--상품 미선택 시 gif-->
-          <div class="imgWrap">
-            <img class="pc first" src="../assets/images/jestina/poche/slide01_pc.jpg" alt="gif이미지1" />
-            <img class="pc second" src="../assets/images/jestina/poche/slide02_pc.jpg" alt="gif이미지2" />
-            <img class="pc third" src="../assets/images/jestina/poche/slide03_pc.jpg" alt="gif이미지3" />
-            <img class="pc fourth" src="../assets/images/jestina/poche/slide04_pc.jpg" alt="gif이미지4" />
-            <img class="mo first" src="../assets/images/jestina/poche/slide01.jpg" alt="gif이미지1" />
-            <img class="mo second" src="../assets/images/jestina/poche/slide02.jpg" alt="gif이미지2" />
-            <img class="mo third" src="../assets/images/jestina/poche/slide03.jpg" alt="gif이미지3" />
-            <img class="mo fourth" src="../assets/images/jestina/poche/slide04.jpg" alt="gif이미지4" />
-          </div>
-          <!--선택 result-->
-          <div id="result_box" style="display: none">
-            <img class="pc select01" src="../assets/images/jestina/poche/slide01_pc.jpg" alt="선택이미지1" />
-            <img class="pc select02" src="../assets/images/jestina/poche/slide02_pc.jpg" alt="선택이미지2" />
-            <img class="pc select03" src="../assets/images/jestina/poche/slide03_pc.jpg" alt="선택이미지3" />
-            <img class="pc select04" src="../assets/images/jestina/poche/slide04_pc.jpg" alt="선택이미지4" />
-            <img class="mo select01" src="../assets/images/jestina/poche/slide01.jpg" alt="선택이미지1" />
-            <img class="mo select02" src="../assets/images/jestina/poche/slide02.jpg" alt="선택이미지2" />
-            <img class="mo select03" src="../assets/images/jestina/poche/slide03.jpg" alt="선택이미지3" />
-            <img class="mo select04" src="../assets/images/jestina/poche/slide04.jpg" alt="선택이미지4" />
-          </div>
-        </div>
-      </section>
-      <section class="event_sec event01">
-        <div class="inner">
-          <img class="pc" src="../assets/images/jestina/poche/section01.jpg" alt="섹션1bg" />
-          <img class="mo" src="../assets/images/jestina/poche/m_section01.jpg" alt="섹션1bg" />
-          <!-- 체크부분 -->
-          <div class="select_box">
-            <ul>
-              <li>
-                <span class="check first">
-                  <input type="radio" name="select" value="1" id="red1" />
-                  <label for="red"></label>
-                </span>
-              </li>
-              <li>
-                <span class="check second">
-                  <input type="radio" name="select" value="2" id="red2" />
-                  <label for="red"></label>
-                </span>
-              </li>
-              <li>
-                <span class="check third">
-                  <input type="radio" name="select" value="3" id="red3" />
-                  <label for="red"></label>
-                </span>
-              </li>
-              <li>
-                <span class="check fourth">
-                  <input type="radio" name="select" value="4" id="red4" />
-                  <label for="red"></label>
-                </span>
-              </li>
-            </ul>
-          </div>
-          <!--선택완료버튼-->
-          <input type="submit" id="complete_btn" />
-          <!-- 팝업 -->
-          <div class="layerPop modal1" style="">
-            <div class="content" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0)">
-              <img src="../assets/images/jestina/poche/popup.png" />
-              <button type="button" onclick="fn_layer_close(this)">확인</button>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="event_sec event02">
-        <div class="inner">
-          <img class="pc" src="../assets/images/jestina/poche/section02.jpg" alt="섹션2bg" />
-          <img class="mo" src="../assets/images/jestina/poche/m_section02.jpg" alt="섹션2bg" />
-        </div>
-      </section>
-      <section class="notice-wrap">
-        <div class="tle close">NOTICE</div>
-        <div class="content-wrap">
-          <ul class="notice_cont">
-            <h2>더블 5% 쿠폰</h2>
-            <li>
-              <p>본 쿠폰은 이벤트에 참여하여 정답을 맞춘 고객에 한 해 자동 지급 되며, 마이페이지 쿠폰관리에서 확인 가능합니다.</p>
-            </li>
-            <li>
-              <p>본 더블 쿠폰은 발행일로부터 23. 08 .31까지 사용 가능하며, ID당 1회 다운로드 가능합니다.</p>
-            </li>
-            <li>
-              <p>사용한 쿠폰은 취소, 반품 시 재발행 되지 않으며 유효기간 내 미 사용 시 자동 소멸됩니다.</p>
-            </li>
-            <li>
-              <p>본 더블 쿠폰은 7만원 이상 구매 시 사용 가능하며, 일부 상품의 경우 쿠폰 적용이 불가 할 수 있습니다.</p>
-            </li>
-            <li>
-              <p>본 이벤트는 당사의 사정에 의해 예고 없이 변경 또는 종료 될 수 있습니다.</p>
-            </li>
-          </ul>
-          <ul class="notice_cont">
-            <h2>‘POCHE 카드탑지퍼 LS’ 경품 증정</h2>
-            <li>
-              <p>본 경품은 이벤트 기간 내 취향 존중 쿠폰을 사용한 고객에 한 해 추첨 1명 지급됩니다.</p>
-            </li>
-            <li>
-              <p>당첨자는 2023. 9. 13(수) Jmall 공지사항을 통해 발표됩니다.</p>
-            </li>
-            <li>
-              <p>본 경품의 제세공과금 22%는 제이에스티나에서 부담합니다.</p>
-            </li>
-            <li>
-              <p>당첨된 경품은 입력된 주소지로 발송되니 마이페이지 내 회원정보를 최신정보로 업데이트 바랍니다.</p>
-            </li>
-            <li>
-              <p>회원정보 미입력/오기재 시 경품 당첨 및 지급이 취소 될 수 있습니다.</p>
-            </li>
-            <li>
-              <p>본 이벤트는 당사의 사정에 의해 예고 없이 변경 또는 종료 될 수 있습니다.</p>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <a name="contentBottom" class="contentBottom"></a>
-    </main>
-    <script></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" sec0ent="IE=edge" />
+        <meta name="viewport" sec0ent="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="/assets/css/reset.css" />
+        <link rel="stylesheet" href="/assets/css/jestina.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="/assets/css/default/animate.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
+        <script src="/assets/js/jestina.js"></script>
+        <script src="/assets/js/swiper.js"></script>
+    </head>
+    <body class="poche">
+        <main>
+            <section class="event_sec cont_top">
+                <div class="inner">
+                    <img class="pc w100" src="/assets/images/jestina/poche/header.jpg" alt="헤더bg" />
+                    <img class="mo" src="/assets/images/jestina/poche/m_header.jpg" alt="헤더bg" />
+                    <div class="cursor_blink">
+                        <img class="pc" src="/assets/images/jestina/poche/arrow.png" alt="커서icon" />
+                        <img class="mo" src="/assets/images/jestina/poche/m_arrow.png" alt="커서icon" />
+                    </div>
+                    <!--상품 미선택 시 gif-->
+                    <div class="imgWrap">
+                        <img class="pc first" src="/assets/images/jestina/poche/slide01_pc.jpg" alt="gif이미지1" />
+                        <img class="pc second" src="/assets/images/jestina/poche/slide02_pc.jpg" alt="gif이미지2" />
+                        <img class="pc third" src="/assets/images/jestina/poche/slide03_pc.jpg" alt="gif이미지3" />
+                        <img class="pc fourth" src="/assets/images/jestina/poche/slide04_pc.jpg" alt="gif이미지4" />
+                        <img class="mo first" src="/assets/images/jestina/poche/slide01.jpg" alt="gif이미지1" />
+                        <img class="mo second" src="/assets/images/jestina/poche/slide02.jpg" alt="gif이미지2" />
+                        <img class="mo third" src="/assets/images/jestina/poche/slide03.jpg" alt="gif이미지3" />
+                        <img class="mo fourth" src="/assets/images/jestina/poche/slide04.jpg" alt="gif이미지4" />
+                    </div>
+                    <!--선택 result-->
+                    <div id="result_box" style="display: none">
+                        <img class="pc select01" src="/assets/images/jestina/poche/slide01_pc.jpg" alt="선택이미지1" />
+                        <img class="pc select02" src="/assets/images/jestina/poche/slide02_pc.jpg" alt="선택이미지2" />
+                        <img class="pc select03" src="/assets/images/jestina/poche/slide03_pc.jpg" alt="선택이미지3" />
+                        <img class="pc select04" src="/assets/images/jestina/poche/slide04_pc.jpg" alt="선택이미지4" />
+                        <img class="mo select01" src="/assets/images/jestina/poche/slide01.jpg" alt="선택이미지1" />
+                        <img class="mo select02" src="/assets/images/jestina/poche/slide02.jpg" alt="선택이미지2" />
+                        <img class="mo select03" src="/assets/images/jestina/poche/slide03.jpg" alt="선택이미지3" />
+                        <img class="mo select04" src="/assets/images/jestina/poche/slide04.jpg" alt="선택이미지4" />
+                    </div>
+                </div>
+            </section>
+            <section class="event_sec event01">
+                <div class="inner">
+                    <img class="pc" src="/assets/images/jestina/poche/section01.jpg" alt="섹션1bg" />
+                    <img class="mo" src="/assets/images/jestina/poche/m_section01.jpg" alt="섹션1bg" />
+                    <!-- 체크부분 -->
+                    <div class="select_box">
+                        <ul>
+                            <li>
+                                <span class="check first">
+                                    <input type="radio" name="select" value="1" id="red1" />
+                                    <label for="red"></label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="check second">
+                                    <input type="radio" name="select" value="2" id="red2" />
+                                    <label for="red"></label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="check third">
+                                    <input type="radio" name="select" value="3" id="red3" />
+                                    <label for="red"></label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="check fourth">
+                                    <input type="radio" name="select" value="4" id="red4" />
+                                    <label for="red"></label>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--선택완료버튼-->
+                    <input type="submit" id="complete_btn" />
+                    <!-- 팝업 -->
+                    <div class="layerPop modal1" style="">
+                        <div class="content" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0)">
+                            <img src="/assets/images/jestina/poche/popup.png" />
+                            <button type="button" onclick="fn_layer_close(this)">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="event_sec event02">
+                <div class="inner">
+                    <img class="pc" src="/assets/images/jestina/poche/section02.jpg" alt="섹션2bg" />
+                    <img class="mo" src="/assets/images/jestina/poche/m_section02.jpg" alt="섹션2bg" />
+                </div>
+            </section>
+            <section class="notice-wrap">
+                <div class="tle close">NOTICE</div>
+                <div class="content-wrap">
+                    <ul class="notice_cont">
+                        <h2>더블 5% 쿠폰</h2>
+                        <li>
+                            <p>본 쿠폰은 이벤트에 참여하여 정답을 맞춘 고객에 한 해 자동 지급 되며, 마이페이지 쿠폰관리에서 확인 가능합니다.</p>
+                        </li>
+                        <li>
+                            <p>본 더블 쿠폰은 발행일로부터 23. 08 .31까지 사용 가능하며, ID당 1회 다운로드 가능합니다.</p>
+                        </li>
+                        <li>
+                            <p>사용한 쿠폰은 취소, 반품 시 재발행 되지 않으며 유효기간 내 미 사용 시 자동 소멸됩니다.</p>
+                        </li>
+                        <li>
+                            <p>본 더블 쿠폰은 7만원 이상 구매 시 사용 가능하며, 일부 상품의 경우 쿠폰 적용이 불가 할 수 있습니다.</p>
+                        </li>
+                        <li>
+                            <p>본 이벤트는 당사의 사정에 의해 예고 없이 변경 또는 종료 될 수 있습니다.</p>
+                        </li>
+                    </ul>
+                    <ul class="notice_cont">
+                        <h2>‘POCHE 카드탑지퍼 LS’ 경품 증정</h2>
+                        <li>
+                            <p>본 경품은 이벤트 기간 내 취향 존중 쿠폰을 사용한 고객에 한 해 추첨 1명 지급됩니다.</p>
+                        </li>
+                        <li>
+                            <p>당첨자는 2023. 9. 13(수) Jmall 공지사항을 통해 발표됩니다.</p>
+                        </li>
+                        <li>
+                            <p>본 경품의 제세공과금 22%는 제이에스티나에서 부담합니다.</p>
+                        </li>
+                        <li>
+                            <p>당첨된 경품은 입력된 주소지로 발송되니 마이페이지 내 회원정보를 최신정보로 업데이트 바랍니다.</p>
+                        </li>
+                        <li>
+                            <p>회원정보 미입력/오기재 시 경품 당첨 및 지급이 취소 될 수 있습니다.</p>
+                        </li>
+                        <li>
+                            <p>본 이벤트는 당사의 사정에 의해 예고 없이 변경 또는 종료 될 수 있습니다.</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <a name="contentBottom" class="contentBottom"></a>
+        </main>
+        <script></script>
+    </body>
 </html>

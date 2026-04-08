@@ -1,90 +1,115 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>suuyom's portfolio</title>
-    <link rel="stylesheet" href="../assets/css/style.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script defer src="/assets/js/common.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
-  </head>
-  <style>
-    .code-container {
-        background: #1e1e1e;
-        border-radius: 10px;
-        overflow: hidden;
-    }
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>suuyom's portfolio</title>
+        <link rel="stylesheet" href="/assets/css/style.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script defer src="/assets/js/common.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+    </head>
+    <style>
+        .myPort-detail__code-wrap {
+            margin-bottom: 20px;
+        }
+        .code-container {
+            background: #1e1e1e;
+            border-radius: 10px;
+            overflow: hidden;
+        }
 
-    .code-header {
-        background: #2d2d2d;
-        padding: 8px;
-    }
+        .code-header {
+            background: #2d2d2d;
+            padding: 8px;
+        }
 
-    .code-container pre {
-    margin: 0;
-    padding: 0;
-    overflow-x: auto;
-    line-height: 1.4;
-    }
+        .code-container pre {
+            margin: 0;
+            padding: 0;
+            overflow-x: auto;
+            line-height: 1.4;
+        }
 
+        .code-container code {
+            font-family: "Fira Code", monospace;
+            font-size: 13px;
+            line-height: 1.4;
+        }
 
+        .code-container code span {
+            line-height: 1.4;
+        }
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+        }
 
-    .code-container code {
-    font-family: 'Fira Code', monospace;
-    font-size: 13px;
-    line-height: 1.4;
-    }
+        .red {
+            background: #ff5f56;
+        }
+        .yellow {
+            background: #ffbd2e;
+        }
+        .green {
+            background: #27c93f;
+        }
+        .code-caption {
+            padding: 0.8rem;
+            color: #dedede;
+        }
+    </style>
+    <body>
+        <main class="myPort-detail" id="myPortDetail">
+            <h2 class="myPort-detail__name">비로벨</h2>
+            <a class="myPort-detail__link" href="../index.html">
+                <img src="/assets/images/ico/home.png" alt="홈 버튼" />
+            </a>
+            <section class="myPort-detail__inner">
+                <section class="myPort-detail__chapters myPort-detail__point">
+                    <h3 class="myPort-detail__chapters-tle">PROJECT KEY POINT</h3>
+                    <ul class="myPort-detail__point-list">
+                        <li class="myPort-detail__point-item">1. Vue.js 컴포넌트 기반 UI 설계</li>
+                        <li class="myPort-detail__point-item">2. 시멘틱 마크업 활용</li>
+                        <li class="myPort-detail__point-item">3. BEM 방법론 활용하여 SCSS 도입</li>
+                    </ul>
+                </section>
 
-    .code-container code span {
-    line-height: 1.4;
-    }
-    .dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        display: inline-block;
-        margin-right: 5px;
-    }
+                <section class="myPort-detail__code-wrap">
+                    <h4 class="myPort-detail__chapters-tle-sub">페이지 구성 컴포넌트 구조</h4>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="code-container swiper-slide">
+                                <div class="code-header">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                </div>
 
-    .red { background: #ff5f56; }
-    .yellow { background: #ffbd2e; }
-    .green { background: #27c93f; }
-    .code-caption{
-        padding: 0.8rem;
-    color: #dedede;
-    }
-  </style>
-  <body>
-    <main class="myPort-detail" id="myPortDetail">
-      <h2 class="myPort-detail__name">비로벨</h2>
-      <a class="myPort-detail__link" href="../index.html">
-        <img src="/assets/images/ico/home.png" alt="홈 버튼" />
-      </a>
-      <section class="myPort-detail__inner">
-        <section class="myPort-detail__chapters myPort-detail__point">
-          <h3 class="myPort-detail__chapters-tle">PROJECT KEY POINT</h3>
-          <ul class="myPort-detail__point-list">
-            <li class="myPort-detail__point-item">1. Vue.js 컴포넌트 기반 UI 설계</li>
-            <li class="myPort-detail__point-item">2. 시멘틱 마크업 활용</li>
-            <li class="myPort-detail__point-item">3. BEM 방법론 활용하여 SCSS 도입</li>
-          </ul>
-        </section>
+                                <pre>
+                        <code class="language-html">
+    &lt;template&gt;
+        &lt;div class="idxPage"&gt;
+            &lt;div v-if="loading"&gt;loading..&lt;/div&gt;
 
-        <section class="myPort-detail__code-wrap">
-          <div class="swiper-container ">
-            <div class="swiper-wrapper">
-              <div class="code-container swiper-slide">
-                <div class="code-header">
-                  <span class="dot red"></span>
-                  <span class="dot yellow"></span>
-                  <span class="dot green"></span>
-                </div>
-
-                <pre>
+            &lt;MainBannerNew&gt;　// 메인 배너 영역
+            &lt;MainQuickMenu&gt;　// 빠른 이동 메뉴
+            &lt;MainTodayNew&gt;　// 오늘의 신작 영역
+            &lt;MainTopBannerv2&gt;　// 공지/이벤트 팝업
+            &lt;MainRankingDrag&gt;　// 인기 작품 랭킹 UI
+            &lt;MainKeyword&gt;　// 키워드 탐색 영역
+            &lt;MainListItemDrag &gt;　// 작품 리스트 UI
+            &lt;DefaultBannerPop &gt;　// 공지/이벤트 팝업
+        &lt;/div&gt;
+    &lt;/template&gt;
+                        </code></pre>
+                                <!-- <pre>
                         <code class="language-html">
     &lt;template&gt;
         &lt;div class="idxPage"&gt;
@@ -104,105 +129,93 @@
             &lt;DefaultBannerPop v-if="mainPopShow" :popup-data="popupData" @close-popup="closePopup"/&gt;
         &lt;/div&gt;
     &lt;/template&gt;
-                        </code></pre>
-                <p class="code-caption">index.vue</p>
-              </div>
-              <div class="code-container swiper-slide">
-                <div class="code-header">
-                  <span class="dot red"></span>
-                  <span class="dot yellow"></span>
-                  <span class="dot green"></span>
-                </div>
+                        </code></pre> -->
+                                <p class="code-caption">index.vue</p>
+                            </div>
+                            <div class="code-container swiper-slide">
+                                <div class="code-header">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                </div>
 
-                <pre>
+                                <pre>
                         <code class="language-html">
     &lt;template&gt;
-        &lt;div class="idxPage"&gt;
-            &lt;div v-if="loading"&gt;loading..&lt;/div&gt;
-
-            &lt;MainBannerNew v-if="mainBanner &amp;&amp; mainBanner.length &gt; 0" :banners="mainBanner"/&gt;
-
-            &lt;MainQuickMenu v-if="mainBanner &amp;&amp; mainBanner.length &gt; 0" :recom="recom"/&gt;
-
-            &lt;MainTodayNew v-if="todayNew" :todayNew="todayNew" /&gt;
-            &lt;MainTopBannerv2 v-if="banners &amp;&amp; banners.length &gt; 0" :banners="banners" /&gt;
-            &lt;MainRankingDrag v-if="ranking" :ranking="ranking" /&gt;
-            &lt;MainKeyword v-if="keyword" :keyword="keyword" /&gt;
-
-            &lt;MainListItemDrag v-for="item in specials" :key="item.special_idx" :data="item"/&gt;
-
-            &lt;DefaultBannerPop v-if="mainPopShow" :popup-data="popupData" @close-popup="closePopup"/&gt;
+        &lt;div class="wrk__left"&gt;
+            &lt;BookEpisodeLeftList&gt;
+            &lt;BookEpisodeRightOther&gt;
+            &lt;BookEpisodeRightRecommand&gt;
+            &lt;BookEpisodeLeftComment&gt;
         &lt;/div&gt;
     &lt;/template&gt;
                         </code></pre>
-                <p class="code-caption">index.vue</p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="myPort-detail__chapters">
-          <section class="myPort-detail__sec">
-            <h3 class="myPort-detail__chapters-tle">1. Vue.js 컴포넌트 기반 UI 설계</h3>
 
-            <div class="myPort-detail__sec-desc">
-              자유연재 웹소설 플랫폼 구축 과정에서 Vue.js 컴포넌트 구조를 기반으로 주요 화면을 퍼블리싱했습니다. <br />
-              메인 페이지, 작품 리스트, 작품 상세, 작가 등록 및 정산 페이지 등 반복적으로 사용되는 UI를 컴포넌트 단위로 분리하여 화면을 구성했습니다.
-            </div>
-            <h4 class="myPort-detail__chapters-tle-sub">1.1작업 포인트</h4>
-            <ul class="myPort-detail__desc-list">
-              <li class="myPort-detail__desc-item">- 공통 UI 요소를 컴포넌트 단위로 분리하여 재사용성 확보</li>
-              <li class="myPort-detail__desc-item">- 페이지별 반복 구조를 일관된 형태로 관리</li>
-              <li class="myPort-detail__desc-item">- 유지보수와 확장성을 고려한 마크업 구조 설계</li>
-            </ul>
-          </section>
+                                <p class="code-caption">Book/EpisodeLeft.vue</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="myPort-detail__chapters">
+                    <section class="myPort-detail__sec">
+                        <h3 class="myPort-detail__chapters-tle">1. Vue.js 기반 컴포넌트 UI 설계</h3>
+                        <div class="myPort-detail__sec-desc">
+                            자유연재 웹소설 플랫폼 구축 과정에서 메인, 작품 리스트, 작품 상세, 작가 등록 및 정산 페이지 등 주요 화면을 컴포넌트 단위로 분리하여 퍼블리싱했습니다. <br />
+                            반복적으로 사용되는 UI를 공통 구조로 설계해 재사용성과 유지보수성을 높였습니다.
+                        </div>
+                        <div class="myPort-detail__sec-text">
+                            <h4 class="myPort-detail__chapters-tle-sub">1.1작업 포인트</h4>
+                            <ul class="myPort-detail__desc-list">
+                                <li class="myPort-detail__desc-item">공통 UI 요소를 컴포넌트 단위로 분리하여 재사용 구조 설계</li>
+                                <li class="myPort-detail__desc-item">반복되는 페이지 패턴을 일관된 형태로 관리</li>
+                                <li class="myPort-detail__desc-item">유지보수와 확장성을 고려한 화면 구조 구성</li>
+                            </ul>
+                            <h4 class="myPort-detail__sec-tle">1.2 기대 효과</h4>
+                            <ul class="myPort-detail__desc-list">
+                                <li class="myPort-detail__desc-item">유지보수와 확장성을 고려한 화면 구조 구성</li>
+                                <li class="myPort-detail__desc-item">화면 구조 통일로 유지보수 용이성 확보</li>
+                                <li class="myPort-detail__desc-item">신규 페이지 확장 시 일관된 퍼블리싱 기반 마련</li>
+                            </ul>
+                        </div>
+                    </section>
+                </section>
 
-          <section class="myPort-detail__sec">
-            <h4 class="myPort-detail__sec-tle">1.2 기대 효과</h4>
-            <ul class="myPort-detail__desc-list">
-              <li class="myPort-detail__desc-item">- 반복 UI 작업 효율 향상</li>
-              <li class="myPort-detail__desc-item">- 구조 통일을 통한 코드 가독성 확보</li>
-              <li class="myPort-detail__desc-item">- 신규 페이지 확장 시 재사용 가능한 퍼블리싱 기반 마련</li>
-            </ul>
-          </section>
-        </section>
+                <section class="myPort-detail__chapters">
+                    <section class="myPort-detail__sec">
+                        <h3 class="myPort-detail__chapters-tle">2. 시맨틱 마크업 기반 UI 구현</h3>
+                        <div class="myPort-detail__sec-desc">
+                            자유연재 웹소설 플랫폼 구축 과정에서 Vue.js 컴포넌트 구조를 기반으로 주요 화면을 퍼블리싱했습니다. <br />
+                            메인 페이지, 작품 리스트, 작품 상세, 작가 등록 및 정산 페이지 등 반복적으로 사용되는 UI를 컴포넌트 단위로 분리하여 화면을 구성했습니다.
+                        </div>
 
-        <section class="myPort-detail__chapters">
-          <section class="myPort-detail__sec">
-            <h3 class="myPort-detail__chapters-tle">2. 시맨틱 마크업 기반 UI 구현</h3>
-            <div class="myPort-detail__sec-desc">
-              자유연재 웹소설 플랫폼 구축 과정에서 Vue.js 컴포넌트 구조를 기반으로 주요 화면을 퍼블리싱했습니다. <br />
-              메인 페이지, 작품 리스트, 작품 상세, 작가 등록 및 정산 페이지 등 반복적으로 사용되는 UI를 컴포넌트 단위로 분리하여 화면을 구성했습니다.
-            </div>
-            <h4 class="myPort-detail__sec-tle">2.1 작업 포인트</h4>
-            <ul class="myPort-detail__desc-list">
-              <li class="myPort-detail__desc-item">- 콘텐츠 성격에 맞는 시맨틱 태그 사용</li>
-              <li class="myPort-detail__desc-item">- 정보 구조를 고려한 마크업 계층 설계</li>
-              <li class="myPort-detail__desc-item">- 가독성과 유지보수를 고려한 HTML 구조 작성</li>
-            </ul>
-            <!-- <figure class="myPort-detail__sec-photo">
-                            <img src="../assets/images/berovel/detail/myPort-detail__chpter1-thum1.png" alt="" />
+                        <div class="myPort-detail__sec-text">
+                            <h4 class="myPort-detail__sec-tle">2.1 작업 포인트</h4>
+                            <ul class="myPort-detail__desc-list">
+                                <li class="myPort-detail__desc-item">콘텐츠 성격에 맞는 시맨틱 태그 사용</li>
+                                <li class="myPort-detail__desc-item">정보 구조를 고려한 마크업 계층 설계</li>
+                                <li class="myPort-detail__desc-item">가독성과 유지보수를 고려한 HTML 구조 작성</li>
+                            </ul>
+
+                            <h4 class="myPort-detail__sec-tle">2.2 기대 효과</h4>
+                            <ul class="myPort-detail__desc-list">
+                                <li class="myPort-detail__desc-item">구조적으로 명확한 화면 구현</li>
+                                <li class="myPort-detail__desc-item">접근성과 문서 이해도 향상</li>
+                                <li class="myPort-detail__desc-item">협업 시 마크업 해석 용이</li>
+                            </ul>
+                        </div>
+
+                        <!-- <figure class="myPort-detail__sec-photo">
+                            <img src="/assets/images/berovel/detail/myPort-detail__chpter1-thum1.png" alt="" />
                         </figure> -->
-          </section>
-          <section class="myPort-detail__sec">
-            <h3 class="myPort-detail__chapters-tle">2. 시맨틱 마크업 기반 UI 구현</h3>
-            <h4 class="myPort-detail__sec-tle">2.2 기대 효과</h4>
-            <ul class="myPort-detail__desc-list">
-              <li class="myPort-detail__desc-item">- 구조적으로 명확한 화면 구현</li>
-              <li class="myPort-detail__desc-item">- 접근성과 문서 이해도 향상</li>
-              <li class="myPort-detail__desc-item">- 협업 시 마크업 해석 용이</li>
-            </ul>
-            <!-- <figure class="myPort-detail__sec-photo">
-                            <img src="../assets/images/berovel/detail/myPort-detail__chpter1-thum1.png" alt="" />
-                        </figure> -->
-          </section>
-        </section>
-        <!-- <section class="myPort-detail__chapters">
+                    </section>
+                </section>
+                <!-- <section class="myPort-detail__chapters">
                     <section class="myPort-detail__sec">
                         <h3 class="myPort-detail__chapters-tle">2. 시맨틱 마크업 기반 UI 구현</h3>
                         <h4 class="myPort-detail__sec-tle">2.1 콘텐츠에 의미 정의 및 목적부여</h4>
                         <h4 class="myPort-detail__chapters-tle-sub">&lt; 컴포넌트를 사용하는 이유 &gt;</h4>
                         <figure class="myPort-detail__sec-photo">
-                            <img src="../assets/images/berovel/detail/myPort-detail__chpter1-thum1.png" alt="" />
+                            <img src="/assets/images/berovel/detail/myPort-detail__chpter1-thum1.png" alt="" />
                         </figure>
                         <div class="myPort-detail__sec-desc">
                             플랫폼 내 다양한 콘텐츠 구조를 보다 명확하게 전달할 수 있도록 시맨틱 태그를 활용해 마크업을 구성했습니다. <br />
@@ -241,63 +254,64 @@
                         </div>
                         <div class="myPort-detail__sec-photo-wrap">
                             <figure class="myPort-detail__sec-code">
-                                <img src="../assets/images/berovel/detail/myPort-detail__chpter1-code2.png" alt="" />
+                                <img src="/assets/images/berovel/detail/myPort-detail__chpter1-code2.png" alt="" />
                             </figure>
                             <figure class="myPort-detail__sec-photo">
-                                <img src="../assets/images/berovel/detail/myPort-detail__chpter1-thum2.png" alt="" />
+                                <img src="/assets/images/berovel/detail/myPort-detail__chpter1-thum2.png" alt="" />
                             </figure>
                         </div>
                     </section>
                 </section> -->
-        <section class="myPort-detail__chapters">
-          <h3 class="myPort-detail__chapters-tle">3. BEM 방법론을 활용한 SCSS 구조화</h3>
-          <div class="myPort-detail__sec-desc">
-            자유연재 웹소설 플랫폼 구축 과정에서 Vue.js 컴포넌트 구조를 기반으로 주요 화면을 퍼블리싱했습니다. <br />
-            메인 페이지, 작품 리스트, 작품 상세, 작가 등록 및 정산 페이지 등 반복적으로 사용되는 UI를 컴포넌트 단위로 분리하여 화면을 구성했습니다.
-          </div>
-          <section class="myPort-detail__sec">
-            <h4 class="myPort-detail__sec-tle">3.1 작업 포인트</h4>
-            <ul class="myPort-detail__desc-list">
-              <li class="myPort-detail__desc-item">BEM 네이밍을 통한 클래스 역할 구분</li>
-              <li class="myPort-detail__desc-item">SCSS를 활용한 중첩 및 스타일 구조화</li>
-              <li class="myPort-detail__desc-item">공통/개별 스타일 분리를 통한 유지보수성 향상</li>
-            </ul>
-            <figure class="myPort-detail__sec-code">
-              <img src="../assets/images/berovel/detail/myPort-detail__chpter2-code1.png" alt="" />
-            </figure>
-          </section>
-          <section class="myPort-detail__sec">
-            <h4 class="myPort-detail__sec-tle">3.2 기대 효과</h4>
-            <ul class="myPort-detail__desc-list">
-              <li class="myPort-detail__desc-item">스타일 충돌 최소화</li>
-              <li class="myPort-detail__desc-item">코드 재사용성 향상</li>
-              <li class="myPort-detail__desc-item">운영 및 수정 시 작업 효율 개선</li>
-            </ul>
-          </section>
-        </section>
-        <!--   <section class="myPort-detail__thum">
+                <section class="myPort-detail__chapters">
+                    <h3 class="myPort-detail__chapters-tle">3. BEM 방법론을 활용한 SCSS 구조화</h3>
+                    <div class="myPort-detail__sec-desc">
+                        자유연재 웹소설 플랫폼 구축 과정에서 Vue.js 컴포넌트 구조를 기반으로 주요 화면을 퍼블리싱했습니다. <br />
+                        메인 페이지, 작품 리스트, 작품 상세, 작가 등록 및 정산 페이지 등 반복적으로 사용되는 UI를 컴포넌트 단위로 분리하여 화면을 구성했습니다.
+                    </div>
+
+                    <section class="myPort-detail__sec">
+                        <div class="myPort-detail__sec-text">
+                            <h4 class="myPort-detail__sec-tle">3.1 작업 포인트</h4>
+                            <ul class="myPort-detail__desc-list">
+                                <li class="myPort-detail__desc-item">BEM 네이밍을 통한 클래스 역할 구분</li>
+                                <li class="myPort-detail__desc-item">SCSS를 활용한 중첩 및 스타일 구조화</li>
+                                <li class="myPort-detail__desc-item">공통/개별 스타일 분리를 통한 유지보수성 향상</li>
+                            </ul>
+                            <h4 class="myPort-detail__sec-tle">3.2 기대 효과</h4>
+                            <ul class="myPort-detail__desc-list">
+                                <li class="myPort-detail__desc-item">스타일 충돌 최소화</li>
+                                <li class="myPort-detail__desc-item">코드 재사용성 향상</li>
+                                <li class="myPort-detail__desc-item">운영 및 수정 시 작업 효율 개선</li>
+                            </ul>
+                            <figure class="myPort-detail__sec-code">
+                                <img src="/assets/images/berovel/detail/myPort-detail__chpter2-code1.png" alt="" />
+                            </figure>
+                        </div>
+                    </section>
+                </section>
+                <!--   <section class="myPort-detail__thum">
                     <div class="myPort-detail__thum-img">
                         <img src="/assets/images/berovel/main_pc.png" alt="비로벨 메인 썸네일" />
                     </div>
                 </section> -->
-      </section>
-    </main>
+            </section>
+        </main>
 
-    <script>
-      AOS.init();
-      const mySwiper = new Swiper(".swiper-container", {
-          slidesPerView: "1",
-          spaceBetween: 1,
-          loop: false,
-          // If we need pagination
-          pagination: {
-              el: ".swiper-pagination",
-              clickable: true,
-              renderBullet: function (index, className) {
-                  return '<span class="' + className + '">' + menu[index] + "</span>";
-              },
-          },
-      });
-    </script>
-  </body>
+        <script>
+            AOS.init();
+            const mySwiper = new Swiper(".swiper-container", {
+                slidesPerView: "1",
+                spaceBetween: 1,
+                loop: false,
+                // If we need pagination
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                    renderBullet: function (index, className) {
+                        return '<span class="' + className + '">' + menu[index] + "</span>";
+                    },
+                },
+            });
+        </script>
+    </body>
 </html>

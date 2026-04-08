@@ -1,208 +1,231 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>suuyeon's portfolio</title>
-    <link rel="stylesheet" href="/assets/css/style.css" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  </head>
-  <body>
-    <main class="wrap">
-      <header class="header" id="header">
-        <h1 class="header__logo">
-          <img class="header__profile" src="/assets/images/logo.png" alt="" />
-        </h1>
-        <nav>
-          <ul class="header__list">
-            <li class="header__item">
-              <a href="#aboutMe" class="header__link">About Me</a>
-            </li>
-            <li class="header__item">
-              <a href="#myProject" class="header__link">Works</a>
-            </li>
-            <li class="header__item">
-              <a href="#contact" class="header__link">Contact</a>
-            </li>
-          </ul>
-        </nav>
-        <p>
-          <span class="header__name">son suyeon</span>
-        </p>
-      </header>
-      <section class="intro" id="intro">
-        <div class="intro__inner">
-          <div class="intro__top">
-            안녕하세요.<br />
-            저는 깔끔한 UI 와 <br />만족도를 높이는 UX를 만드는<br />
-            퍼블리셔 입니다.
-          </div>
-          <div class="intro__coding">
-            <span class="intro__coding-var">let</span>
-            <span class="intro__coding-indentifier">suusuu</span> {<br />
-            <div class="intro__coding-item">
-              <div class="intro__coding-left">
-                <span class="intro__coding-keyword">name : </span>
-              </div>
-              <div class="intro__coding-right">‘<span class="intro__coding-lang">손수연</span>’;<br /></div>
-            </div>
-
-            <div class="intro__coding-item">
-              <div class="intro__coding-left">
-                <span class="intro__coding-keyword">skill : </span>
-              </div>
-              <div class="intro__coding-right">
-                [‘<span class="intro__coding-lang">HTML5</span>’, ‘<span class="intro__coding-lang">CSS3</span>’, ‘<span class="intro__coding-lang">javascript</span>’, ‘<span class="intro__coding-lang">jQuery</span>’, ‘<span class="intro__coding-lang">SCSS</span>’, ‘<span class="intro__coding-lang"
-                  >vue.js</span
-                >’,<br />
-                ‘<span class="intro__coding-lang">git</span>’, ‘<span class="intro__coding-lang">figma</span>’, ‘<span class="intro__coding-lang">photoshop</span>’],<br />
-              </div>
-            </div>
-
-            <div class="intro__coding-item">
-              <div class="intro__coding-left">
-                <span class="intro__coding-keyword">goal : </span>
-              </div>
-              <div class="intro__coding-right">
-                ‘<span class="intro__coding-lang"> prontend developer</span>’
-                <br />
-              </div>
-            </div>
-
-            }
-          </div>
-        </div>
-      </section>
-      <section class="myportMain_sec about" id="aboutMe">
-        <div class="myportMain_sec-inner about__inner">
-          <h2 class="myportMain_sec-tle about__tle">About Me</h2>
-          <div class="about__wrap">
-            <div class="about-left">
-              <div class="about-profile"></div>
-              <div class="about-more">
-                <div class="about-more__item">
-                  <a href="https://www.notion.so/TIL-Today-I-Learn-ac94b346c6a7461abb8c26187cfd68d0" target="_blank" class="about-more__link">
-                    <span class="about-more__photo about-more__photo1"></span>
-                    <span class="about-more__desc"> 기술 블로그 바로가기 </span>
-                  </a>
-                </div>
-                <div class="about-more__item">
-                  <a href="resume.pdf" class="about-more__link" download>
-                    <span class="about-more__photo about-more__photo2"></span>
-                    <span class="about-more__desc"> 이력서 다운받기 </span>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="about-intro">
-              <p class="about-intro__top">
-                안녕하세요! <br />
-                열정가득한 <br />
-                웹퍼블리셔 손수연입니다.
-              </p>
-              <div class="about-intro__desc">
-                <div class="about-key">
-                  <ul class="about-key__list">
-                    <li class="about-key__item"></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="about-intro__desc">
-                <p class="about-intro__desc-inner">누구나 사용할 수 있으면서 사용자가 원하는 만족도 높은 사이트를 만드는 것이 <br />제가 하는 일이라고 생각하여, 웹 접근성과 웹 표준성에 준수하는 작업을 하고 있습니다.</p>
-                <p class="about-intro__desc-inner">
-                  머릿속에 그리고 상상했던 그림을 제 손 끝으로 완성시킬 때
-                  <br />성취감을 느끼고 처음 이 길에 들어서게 되었습니다.
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>suuyeon's portfolio</title>
+        <link rel="stylesheet" href="/assets/css/style.css" />
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    </head>
+    <body>
+        <main class="wrap">
+            <header class="header" id="header">
+                <h1 class="header__logo">
+                    <img class="header__profile" src="/assets/images/logo.png" alt="" />
+                </h1>
+                <nav>
+                    <ul class="header__list">
+                        <li class="header__item">
+                            <a href="#aboutMe" class="header__link">About Me</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#myProject" class="header__link">Works</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#contact" class="header__link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <p>
+                    <span class="header__name">son suyeon</span>
                 </p>
-                <p class="about-intro__desc-inner">
-                  앞으로도 수많은 수식으로 빈칸을 채워 넣어 코드를 완성시키는 것처럼 <br />
-                  저의 빈칸도 채워넣어서 계속 성장하는 개발자가 되고 싶습니다.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="myportMain_sec myskill">
-        <div class="myportMain_sec-inner myskill__inner">
-          <article class="myskill-top">
-            <h2 class="myportMain_sec-tle myskill__tle">What I can do</h2>
-            <ul class="myskill-top__list">
-              <li class="myskill-top__item">
-                <h3 class="myskill-top__name">HTML</h3>
-                <div class="myskill-top__desc">
-                  <p class="myskill-top__text">HTML5</p>
-                  <p class="myskill-top__text">시멘틱 마크업</p>
-                  <p class="myskill-top__text">웹 표준 및 웹 접근성 고려</p>
+            </header>
+            <section class="intro" id="intro">
+                <div class="intro__inner">
+                    <div class="intro__top">
+                        안녕하세요.<br />
+                        저는 깔끔한 UI 와 <br />만족도를 높이는 UX를 만드는<br />
+                        퍼블리셔 입니다.
+                    </div>
+                    <div class="intro__coding">
+                        <span class="intro__coding-var">let</span>
+                        <span class="intro__coding-indentifier">suusuu</span> {<br />
+
+                        <div class="intro__coding-item">
+                            <div class="intro__coding-left">
+                                <span class="intro__coding-keyword">name : </span>
+                            </div>
+                            <div class="intro__coding-right">‘<span class="intro__coding-lang">손수연</span>’;<br /></div>
+                        </div>
+                        <div class="intro__coding-item">
+                            <div class="intro__coding-left">
+                                <span class="intro__coding-keyword">role : </span>
+                            </div>
+                            <div class="intro__coding-right">‘<span class="intro__coding-lang">UI Publisher</span>’;<br /></div>
+                        </div>
+                        <div class="intro__coding-item">
+                            <div class="intro__coding-left">
+                                <span class="intro__coding-keyword">skills : </span>
+                            </div>
+                            <div class="intro__coding-right">
+                                [‘<span class="intro__coding-lang">HTML5</span>’, ‘<span class="intro__coding-lang">CSS3</span>’, ‘<span class="intro__coding-lang">SCSS</span>’,‘<span
+                                    class="intro__coding-lang"
+                                    >JavaScript</span
+                                >’, ‘<span class="intro__coding-lang">Vue</span>’];
+                            </div>
+                        </div>
+                        <div class="intro__coding-item">
+                            <div class="intro__coding-left">
+                                <span class="intro__coding-keyword">strengths : </span>
+                            </div>
+                            <div class="intro__coding-right">
+                                [‘<span class="intro__coding-lang">Semantic Markup</span>’, ‘<span class="intro__coding-lang">Web Accessibility</span>’, <br />‘<span class="intro__coding-lang"
+                                    >Responsive UI</span
+                                >’, ‘<span class="intro__coding-lang">UI Interaction</span>’];
+                            </div>
+                        </div>
+
+                        }
+                    </div>
                 </div>
-              </li>
-              <li class="myskill-top__item">
-                <h3 class="myskill-top__name">CSS</h3>
-                <div class="myskill-top__desc">
-                  <p class="myskill-top__text">CSS3</p>
-                  <p class="myskill-top__text">반응형 레이아웃 구현</p>
-                  <p class="myskill-top__text">Transition / Animation 활용</p>
-                  <p class="myskill-top__text">SCSS를 활용한 프리프로세싱</p>
-                  <p class="myskill-top__text">부트스트랩</p>
+            </section>
+            <section class="myportMain_sec about" id="aboutMe">
+                <div class="myportMain_sec-inner about__inner">
+                    <h2 class="myportMain_sec-tle about__tle">About Me</h2>
+                    <div class="about__wrap">
+                        <div class="about-left">
+                            <div class="about-profile"></div>
+                            <div class="about-more">
+                                <div class="about-more__item">
+                                    <a href="https://www.notion.so/TIL-Today-I-Learn-ac94b346c6a7461abb8c26187cfd68d0" target="_blank" class="about-more__link">
+                                        <span class="about-more__photo about-more__photo1"></span>
+                                        <span class="about-more__desc"> 기술 블로그 바로가기 </span>
+                                    </a>
+                                </div>
+                                <div class="about-more__item">
+                                    <a href="resume.pdf" class="about-more__link" download>
+                                        <span class="about-more__photo about-more__photo2"></span>
+                                        <span class="about-more__desc"> 이력서 다운받기 </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-intro">
+                            <p class="about-intro__top">
+                                안녕하세요! <br />
+                                웹표준과 접근성을 기반으로 UI를 구현하는<br />
+                                웹퍼블리셔 손수연입니다.
+                            </p>
+                            <div class="about-intro__desc">
+                                <div class="about-key">
+                                    <ul class="about-key__list">
+                                        <li class="about-key__item"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="about-intro__desc">
+                                <p class="about-intro__desc-inner">
+                                    누구나 쉽게 사용할 수 있는 웹 환경을 만드는 것을 중요하게 생각합니다.<br />
+                                    웹 접근성과 웹 표준을 기반으로 구조화된 마크업과 반응형 UI를 구현하고 있습니다.
+                                </p>
+                                <p class="about-intro__desc-inner">
+                                    시맨틱 마크업과 사용자 흐름을 고려한 인터랙션 구현에 강점을 가지고 있으며, <br />
+                                    Vue 기반 화면 유지보수 경험을 통해 컴포넌트 구조에 대한 이해를 쌓았습니다.
+                                </p>
+                                <p class="about-intro__desc-inner">
+                                    재사용성과 유지보수를 고려한 UI를 지향하며,<br />프론트엔드 협업 역량을 지속적으로 확장해 나가고 있습니다.
+                                    <br />
+                                </p>
+                            </div>
+                            <!-- <div class="about-intro__desc">
+                                <p class="about-intro__desc-inner">
+                                    누구나 사용할 수 있으면서 사용자가 원하는 만족도 높은 사이트를 만드는 것이 <br />제가 하는 일이라고 생각하여, 웹 접근성과 웹 표준성에 준수하는 작업을 하고 있습니다.
+                                </p>
+                                <p class="about-intro__desc-inner">
+                                    머릿속에 그리고 상상했던 그림을 제 손 끝으로 완성시킬 때
+                                    <br />성취감을 느끼고 처음 이 길에 들어서게 되었습니다.
+                                </p>
+                                <p class="about-intro__desc-inner">
+                                    앞으로도 수많은 수식으로 빈칸을 채워 넣어 코드를 완성시키는 것처럼 <br />
+                                    저의 빈칸도 채워넣어서 계속 성장하는 개발자가 되고 싶습니다.
+                                </p>
+                            </div> -->
+                        </div>
+                    </div>
                 </div>
-              </li>
-              <li class="myskill-top__item">
-                <h3 class="myskill-top__name">JavaScript</h3>
-                <div class="myskill-top__desc">
-                  <p class="myskill-top__text">JavaScript(ES6)/ jQuery</p>
-                  <p class="myskill-top__text">vue framework 사용가능</p>
+            </section>
+            <section class="myportMain_sec myskill">
+                <div class="myportMain_sec-inner myskill__inner">
+                    <article class="myskill-top">
+                        <h2 class="myportMain_sec-tle myskill__tle">What I do</h2>
+                        <ul class="myskill-top__list">
+                            <li class="myskill-top__item">
+                                <h3 class="myskill-top__name">HTML</h3>
+                                <div class="myskill-top__desc">
+                                    <p class="myskill-top__text">시맨틱 마크업 기반 구조 설계</p>
+                                    <p class="myskill-top__text">웹 표준 및 웹 접근성 고려한 HTML 작성</p>
+                                    <p class="myskill-top__text">SEO 및 유지보수를 고려한 구조화된 마크업</p>
+                                </div>
+                            </li>
+                            <li class="myskill-top__item">
+                                <h3 class="myskill-top__name">CSS</h3>
+                                <div class="myskill-top__desc">
+                                    <p class="myskill-top__text">반응형 웹 구현 (모바일/태블릿/데스크탑 대응)</p>
+                                    <p class="myskill-top__text">Flex / Grid 기반 레이아웃 구성</p>
+                                    <p class="myskill-top__text">SCSS를 활용한 스타일 구조화 및 유지보수</p>
+                                    <p class="myskill-top__text">Transition / Animation을 활용한 UI 인터랙션</p>
+                                </div>
+                            </li>
+                            <li class="myskill-top__item">
+                                <h3 class="myskill-top__name">JavaScript</h3>
+                                <div class="myskill-top__desc">
+                                    <p class="myskill-top__text">JavaScript(ES6)를 활용한 동적 UI 구현</p>
+                                    <p class="myskill-top__text">탭, 모달, 드롭다운 등 인터랙션 컴포넌트 구현</p>
+                                    <p class="myskill-top__text">사용자 이벤트 기반 UI 상태 제어</p>
+                                    <p class="myskill-top__text">Vue 기반 화면 유지보수 및 컴포넌트 구조 이해</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </article>
+                    <article class="myskill-bottom">
+                        <h2 class="myportMain_sec-tle myskill__tle myskill__tle-more">Tools & Collaboration</h2>
+                        <ul class="myskill-bottom__list">
+                            <li class="myskill-bottom__item">
+                                <h3 class="myskill-bottom__name">Git을 활용한 버전 관리 및 협업 경험</h3>
+                            </li>
+                            <li class="myskill-bottom__item">
+                                <h3 class="myskill-bottom__name">Figma를 통한 디자인 시안 확인 및 개발 협업</h3>
+                            </li>
+                            <li class="myskill-bottom__item">
+                                <h3 class="myskill-bottom__name">Notion 기반 협업 및 문서 관리 경험</h3>
+                            </li>
+                            <li class="myskill-bottom__item">
+                                <h3 class="myskill-bottom__name">Photoshop을 활용한 이미지 편집 및 UI 리소스 제작</h3>
+                            </li>
+                            <li class="myskill-bottom__item">
+                                <h3 class="myskill-bottom__name">Jira를 활용한 이슈 트래킹 및 협업 프로세스 경험</h3>
+                            </li>
+                        </ul>
+                    </article>
                 </div>
-              </li>
-            </ul>
-          </article>
-          <article class="myskill-bottom">
-            <h2 class="myportMain_sec-tle myskill__tle myskill__tle-more">more .. than</h2>
-            <ul class="myskill-bottom__list">
-              <li class="myskill-bottom__item">
-                <h3 class="myskill-bottom__name">Photoshop + Illustrator</h3>
-              </li>
-              <li class="myskill-bottom__item">
-                <h3 class="myskill-bottom__name">Figma</h3>
-              </li>
-              <li class="myskill-bottom__item">
-                <h3 class="myskill-bottom__name">Git</h3>
-              </li>
-              <li class="myskill-bottom__item">
-                <h3 class="myskill-bottom__name">Notion</h3>
-              </li>
-              <li class="myskill-bottom__item">
-                <h3 class="myskill-bottom__name">Co-work</h3>
-              </li>
-            </ul>
-          </article>
-        </div>
-      </section>
-      <section class="myportMain_sec myProject" id="myProject">
-        <div class="myportMain_sec-inner myProject__inner">
-          <h2 class="myportMain_sec-tle myWork__tle">My work</h2>
-          <ul class="myProject__list">
-            <li class="myProject__item">
-              <a class="myProject__link" target="_blank" href="/portfolio/jestina.html">
-                <div class="myProject__thum">
-                  <img class="myProject__thum-img" src="/assets/images/work/jestina.jpg" alt="제이에스티나 " />
-                </div>
-                <div class="myProject__hover">
-                  <h3>제이에스티나</h3>
-                </div></a
-              >
-            </li>
-            <li class="myProject__item">
-              <a class="myProject__link" target="_blank" href="/portfolio/berovel.html">
-                <div class="myProject__thum">
-                  <img class="myProject__thum-img" src="/assets/images/work/berovel.png" alt="비로벨 " />
-                </div>
-                <div class="myProject__hover">
-                  <h3>비로벨</h3>
-                </div></a
-              >
-            </li>
-            <!-- <li class="myProject__item">
-                            <a class="myProject__link" target="_blank" href="/portfolio/movies.html">
+            </section>
+            <section class="myportMain_sec myProject" id="myProject">
+                <div class="myportMain_sec-inner myProject__inner">
+                    <h2 class="myportMain_sec-tle myWork__tle">My work</h2>
+                    <ul class="myProject__list">
+                        <li class="myProject__item">
+                            <a class="myProject__link" target="_blank" href="./portfolio/jestina.html">
+                                <div class="myProject__thum">
+                                    <img class="myProject__thum-img" src="/assets/images/work/jestina.jpg" alt="제이에스티나 " />
+                                </div>
+                                <div class="myProject__hover">
+                                    <h3>제이에스티나</h3>
+                                </div></a
+                            >
+                        </li>
+                        <li class="myProject__item">
+                            <a class="myProject__link" target="_blank" href="./portfolio/berovel.html">
+                                <div class="myProject__thum">
+                                    <img class="myProject__thum-img" src="/assets/images/work/berovel.png" alt="비로벨 " />
+                                </div>
+                                <div class="myProject__hover">
+                                    <h3>비로벨</h3>
+                                </div></a
+                            >
+                        </li>
+                        <!-- <li class="myProject__item">
+                            <a class="myProject__link" target="_blank" href="./portfolio/movies.html">
                                 <div class="myProject__thum">
                                     <img class="myProject__thum-img" src="/assets/images/work/vue_movies.png" alt="영화데이터 가져오기" />
                                 </div>
@@ -211,96 +234,96 @@
                                 </div></a
                             >
                         </li> -->
-            <li class="myProject__item">
-              <a class="myProject__link" target="_blank" href="/portfolio/dynersum.html">
-                <div class="myProject__thum">
-                  <img class="myProject__thum-img" src="/assets/images/work/dynersum.png" alt="다이너썸" />
+                        <li class="myProject__item">
+                            <a class="myProject__link" target="_blank" href="./portfolio/dynersum.html">
+                                <div class="myProject__thum">
+                                    <img class="myProject__thum-img" src="/assets/images/work/dynersum.png" alt="다이너썸" />
+                                </div>
+                                <div class="myProject__hover">
+                                    <h3>다이너썸</h3>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="myProject__item">
+                            <a class="myProject__link" target="_blank" href="./portfolio/doguri.html">
+                                <div class="myProject__thum">
+                                    <img class="myProject__thum-img" src="/assets/images/work/doguri.png" alt="도구리 막내클럽" />
+                                </div>
+                                <div class="myProject__hover">
+                                    <h3>도구리 막내클럽</h3>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="myProject__item">
+                            <a class="myProject__link" target="_blank" href="./portfolio/sapling.html">
+                                <div class="myProject__thum">
+                                    <img class="myProject__thum-img" src="/assets/images/work/sapling.png" alt="새프링" />
+                                </div>
+                                <div class="myProject__hover">
+                                    <h3>새프링</h3>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="myProject__item">
+                            <a class="myProject__link" target="_blank" href="./portfolio/smallbig.html">
+                                <div class="myProject__thum">
+                                    <img class="myProject__thum-img" src="/assets/images/work/smallbig.png" alt="스몰빅" />
+                                </div>
+                                <div class="myProject__hover">
+                                    <h3>스몰빅</h3>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="myProject__hover">
-                  <h3>다이너썸</h3>
+            </section>
+            <section class="myportMain_sec myStudy">
+                <div class="myportMain_sec-inner myStudy__inner">
+                    <h2 class="myportMain_sec-tle myStudy__tle">my Study</h2>
+                    <p class="myportMain_sec-sub">제가 공부하고 있는 것들을 기록하고 있어요</p>
+                    <ul class="myStudy__list">
+                        <li class="myStudy__item myStudy__html">
+                            <a href="https://ebony-battery-335.notion.site/html-5f65da95f18e4f59807c761521bf5749">HTML정리</a>
+                        </li>
+                        <li class="myStudy__item myStudy__css">
+                            <a href="https://ebony-battery-335.notion.site/BEM-2f9710f3b1f0483299d9673abaed60f1">BEM 방법론 정리</a>
+                        </li>
+                        <li class="myStudy__item myStudy__css">
+                            <a href="https://ebony-battery-335.notion.site/SASS-755dbbab23ce417a8a2e6119ed7eb979">웹디자이너를 위한 SASS (책정리)</a>
+                        </li>
+                        <li class="myStudy__item myStudy__css">
+                            <a href="https://www.notion.so/0ca551d0099e437b831367ac4885e2a0?v=2da89b8f2b024560899358aeb2b8443d&pvs=4">JavaScript 기초 문법</a>
+                        </li>
+                        <li class="myStudy__item myStudy__css">
+                            <a href="https://ebony-battery-335.notion.site/JavaScript-460a337432c14957a87bbb6fd049ffac">JavaScript 예제정리</a>
+                        </li>
+                        <li class="myStudy__item myStudy__css">
+                            <a href="https://ebony-battery-335.notion.site/git-186a85ed786142989eca41b0b7795c21">git 정리</a>
+                        </li>
+                    </ul>
                 </div>
-              </a>
-            </li>
-            <li class="myProject__item">
-              <a class="myProject__link" target="_blank" href="/portfolio/doguri.html">
-                <div class="myProject__thum">
-                  <img class="myProject__thum-img" src="/assets/images/work/doguri.png" alt="도구리 막내클럽" />
+            </section>
+            <footer class="footer">
+                <div class="footer__inner">
+                    <p class="footer__desc-text">본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.</p>
+                    <p class="footer__desc-copy">© 2026. SonSuYeon All Rights reserved.</p>
                 </div>
-                <div class="myProject__hover">
-                  <h3>도구리 막내클럽</h3>
-                </div>
-              </a>
-            </li>
-            <li class="myProject__item">
-              <a class="myProject__link" target="_blank" href="/portfolio/sapling.html">
-                <div class="myProject__thum">
-                  <img class="myProject__thum-img" src="/assets/images/work/sapling.png" alt="새프링" />
-                </div>
-                <div class="myProject__hover">
-                  <h3>새프링</h3>
-                </div>
-              </a>
-            </li>
-            <li class="myProject__item">
-              <a class="myProject__link" target="_blank" href="/portfolio/smallbig.html">
-                <div class="myProject__thum">
-                  <img class="myProject__thum-img" src="/assets/images/work/smallbig.png" alt="스몰빅" />
-                </div>
-                <div class="myProject__hover">
-                  <h3>스몰빅</h3>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="myportMain_sec myStudy">
-        <div class="myportMain_sec-inner myStudy__inner">
-          <h2 class="myportMain_sec-tle myStudy__tle">my Study</h2>
-          <p class="myportMain_sec-sub">제가 공부하고 있는 것들을 기록하고 있어요</p>
-          <ul class="myStudy__list">
-            <li class="myStudy__item myStudy__html">
-              <a href="https://ebony-battery-335.notion.site/html-5f65da95f18e4f59807c761521bf5749">HTML정리</a>
-            </li>
-            <li class="myStudy__item myStudy__css">
-              <a href="https://ebony-battery-335.notion.site/BEM-2f9710f3b1f0483299d9673abaed60f1">BEM 방법론 정리</a>
-            </li>
-            <li class="myStudy__item myStudy__css">
-              <a href="https://ebony-battery-335.notion.site/SASS-755dbbab23ce417a8a2e6119ed7eb979">웹디자이너를 위한 SASS (책정리)</a>
-            </li>
-            <li class="myStudy__item myStudy__css">
-              <a href="https://www.notion.so/0ca551d0099e437b831367ac4885e2a0?v=2da89b8f2b024560899358aeb2b8443d&pvs=4">JavaScript 기초 문법</a>
-            </li>
-            <li class="myStudy__item myStudy__css">
-              <a href="https://ebony-battery-335.notion.site/JavaScript-460a337432c14957a87bbb6fd049ffac">JavaScript 예제정리</a>
-            </li>
-            <li class="myStudy__item myStudy__css">
-              <a href="https://ebony-battery-335.notion.site/git-186a85ed786142989eca41b0b7795c21">git 정리</a>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <footer class="footer">
-        <div class="footer__inner">
-          <p class="footer__desc-text">본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.</p>
-          <p class="footer__desc-copy">© 2026. SonSuYeon All Rights reserved.</p>
-        </div>
-      </footer>
-    </main>
+            </footer>
+        </main>
 
-    <script type="module">
-      let header = document.querySelector(".header");
-      // let headerHeght = header.offsetHeight;
+        <script type="module">
+            let header = document.querySelector(".header");
+            // let headerHeght = header.offsetHeight;
 
-      window.onscroll = function () {
-          let windowTop = window.scrollY;
-          if (windowTop >= 300) {
-              header.classList.add("topfixed");
-          } else {
-              header.classList.remove("topfixed");
-          }
-          //
-      };
-    </script>
-  </body>
+            window.onscroll = function () {
+                let windowTop = window.scrollY;
+                if (windowTop >= 300) {
+                    header.classList.add("topfixed");
+                } else {
+                    header.classList.remove("topfixed");
+                }
+                //
+            };
+        </script>
+    </body>
 </html>
