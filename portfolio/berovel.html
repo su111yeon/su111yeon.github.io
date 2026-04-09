@@ -32,12 +32,13 @@
                     </div>
                     <h3 class="myPort__overView-tle">웹소설 플랫폼 사이트 구축</h3>
                     <p class="myPort__overView-text">
-                        Vue.js와 Nuxt.js를 기반으로 페이지를 구성하고, <br />
-                        작품 리스트, 상세, 랭킹 등 주요 화면을 컴포넌트 단위로 분리하여 재사용성과 유지보수성을 고려한 UI 구조를 설계했습니다.
+                        Vue 기반 웹 서비스 퍼블리싱을 진행하며 컴포넌트 단위로 UI를 구조화하고<br />
+                        재사용 가능한 형태로 설계하였습니다.
                     </p>
                     <p class="myPort__overView-text">
-                        반응형 환경에 대응하여 다양한 디바이스에서도 UI가 안정적으로 동작하도록 구현했으며, <br />
-                        크로스 브라우징을 통해 일관된 사용자 경험을 제공했습니다.
+                        리스트, 배너, 랭킹 등 반복되는 UI를 컴포넌트로 분리하여<br />
+                        메인, 작품 리스트, 작품 상세, 작품 읽기, 마이페이지 등 공통 페이지를 구현했으며,<br />
+                        유지보수와 확장성을 고려한 구조로 구현하였습니다.
                     </p>
 
                     <div class="myPort-desc">
@@ -48,127 +49,65 @@
                                 <span class="myPort-desc__text"> 2022.08 ~ 2023.01</span>
                             </li>
                             <li class="myPort-desc__item">
-                                <span class="myPort-desc__tle">기술스택</span>
-                                <span class="myPort-desc__text"> HTML5,CSS3,SCSS,JavaScript,vue.js,nuxt.js</span>
+                                <span class="myPort-desc__tle">역할</span>
+                                <span class="myPort-desc__text"> 퍼블리싱 / UI 개발</span>
                             </li>
                             <li class="myPort-desc__item">
-                                <span class="myPort-desc__tle">협업툴</span>
-                                <span class="myPort-desc__text"> git</span>
+                                <span class="myPort-desc__tle">기술스택</span>
+                                <span class="myPort-desc__text"> HTML5,CSS3,SCSS,JavaScript,vue.js,nuxt.js</span>
                             </li>
                         </ul>
                     </div>
                 </section>
                 <section class="myPort-content">
-                    <h3 class="myPort__head">Interactive Elements</h3>
-                    <h4 class="myPort-content__tle">메인 페이지</h4>
-                    <div class="myPort-content__inner">
-                        <img class="myPort-content__thum" data-aos="fade-right" src="/assets/images/berovel/main_banner.png" alt="메인페이지" />
-                        <div class="myPort-content__txt-wrap">
-                            <ul class="myPort-content__list">
-                                <li class="myPort-content__item">
-                                    <p class="myPort-content__text">
-                                        <sapn class="myPort-content__skill">swiper.js </sapn> 을 화면에 슬라이드 배너를 노출시켰으며, <br />
-                                        배너이동이 가능하도록 button 커스텀과 <br />
-                                        indicator를 통해 배너의 개수와 위치를 표시해두었습니다.
-                                    </p>
-                                </li>
-                            </ul>
+                    <h3 class="myPort__head">site preview</h3>
+                    <section class="myPort-detail__chapters">
+                        <h4 class="myPort-detail__chapters-tle myPort-detail__keypoint">서비스 소개</h4>
+                        <div class="myPort-detail__explanation">
+                            <div class="myPort-detail__element">
+                                <p class="myPort-detail__element-txt">
+                                    웹소설 콘텐츠를 탐색하는 <span class="myPort-detail__highlight">사용자</span>와 <br />작품을 등록·관리하는 <span class="myPort-detail__highlight">작가</span>로
+                                    구성된 플랫폼 서비스입니다.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="myPort-content__inner myPort-content__second">
-                        <img class="myPort-content__thum" data-aos="fade-left" src="/assets/images/berovel/main_sec1.png" alt="메인섹션" />
-                        <div class="myPort-content__txt-wrap">
-                            <ul class="myPort-content__list">
-                                <li class="myPort-content__item">
-                                    <p class="myPort-content__text">
-                                        <span class="myPort-content__skill">dragscroll.js </span>
-                                        사용하여 화면 영역을 넘어가는 리스트를 <br />
-                                        드래그 스크롤 하여 확인할 수 있도록 작업하였습니다.
-                                    </p>
-                                </li>
-                            </ul>
+                    </section>
+
+                    <section class="myPort-detail__chapters">
+                        <h4 class="myPort-detail__chapters-tle myPort-detail__keypoint">서비스 구조</h4>
+                        <div class="myPort-detail__explanation">
+                            <div class="myPort-detail__element">
+                                <p class="myPort-detail__element-txt">
+                                    사용자 영역(메인, 리스트, 상세, 읽기)과 작가 영역(작품 등록, 관리, 정산)을 분리하여 <br />
+                                    각 역할에 맞는 화면 흐름을 설계했습니다.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <h4 class="myPort-content__tle">작품소개 페이지</h4>
-                    <div class="myPort-content__inner">
-                        <img data-aos="fade-right" class="myPort-content__thum" src="/assets/images/berovel/work1.png" alt="작품" />
-                        <div class="myPort-content__txt-wrap">
-                            <ul class="myPort-content__list">
-                                <li class="myPort-content__item">
-                                    <p class="myPort-content__text">
-                                        <sapn class="myPort-content__skill">image popup </sapn>
-                                        작품 표지를 클릭하면 image popup 뜨도록하여 큰 이미지로 확인할 수 있도록 하였습니다. <br />
-                                        메뉴와 컨텐츠의 인덱스 순서가 동일한 경우 컨텐츠 내용을 보여주었고<br />
-                                        아이템을 선택함과 동시에 캐릭터에 아이템을 장착하는 효과를 보여줄 수 있도록 코드 작성하였습니다.
-                                    </p>
-                                </li>
-                                <li class="myPort-content__item">
-                                    <p class="myPort-content__text">
-                                        <sapn class="myPort-content__skill">button effect </sapn>
-                                        button을 클릭하면 '더보기/접기' 기능이 활성화되어 작품소개란의 부분을 통해 화면의 사용성을 높였습니다.
-                                    </p>
-                                </li>
-                            </ul>
+                    </section>
+
+                    <section class="myPort-detail__chapters">
+                        <h3 class="myPort__head"></h3>
+                        <h4 class="myPort-detail__chapters-tle myPort-detail__keypoint">USER FLOW & SERVICE STRUCTURE</h4>
+                        <div class="myPort-detail__explanation">
+                            <div class="myPort-detail__element">
+                                <p class="myPort-detail__element-txt">
+                                    사용자와 작가의 이용 목적이 다른 서비스 구조에 맞춰<br />
+                                    탐색형 사용자 흐름과 등록/관리형 작가 흐름을 분리 설계했습니다. <br />
+                                    각 역할에 필요한 화면 우선순위를 구분하여 서비스 구조에 맞는 UI를 구현했습니다.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <h4 class="myPort-content__tle">작품읽기 페이지</h4>
-                    <div class="myPort-content__inner">
-                        <div class="myPort-content__thum swiper-container" data-aos="fade-up">
-                            <ul class="myPort-content__thum-list swiper-wrapper">
-                                <li class="myPort-content__thum-item swiper-slide">
-                                    <img class="myPort-content__thum-img" src="/assets/images/berovel/workdetail1.png" alt="메인페이지" />
-                                </li>
-                                <li class="myPort-content__thum-item swiper-slide">
-                                    <img class="myPort-content__thum-img" src="/assets/images/berovel/workdetail2.png" alt="메인페이지" />
-                                </li>
-                                <li class="myPort-content__thum-item swiper-slide">
-                                    <img class="myPort-content__thum-img" src="/assets/images/berovel/workdetail3.png" alt="메인페이지" />
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="myPort-content__txt-wrap">
-                            <ul class="myPort-content__list">
-                                <li class="myPort-content__item">
-                                    <p class="myPort-content__text">
-                                        <sapn class="myPort-content__skill">head,bottom effect </sapn>
-                                        작품읽기 창에서 스크롤,커서 클릭시 head,bottom 활성화/비활성화상태가 되어 <br />작품 읽기의 편의성을 제공했습니다.
-                                    </p>
-                                </li>
-                                <li class="myPort-content__item">
-                                    <p class="myPort-content__text">
-                                        <sapn class="myPort-content__skill">setting popup </sapn>
-                                        톱니바퀴 모양 아이콘을 클릭했을 때 팝업 창이 활성화되며<br />
-                                        글꼴의 종류,크기,줄간격,배경색을 변경할 수 있습니다.
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <h4 class="myPort-content__tle">작품리스트 페이지</h4>
-                    <div class="myPort-content__inner">
-                        <img class="myPort-content__thum" src="/assets/images/berovel/work_list.gif" alt="작품" />
-                        <div class="myPort-content__txt-wrap">
-                            <ul class="myPort-content__list">
-                                <li class="myPort-content__item">
-                                    <p class="myPort-content__text">
-                                        <sapn class="myPort-content__skill">반응형 체크 </sapn>
-                                        작품 리스트의 이미지의 레이아웃이 깨지지 않도록<br />
-                                        미디어쿼리를 활용하여 비율에 맞게 반응형으로 떨어지도록 작업했습니다.
-                                    </p>
-                                </li>
-                                <li class="myPort-content__item"></li>
-                            </ul>
-                        </div>
-                    </div>
+                    </section>
                 </section>
+
                 <section class="myPort-site">
                     <h3 class="myPort__head">site preview</h3>
                     <ul class="myPort-site__list">
                         <li class="myPort-site__item myPort-site__pc">
-                            <img src="/assets/images/berovel/main_pc.png" alt="" />
+                            <img src="../assets/images/berovel/main_pc.png" alt="" />
                         </li>
                         <li class="myPort-site__item myPort-site__m">
-                            <img src="/assets/images/berovel/main_m.png" alt="" />
+                            <img src="../assets/images/berovel/main_m.png" alt="" />
                         </li>
                     </ul>
                 </section>
