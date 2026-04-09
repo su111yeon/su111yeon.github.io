@@ -366,17 +366,21 @@
 }
 .myPort-detail__name {
     font-size: 36px;
-    margin-bottom: 24px;
+    margin-bottom: 48px;
     letter-spacing: -1px;
     text-align: center;
 }
 
 .myPort-detail__chapters-tle {
     font-size: 24px;
-    margin-bottom: 8px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+.myPort-detail__keypoint {
+    text-align: left;
 }
 .myPort-detail__sec {
-    margin-bottom: 32px;
+    margin-bottom: 48px;
 }
 .myPort-detail__sec-tle {
     display: block;
@@ -422,6 +426,7 @@
 }
 .myPort-detail__sec-text {
     width: 95%;
+    width: 100%;
     word-break: keep-all;
     line-height: 1.5;
     margin: 0 auto 24px;
@@ -497,38 +502,51 @@
     position: relative;
     display: block;
 }
-.myPort-detail__element {
-    text-align: center;
-}
+
 .myPort-detail__element-tle {
     display: block;
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 .myPort-detail__explanation {
+    margin-bottom: 20px;
+}
+.myPort-detail__explanation--photo {
     display: flex;
     justify-content: center;
     gap: 100px;
     margin-bottom: 20px;
     text-align: center;
+    /* background: #f3f3f3; */
 }
 .myPort-detail__explanation-highlight {
-    color: #d9001b;
     text-decoration: underline;
+    text-decoration-color: #d9001b;
+    text-underline-offset: 4px;
 }
-.myPort-detail__element-txt {
+.myPort-detail__element {
     margin-bottom: 20px;
 }
-.myPort-detail__txt-toBe {
+.myPort-detail__element-txt {
+    line-height: 1.5;
+}
+.myPort-detail__element-txt + .myPort-detail__element-txt {
+    margin-top: 8px;
+}
+.myPort-detail__potho-toBe {
+    background: #f3f3f3;
+    /* background: #eee; */
+    padding: 12px;
+    border-radius: 5px;
 }
 .myPort-detail__potho-asIs::after,
 .myPort-detail__potho-toBe::after {
     position: absolute;
     display: block;
     content: "";
-    border: 5px solid red;
-    width: 102%;
+    border: 3px solid red;
+    width: 100%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -541,38 +559,50 @@
     color: red;
     font-size: 20px;
 }
-.myPort-detail__potho-toBe.j-detail03::before {
+.myPort-detail__potho-toBe.j-detail03::before,
+.j-detail032::before {
     display: none;
 }
 .myPort-detail__potho-asIs.j-detail01::after {
     width: 100%;
-    height: 148px;
+    height: 18%;
     top: 57%;
 }
 .myPort-detail__potho-toBe.j-detail01::after {
     width: 100%;
-    height: 148px;
+    height: 18%;
     top: 35%;
 }
 .myPort-detail__potho-asIs.j-detail02::after {
     width: 99%;
-    height: 40px;
+    height: 7%;
     top: 80%;
 }
 .myPort-detail__potho-toBe.j-detail02::after {
     width: 96%;
-    height: 180px;
+    height: 28%;
     top: 49%;
 }
-.myPort-detail__potho-asIs.j-detail03::after {
+.myPort-detail__potho-toBe.j-detail031::after {
     width: 99%;
-    height: 40px;
-    top: 80%;
+    height: 5%;
+    top: 29%;
 }
-.myPort-detail__potho-toBe.j-detail03::after {
+.myPort-detail__potho-toBe.j-detail031::before {
+    position: absolute;
+    display: block;
+    content: "";
+    border: 3px solid red;
+    width: 102%;
+    height: 52%;
+    top: 47%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.myPort-detail__potho-toBe.j-detail032::after {
     width: 96%;
-    height: 180px;
-    top: 49%;
+    height: 46%;
+    top: 2%;
 }
 /* 제이에스티나 */
 .myPort__overView-swiper {
@@ -904,11 +934,10 @@
         text-align: center;
     }
     .myPort-detail__link {
-        max-width: 1136px;
-        width: 32px;
-        height: 32px;
-        right: 24px;
-        top: 24px;
+        width: 3rem;
+        height: 3rem;
+        right: 2%;
+        top: 2%;
     }
     .myPort-detail__name {
         font-size: 2.4rem;
@@ -916,10 +945,10 @@
     }
     .myPort-detail__chapters-tle {
         font-size: 1.8rem;
-        margin-bottom: 0.8rem;
+        margin-bottom: 1.8rem;
     }
     .myPort-detail__sec {
-        margin-bottom: 32px;
+        margin-bottom: 3rem;
     }
     .myPort-detail__sec-tle,
     .myPort-detail__chapters-tle-sub {
@@ -1018,7 +1047,7 @@
     }
     .myPort-detail__potho-asIs,
     .myPort-detail__potho-toBe {
-        width: 50%;
+        /* width: 50%; */
         margin: 0 auto;
     }
     .myPort-detail__potho-asIs img,
@@ -1026,20 +1055,24 @@
         width: 100%;
     }
     .myPort-detail__element {
+        margin-bottom: 2rem;
     }
     .myPort-detail__element-tle {
         font-size: 1.6rem;
         margin-bottom: 1rem;
     }
-    .myPort-detail__explanation {
-        flex-direction: column;
-        gap: 3rem;
-        margin-bottom: 1.6rem;
-        text-align: center;
-    }
     .myPort-detail__element-txt {
-        margin-bottom: 1rem;
+        font-size: 1.4rem;
     }
+    .myPort-detail__explanation {
+        margin-bottom: 1.6rem;
+    }
+    .myPort-detail__explanation--photo {
+        gap: 2rem;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+    }
+
     .myPort-detail__txt-toBe {
     }
     .myPort-detail__element br {
@@ -1048,17 +1081,9 @@
     .myPort-detail__potho-toBe::before {
         display: none;
     }
-    .myPort-detail__potho-asIs.j-detail01::after {
-        height: 7rem;
-    }
-    .myPort-detail__potho-toBe.j-detail01::after {
-        height: 7rem;
-    }
-    .myPort-detail__potho-asIs.j-detail02::after {
-        height: 2rem;
-    }
-    .myPort-detail__potho-toBe.j-detail02::after {
-        height: 9rem;
+    .myPort-detail__potho-asIs::after,
+    .myPort-detail__potho-toBe::after {
+        border: 0.35rem solid red;
     }
     .myPort__overView-swiper li img {
         width: 100%;
