@@ -65,6 +65,13 @@
             padding: 0.8rem;
             color: #dedede;
         }
+        .flex {
+            display: flex;
+        }
+        .flex > div {
+            width: 50%;
+            max-width: 300px;
+        }
     </style>
     <body>
         <!-- 공통 UI구조,컴포넌트구성,인터랙션UX,읽기화면UX,작가/사용자 역할 분리 구조 -->
@@ -141,13 +148,48 @@
                         </div>
                         <div class="myPort-detail__sec-text">
                             <h4 class="myPort-detail__sec-tle">예시 2. 작품 상태에 따른 노출 분기</h4>
+                            <ul>
+                                <li class="flex">
+                                    <div>
+                                        <figure class="myPort-detail__sec-photo">
+                                            <img src="../assets/images/berovel/detail/item_normal.png" alt="" />
+                                        </figure>
+                                        <p>인증된 사용자 ▶ 정상 노출</p>
+                                    </div>
+                                    <div>
+                                        <figure class="myPort-detail__sec-photo">
+                                            <img src="../assets/images/berovel/detail/item_normal--off.png" alt="" />
+                                        </figure>
+                                        <p>미인증 사용자 ▶ 이미지 블러 + 19 표시</p>
+                                    </div>
+                                </li>
+                            </ul>
+
                             <div class="myPort-detail__sec-desc">
-                                작품의 연재 여부, 등록 상태, 공개 여부 등에 따라 <br />노출되는 정보와 액션 버튼이 달라질 수 있어 상태별 UI 분기를 적용했습니다.<br />
-                                동일한 레이아웃 안에서 텍스트, 버튼, 뱃지 영역을 상황에 맞게 다르게 구성했습니다.
+                                사용자 성인 인증 여부에 따라 콘텐츠 노출을 분기하고, <br />
+                                비인증 사용자에게는 블라인드 처리된 UI를 제공하여 <br />
+                                접근 권한에 따른 콘텐츠 제어 흐름을 구현
                             </div>
                         </div>
                         <div class="myPort-detail__sec-text">
                             <h4 class="myPort-detail__sec-tle">예시 3. 데이터 유무에 따른 화면 처리</h4>
+
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="code-container swiper-slide">
+                                        <figure class="myPort-detail__sec-photo">
+                                            <img src="../assets/images/berovel/detail/mypage_main--nodata.png" alt="" />
+                                        </figure>
+                                        <p class="code-caption">사용자-작가: 리스트 데이터 없는 경우</p>
+                                    </div>
+                                    <div class="code-container swiper-slide">
+                                        <figure class="myPort-detail__sec-photo">
+                                            <img src="../assets/images/berovel/detail/mypage_main--data.png" alt="" />
+                                        </figure>
+                                        <p class="code-caption">사용자-작가: 리스트 데이터 있는 경우</p>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="myPort-detail__sec-desc">
                                 리스트 데이터가 없는 경우, 등록된 작품이 없는 경우, 검색 결과가 없는 경우 등<br />
                                 빈 상태 화면을 별도로 구성하여 사용자가 다음 행동을 이해할 수 있도록 했습니다.<br />
