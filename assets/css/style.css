@@ -641,6 +641,7 @@ img {
 @media only screen and (max-width: 1100px) {
     .intro {
         align-items: center;
+        padding: 0;
     }
     .intro__top {
         font-size: 2rem;
@@ -648,7 +649,7 @@ img {
         margin-bottom: 2rem;
     }
     .intro__coding {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         line-height: 1.75;
     }
     .intro__coding-left {
@@ -679,7 +680,7 @@ img {
         margin-bottom: 2.4rem;
     }
     .intro__top {
-        font-size: 2.4rem;
+        font-size: 2.2rem;
     }
     .intro__coding {
         font-size: 1.6rem;

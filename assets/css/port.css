@@ -42,7 +42,7 @@
 .myPort__head {
     color: #292929;
     font-size: 44px;
-    text-transform: capitalize;
+    text-transform: uppercase;
     text-align: center;
     margin-bottom: 24px;
     letter-spacing: -1px;
@@ -145,7 +145,7 @@
     font-size: 30px;
     font-weight: bold;
     margin-bottom: 24px;
-    text-transform: capitalize;
+    text-transform: uppercase;
     color: #292929;
 }
 .myPort__overView-tle-sub {
@@ -328,7 +328,7 @@
     display: block;
     font-size: 20px;
     font-weight: bold;
-    text-transform: capitalize;
+    text-transform: uppercase;
     margin-bottom: 8px;
     color: #a37a7a;
 }
@@ -340,6 +340,7 @@
     position: relative;
     display: block;
     max-width: 1136px;
+    width: 100%;
     padding-top: 56px;
     box-sizing: border-box;
     /* overflow-x: hidden; */
@@ -349,8 +350,11 @@
     margin: 0 auto;
     padding: 0 32px;
 }
-.myPort-detail__chapters {
+.myProt-detail__chapter {
     margin-bottom: 56px;
+}
+.myProt-detail__case {
+    margin-bottom: 48px;
 }
 .myPort-detail__link {
     max-width: 1136px;
@@ -370,31 +374,27 @@
     letter-spacing: -1px;
     text-align: center;
 }
-
-.myPort-detail__chapters-tle {
+.myProt-detail__chapter-tle {
     font-size: 24px;
-    margin-bottom: 24px;
-    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
 }
 .myPort-detail__keypoint {
     text-align: left;
 }
-.myPort-detail__sec {
-    margin-bottom: 48px;
-}
-.myPort-detail__sec-tle {
+.myPort-detail__case-tle {
     display: block;
     font-size: 20px;
     font-weight: bold;
-    text-transform: capitalize;
-    margin-bottom: 8px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
     color: #a37a7a;
 }
-.myPort-detail__chapters-tle-sub {
+.myPort-detail__case-tle-sub {
     display: block;
     font-size: 20px;
     font-weight: bold;
-    text-transform: capitalize;
+    text-transform: uppercase;
     margin-bottom: 8px;
 }
 .myPort-detail__point-item {
@@ -419,24 +419,23 @@
 .myPort-detail__desc-item:last-child {
     margin-bottom: 0;
 }
-.myPort-detail__sec-desc {
+.myPort-detail__desc {
     width: 95%;
     line-height: 1.5;
     margin-bottom: 24px;
 }
-.myPort-detail__sec-text {
-    width: 95%;
+.myPort-detail__case {
     width: 100%;
     word-break: keep-all;
     line-height: 1.5;
-    margin: 0 auto 24px;
+    margin: 0 auto 32px;
 }
-.myPort-detail__sec-desc,
-.myPort-detail__sec-text {
+.myPort-detail__desc,
+.myPort-detail__case {
     word-break: keep-all;
 }
-.myPort-detail__sec-desc:last-child,
-.myPort-detail__sec-text:last-child {
+.myPort-detail__desc:last-child,
+.myPort-detail__case:last-child {
     margin-bottom: 0;
 }
 .myPort-detail__sec-photo-wrap {
@@ -445,7 +444,7 @@
     width: 100%;
 }
 .myPort-detail__sec-photo {
-    max-width: 60%;
+    max-width: 70%;
     width: 100%;
 }
 .myPort-detail__sec-code {
@@ -465,6 +464,7 @@
 .myPort-detail__sec-code img {
     width: 100%;
     margin-bottom: 8px;
+    box-shadow: 3px 3px 15px rgba(170, 170, 170, 0.2);
 }
 .myPort-detail__sec-code-wrap {
     width: 100%;
@@ -492,33 +492,76 @@
     gap: 20px;
     width: 60%;
 }
-.myPort-detail__potho {
+.myPort-detail__photo {
     display: flex;
     justify-content: center;
     gap: 100px;
 }
-.myPort-detail__potho-asIs,
-.myPort-detail__potho-toBe {
+.myPort-detail__swiper {
+    margin-bottom: 20px;
+}
+.myPort-detail__swiper-item {
+    position: relative;
+}
+.myPort-detail__swiper--caption {
+    position: absolute;
+    bottom: 50px;
+    left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.myPort-detail__photo-asIs,
+.myPort-detail__photo-toBe {
     position: relative;
     display: block;
 }
-
-.myPort-detail__element-tle {
+.myPort-detail__case-list {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+.myPort-detail__case-item {
+}
+.myPort-detaii__case-photo {
+    max-width: 150px;
+    width: 100%;
+    margin-bottom: 8px;
+}
+.myPort-detaii__case-photo img {
+    width: 100%;
+}
+.myPort-detaii__case-caption {
+}
+.myPort-detail__case-subtitle,
+.myPort-detail__case-label {
     display: block;
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 12px;
 }
-.myPort-detail__explanation {
+.myPort-detail__case-body {
     margin-bottom: 20px;
 }
-.myPort-detail__explanation--photo {
+.myPort-detail__case-compare {
     display: flex;
     justify-content: center;
     gap: 100px;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     text-align: center;
     /* background: #f3f3f3; */
+}
+.myPort-detail__case-compare-item {
+    position: relative;
+}
+.myPort-detail__case-compare-item.myPort-detail_tobe {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.myPort-detail_tobe .myPort-detail__case-label {
+    width: 100px;
 }
 .myPort-detail__highlight {
     text-decoration: underline;
@@ -528,20 +571,18 @@
 .myPort-detail__element {
     margin-bottom: 20px;
 }
-.myPort-detail__element-txt {
+.myPort-detail__case-section {
+    margin-bottom: 20px;
+}
+
+.myPort-detail__case-desc {
     line-height: 1.5;
 }
-.myPort-detail__element-txt + .myPort-detail__element-txt {
+.myPort-detail__case-desc + .myPort-detail__case-desc {
     margin-top: 8px;
 }
-.myPort-detail__potho-toBe {
-    background: #f3f3f3;
-    /* background: #eee; */
-    padding: 12px;
-    border-radius: 5px;
-}
-.myPort-detail__potho-asIs::after,
-.myPort-detail__potho-toBe::after {
+.myPort-detail_compare-A::after,
+.myPort-detail_compare-B::after {
     position: absolute;
     display: block;
     content: "";
@@ -550,7 +591,27 @@
     left: 50%;
     transform: translateX(-50%);
 }
-.myPort-detail__potho-toBe::before {
+.j-detail01 .myPort-detail_compare-A::after {
+    width: 100%;
+    height: 18%;
+    top: 57%;
+}
+.j-detail01 .myPort-detail_compare-B::after {
+    width: 100%;
+    height: 18%;
+    top: 39%;
+}
+.j-detail02 .myPort-detail_compare-A::after {
+    width: 99%;
+    height: 7%;
+    top: 76.5%;
+}
+.j-detail02 .myPort-detail_compare-B::after {
+    width: 96%;
+    height: 28%;
+    top: 51%;
+}
+.myPort-detail_compare-B::before {
     position: absolute;
     display: block;
     content: "▶";
@@ -559,36 +620,42 @@
     color: red;
     font-size: 20px;
 }
-.myPort-detail__potho-toBe.j-detail03::before,
+.myPort-detail__photo-toBe {
+    position: relative;
+    background: #f3f3f3;
+    /* background: #eee; */
+    padding: 12px;
+    border-radius: 5px;
+}
+.myPort-detail__photo-asIs::after,
+.myPort-detail__photo-toBe::after {
+    position: absolute;
+    display: block;
+    content: "";
+    border: 3px solid red;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.myPort-detail__photo-toBe::before {
+    position: absolute;
+    display: block;
+    content: "▶";
+    left: -17%;
+    top: 50%;
+    color: red;
+    font-size: 20px;
+}
+.myPort-detail__photo-toBe.j-detail03::before,
 .j-detail032::before {
     display: none;
 }
-.myPort-detail__potho-asIs.j-detail01::after {
-    width: 100%;
-    height: 18%;
-    top: 57%;
-}
-.myPort-detail__potho-toBe.j-detail01::after {
-    width: 100%;
-    height: 18%;
-    top: 35%;
-}
-.myPort-detail__potho-asIs.j-detail02::after {
-    width: 99%;
-    height: 7%;
-    top: 80%;
-}
-.myPort-detail__potho-toBe.j-detail02::after {
-    width: 96%;
-    height: 28%;
-    top: 49%;
-}
-.myPort-detail__potho-toBe.j-detail031::after {
+.myPort-detail__photo-toBe.j-detail031::after {
     width: 99%;
     height: 5%;
     top: 29%;
 }
-.myPort-detail__potho-toBe.j-detail031::before {
+.myPort-detail__photo-toBe.j-detail031::before {
     position: absolute;
     display: block;
     content: "";
@@ -599,7 +666,7 @@
     left: 50%;
     transform: translateX(-50%);
 }
-.myPort-detail__potho-toBe.j-detail032::after {
+.myPort-detail__photo-toBe.j-detail032::after {
     width: 96%;
     height: 46%;
     top: 2%;
@@ -927,11 +994,14 @@
     .myPort-detail__inner {
         padding: 0 1.6rem 0;
     }
-    .myPort-detail__chapters {
+    .myProt-detail__case {
         margin-bottom: 3.2rem;
     }
     .myPort-detail__point {
-        text-align: center;
+        /* text-align: center; */
+    }
+    .myProt-detail__chapter {
+        margin-bottom: 4rem;
     }
     .myPort-detail__link {
         width: 3rem;
@@ -943,15 +1013,16 @@
         font-size: 2.4rem;
         margin-bottom: 2rem;
     }
-    .myPort-detail__chapters-tle {
+    .myPort-detail__case-tle,
+    .myProt-detail__chapter-tle {
         font-size: 1.8rem;
-        margin-bottom: 1.8rem;
+        margin-bottom: 1.5rem;
     }
     .myPort-detail__sec {
         margin-bottom: 3rem;
     }
-    .myPort-detail__sec-tle,
-    .myPort-detail__chapters-tle-sub {
+    .myPort-detail__case-tle,
+    .myPort-detail__case-tle-sub {
         font-size: 1.6rem;
         margin-bottom: 0.8rem;
     }
@@ -960,11 +1031,8 @@
         display: flex;
         margin-bottom: 2rem;
     }
-    .myPort-detail__point-list {
-        font-size: 1.4rem;
-        margin-bottom: 0.4rem;
-    }
     .myPort-detail__point-item {
+        font-size: 1.4rem;
         margin-bottom: 0.4rem;
     }
     .myPort-detail__desc-list {
@@ -981,19 +1049,19 @@
     .myPort-detail__desc-item:last-child {
         margin-bottom: 0;
     }
-    .myPort-detail__sec-desc,
-    .myPort-detail__sec-text {
+    .myPort-detail__desc,
+    .myPort-detail__case {
         font-size: 1.4rem;
         margin-bottom: 2rem;
     }
-    .myPort-detail__sec-text {
+    .myPort-detail__case {
         width: 100%;
     }
-    .myPort-detail__sec-text br {
+    .myPort-detail__case br {
         display: none;
     }
-    .myPort-detail__sec-desc:last-child,
-    .myPort-detail__sec-text:last-child {
+    .myPort-detail__desc:last-child,
+    .myPort-detail__case:last-child {
         margin-bottom: 0;
     }
     .myPort-detail__sec-photo-wrap {
@@ -1004,15 +1072,15 @@
     .myPort-detail__sec-photo,
     .myPort-detail__sec-code {
         max-width: 100%;
-        width: 100%;
     }
     .myPort-detail__sec-photo-wrap .myPort-detail__sec-photo {
         display: none;
     }
     .myPort-detail__sec-photo img,
     .myPort-detail__sec-code img {
-        width: 100%;
-        margin-bottom: 8px;
+        width: 99%;
+        margin-bottom: 0.5rem;
+        box-shadow: 0.3rem 0.3rem 0.5rem rgba(170, 170, 170, 0.2);
     }
     .myPort-detail__sec-code-wrap {
         width: 100%;
@@ -1040,34 +1108,50 @@
         gap: 20px;
         width: 60%;
     }
-    .myPort-detail__potho {
+    .myPort-detail__photo {
         display: flex;
         justify-content: center;
         gap: 100px;
     }
-    .myPort-detail__potho-asIs,
-    .myPort-detail__potho-toBe {
+    .myPort-detail__swiper {
+        margin-bottom: 2rem;
+    }
+    .myPort-detail__swiper-item {
+        position: relative;
+        margin-bottom: 0.5rem;
+    }
+    .myPort-detail__swiper--caption {
+        bottom: 1.5rem;
+        left: 1rem;
+        font-size: 1.4rem;
+    }
+    .myPort-detail__photo-asIs,
+    .myPort-detail__photo-toBe {
         /* width: 50%; */
         margin: 0 auto;
     }
-    .myPort-detail__potho-asIs img,
-    .myPort-detail__potho-toBe img {
+    .myPort-detail__photo-asIs img,
+    .myPort-detail__photo-toBe img {
         width: 100%;
     }
     .myPort-detail__element {
         margin-bottom: 2rem;
     }
-    .myPort-detail__element-tle {
+    .myPort-detail__case-section {
+        margin-bottom: 2rem;
+    }
+    .myPort-detail__case-subtitle,
+    .myPort-detail__case-label {
         font-size: 1.6rem;
         margin-bottom: 1rem;
     }
-    .myPort-detail__element-txt {
+    .myPort-detail__case-desc {
         font-size: 1.4rem;
     }
-    .myPort-detail__explanation {
+    .myPort-detail__case-body {
         margin-bottom: 1.6rem;
     }
-    .myPort-detail__explanation--photo {
+    .myPort-detail__case-compare {
         gap: 2rem;
         padding: 0.5rem 1rem;
         border-radius: 0.5rem;
@@ -1078,16 +1162,41 @@
     .myPort-detail__element br {
         display: block;
     }
-    .myPort-detail__potho-toBe::before {
+    .myPort-detail__case-section br {
+        display: block;
+    }
+    .myPort-detail__photo-toBe::before {
         display: none;
     }
-    .myPort-detail__potho-asIs::after,
-    .myPort-detail__potho-toBe::after {
+    .myPort-detail__photo-asIs::after,
+    .myPort-detail__photo-toBe::after {
         border: 0.35rem solid red;
     }
     .myPort__overView-swiper li img {
         width: 100%;
         height: 100%;
+    }
+    .myPort-detail__case-list {
+        flex-direction: column;
+        margin-bottom: 1rem;
+        gap: 1.5rem;
+    }
+    .myPort-detail__case-item {
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .myPort-detaii__case-photo {
+        max-width: 150px;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    .myPort-detaii__case-photo img {
+        box-shadow: 3px 3px 15px rgba(170, 170, 170, 0.2);
+    }
+    .myPort-detaii__case-caption {
+        font-size: 1.4rem;
     }
     .flip {
         height: 16rem;

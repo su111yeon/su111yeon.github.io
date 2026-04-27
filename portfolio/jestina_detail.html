@@ -1,12 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<<<<<<< HEAD
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>suuyom's portfolio</title>
-        <link rel="stylesheet" href="/assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/style.css" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script defer src="/assets/js/common.js"></script>
@@ -18,351 +17,149 @@
             <a class="myPort-detail__link" href="/index.html">
                 <img src="/assets/images/ico/home.png" alt="홈 버튼" />
             </a>
-            <section class="myPort-detail__inner j-detail">
-                <section class="myPort-detail__chapters myPort-detail__point">
-                    <h3 class="myPort-detail__chapters-tle myPort-detail__keypoint">PROJECT KEY POINT</h3>
+            <div class="myPort-detail__inner j-detail">
+                <section class="myProt-detail__chapter myPort-detail__point">
+                    <h3 class="myProt-detail__chapter-tle myPort-detail__keypoint">PROJECT KEY POINT</h3>
                     <ul class="myPort-detail__point-list">
                         <li class="myPort-detail__point-item">1. 사용자 흐름을 고려한 UI 구조 개선</li>
                         <li class="myPort-detail__point-item">2. 상태 기반 UI 분기 및 인터랙션 구현</li>
                         <li class="myPort-detail__point-item">3. 외부 서비스 연동을 고려한 UI 설계 경험</li>
                     </ul>
                 </section>
-                <section class="myPort-detail__chapters">
-                    <h4 class="myPort-detail__chapters-tle">🧩 사례 A. 상품 상세 페이지 UI/UX 개선</h4>
-                    <section class="myPort-detail__sec">
-                        <div class="myPort-detail__explanation">
-                            <div class="myPort-detail__element">
-                                <span class="myPort-detail__element-tle">문제정의</span>
-                                <p class="myPort-detail__element-txt">
-                                    사은품마다 다른 형태의 배너가 상세 정보 영역에 혼재되어 있어 <br />
-                                    사용자가 상품 정보와 사은품 정보를 명확하게 구분하기 어려운 문제가 있었습니다.
-                                </p>
-                            </div>
-                            <div class="myPort-detail__element">
-                                <span class="myPort-detail__element-tle">개선 방향</span>
-                                <p class="myPort-detail__element-txt">
-                                    사은품 노출 영역을 별도로 분리하고, <span class="myPort-detail__highlight">일관된 UI 패턴으로 구성</span>하여 <br />
-                                    <span class="myPort-detail__highlight">정보 구조를 명확하게 정리</span>
-                                    했습니다.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="myPort-detail__explanation--photo">
-                            <div class="myPort-detail__element">
-                                <span class="myPort-detail__element-tle">[AS-IS]</span>
-                                <p class="myPort-detail__potho-asIs j-detail01">
-                                    <img src="../assets/images/jestina/gift_AS-IS.png" alt="사은품 영역 AS-IS" />
-                                </p>
-                            </div>
-                            <div class="myPort-detail__element">
-                                <span class="myPort-detail__element-tle">[TO-BE]</span>
-                                <p class="myPort-detail__potho-toBe j-detail01">
-                                    <img src="../assets/images/jestina/gift_TO-BE.png" alt="사은품 영역 TO-BE" />
-                                </p>
-                            </div>
-                        </div>
-                        <div class="myPort-detail__explanation">
-                            <div class="myPort-detail__element">
-                                <span class="myPort-detail__element-tle">결과</span>
-                                <p class="myPort-detail__element-txt">
-                                    상품 정보와 사은품 정보를 직관적으로 구분할 수 있게 되었으며,
-                                    <br />
-                                    사은품 증정 기간 및 기준 전달의 명확성을 개선했습니다.
-                                </p>
-                            </div>
-                        </div>
+                <article class="myProt-detail__case">
+                    <h4 class="myPort-detail__case-tle">🧩 사례 A. 상품 상세 페이지 UI/UX 개선</h4>
+                    <div class="myPort-detail__case-body">
+                        <section class="myPort-detail__case-section">
+                            <h5 class="myPort-detail__case-subtitle">문제정의</h5>
+                            <p class="myPort-detail__case-desc">
+                                사은품마다 다른 형태의 배너가 상세 정보 영역에 혼재되어 있어 <br />
+                                사용자가 상품 정보와 사은품 정보를 명확하게 구분하기 어려운 문제가 있었습니다.
+                            </p>
+                        </section>
+                        <section class="myPort-detail__case-section">
+                            <h5 class="myPort-detail__case-subtitle">개선 방향</h5>
+                            <p class="myPort-detail__case-desc">
+                                사은품 노출 영역을 별도로 분리하고, <span class="myPort-detail__highlight">일관된 UI 패턴으로 구성</span>하여 <br />
+                                <span class="myPort-detail__highlight">정보 구조를 명확하게 정리</span>
+                                했습니다.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="myPort-detail__case-compare j-detail01">
+                        <figure class="myPort-detail__case-compare-item myPort-detail_compare-A">
+                            <figcaption class="myPort-detail__case-label">[AS-IS]</figcaption>
+                            <img class="myPort-detail__photo-asIs" src="../assets/images/jestina/gift_AS-IS.png" alt="사은품 영역 AS-IS" />
+                        </figure>
+                        <figure class="myPort-detail__case-compare-item myPort-detail_compare-B">
+                            <figcaption class="myPort-detail__case-label">[TO-BE]</figcaption>
+                            <img class="myPort-detail__photo-toBe" src="../assets/images/jestina/gift_TO-BE.png" alt="사은품 영역 TO-BE" />
+                        </figure>
+                    </div>
+                    <section class="myPort-detail__case-section">
+                        <h5 class="myPort-detail__case-subtitle">결과</h5>
+                        <p class="myPort-detail__case-desc">
+                            상품 정보와 사은품 정보를 직관적으로 구분할 수 있게 되었으며,
+                            <br />
+                            사은품 증정 기간 및 기준 전달의 명확성을 개선했습니다.
+                        </p>
                     </section>
-                </section>
-                <section class="myPort-detail__chapters">
-                    <h4 class="myPort-detail__chapters-tle">🧩 사례 B. 장바구니 상태 분기 UI 개선</h4>
-                    <section class="myPort-detail__sec">
-                        <div class="myPort-detail__explanation">
-                            <div class="myPort-detail__element">
-                                <span class="myPort-detail__element-tle">문제정의</span>
-                                <p class="myPort-detail__element-txt">
-                                    상품 상태에 따른 UI 구분이 명확하지 않아<br />
-                                    사용자가 현재 상품 상태를 직관적으로 인지하기 어려운 문제가 있었습니다.
-                                </p>
-                            </div>
-                            <div class="myPort-detail__element">
-                                <span class="myPort-detail__element-tle">개선 방향</span>
-                                <p class="myPort-detail__element-txt">
-                                    품절 및 판매중지 상태를 정의하고,<br />
-                                    <span class="myPort-detail__highlight">상태에 따라 UI를 분기 처리</span> 하여 사용자 행동 가능 여부를 명확하게 구분했습니다.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="myPort-detail__explanation--photo">
-                            <div class="myPort-detail__element">
-                                <span class="myPort-detail__element-tle">[AS-IS]</span>
-                                <p class="myPort-detail__potho-asIs j-detail02">
-                                    <img src="../assets/images/jestina/cart_AS-IS.png" alt="장바구니 AS-IS" />
-                                </p>
-                            </div>
-                            <div class="myPort-detail__element">
-                                <span class="myPort-detail__element-tle">[TO-BE]</span>
-                                <p class="myPort-detail__potho-toBe j-detail02">
-                                    <img src="../assets/images/jestina/cart_TO-BE.png" alt="장바구니 TO-BE" />
-                                </p>
-                            </div>
-                        </div>
-                        <div class="myPort-detail__explanation">
-                            <div class="myPort-detail__element">
-                                <span class="myPort-detail__element-tle">결과</span>
-                                <p class="myPort-detail__element-txt">
-                                    상품 상태를 직관적으로 인지할 수 있도록 개선되어<br />
-                                    사용자 혼란을 줄이고 명확한 구매 흐름을 유도할 수 있도록 개선했습니다.
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-                </section>
-                <section class="myPort-detail__chapters">
-                    <h4 class="myPort-detail__chapters-tle">🧩 사례 C. 선물하기 기능 및 카카오톡 연동</h4>
-                    <section class="myPort-detail__sec">
-                        <div class="myPort-detail__explanation">
-                            <div class="myPort-detail__element">
-                                <span class="myPort-detail__element-tle">문제정의</span>
-                                <p class="myPort-detail__element-txt">
-                                    기존 선물하기 기능은 결제 완료 후 SMS로만 발송되어<br />
-                                    전달 방식이 제한적이고 사용자 선택의 폭이 좁은 문제가 있었습니다.
-                                </p>
-                            </div>
-                            <div class="myPort-detail__element">
-                                <span class="myPort-detail__element-tle">개선 방향</span>
-                                <p class="myPort-detail__element-txt">
-                                    카카오톡 연동을 통해 발송 채널을 확장하고, <br />
-                                    사용자가 상황에 맞는 전달 방식을 선택할 수 있도록 UI 흐름을 개선했습니다.
-                                </p>
-                                <p class="myPort-detail__element-txt">또한 메시지 전달 과정을 단순화하여 사용자 입력 경험을 개선했습니다.</p>
-                            </div>
-                            <div class="myPort-detail__element">
-                                <span class="myPort-detail__element-tle">구현 내용</span>
-                                <ul class="myPort-detail__desc-list">
-                                    <li class="myPort-detail__desc-item">카카오톡 친구 선택 기반의 발송 대상자 선택 UI 구성</li>
-                                    <li class="myPort-detail__desc-item">메시지 카드 선택 및 미리보기 인터페이스 설계</li>
-                                    <li class="myPort-detail__desc-item">SMS 및 카카오톡 발송 방식을 선택할 수 있는 UI 제공</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="myPort-detail__sec-text">
-                            <div class="myPort-detail__explanation--photo">
-                                <span class="myPort-detail__element-tle">[TO-BE]</span>
-                                <div class="myPort-detail__element">
-                                    <p class="myPort-detail__potho-toBe j-detail031">
-                                        <img src="../assets/images/jestina/giftCard01.png" alt="장바구니 AS-IS" />
-                                    </p>
-                                </div>
-                                <div class="myPort-detail__element">
-                                    <p class="myPort-detail__potho-toBe j-detail032">
-                                        <img src="../assets/images/jestina/giftCard02.png" alt="장바구니 TO-BE" />
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="myPort-detail__explanation">
-                            <div class="myPort-detail__element">
-                                <span class="myPort-detail__element-tle">결과</span>
-                                <p class="myPort-detail__element-txt">
-                                    <span class="myPort-detail__highlight">발송 채널 선택의 유연성</span>이 확보되고,<br />
-                                    <span class="myPort-detail__highlight">사용자 상황에 맞는 선물 전달 경험</span>을 제공할 수 있도록 개선했습니다.
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-                </section>
-            </section>
-        </main>
-=======
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>suuyom's portfolio</title>
-    <link rel="stylesheet" href="../assets/css/style.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script defer src="/assets/js/common.js"></script>
-  </head>
-  <style></style>
-  <body>
-    <main class="myPort-detail" id="myPortDetail">
-      <h2 class="myPort-detail__name">제이에스티나_ DETAIL REVIEW</h2>
-      <a class="myPort-detail__link" href="/index.html">
-        <img src="/assets/images/ico/home.png" alt="홈 버튼" />
-      </a>
-      <section class="myPort-detail__inner j-detail">
-        <section class="myPort-detail__chapters myPort-detail__point">
-          <h3 class="myPort-detail__chapters-tle myPort-detail__keypoint">PROJECT KEY POINT</h3>
-          <ul class="myPort-detail__point-list">
-            <li class="myPort-detail__point-item">1. 사용자 흐름을 고려한 UI 구조 개선</li>
-            <li class="myPort-detail__point-item">2. 상태 기반 UI 분기 및 인터랙션 구현</li>
-            <li class="myPort-detail__point-item">3. 외부 서비스 연동을 고려한 UI 설계 경험</li>
-          </ul>
-        </section>
-        <section class="myPort-detail__chapters">
-          <h4 class="myPort-detail__chapters-tle">🧩 사례 A. 상품 상세 페이지 UI/UX 개선</h4>
-          <section class="myPort-detail__sec">
-            <div class="myPort-detail__explanation">
-              <div class="myPort-detail__element">
-                <span class="myPort-detail__element-tle">문제정의</span>
-                <p class="myPort-detail__element-txt">
-                  사은품마다 다른 형태의 배너가 상세 정보 영역에 혼재되어 있어 <br />
-                  사용자가 상품 정보와 사은품 정보를 명확하게 구분하기 어려운 문제가 있었습니다.
-                </p>
-              </div>
-              <div class="myPort-detail__element">
-                <span class="myPort-detail__element-tle">개선 방향</span>
-                <p class="myPort-detail__element-txt">
-                  사은품 노출 영역을 별도로 분리하고, <span class="myPort-detail__highlight">일관된 UI 패턴으로 구성</span>하여 <br />
-                  <span class="myPort-detail__highlight">정보 구조를 명확하게 정리</span>
-                  했습니다.
-                </p>
-              </div>
-            </div>
-            <div class="myPort-detail__explanation--photo">
-              <div class="myPort-detail__element">
-                <span class="myPort-detail__element-tle">[AS-IS]</span>
-                <p class="myPort-detail__potho-asIs j-detail01">
-                  <img src="../assets/images/jestina/gift_AS-IS.png" alt="사은품 영역 AS-IS" />
-                </p>
-              </div>
-              <div class="myPort-detail__element">
-                <span class="myPort-detail__element-tle">[TO-BE]</span>
-                <p class="myPort-detail__potho-toBe j-detail01">
-                  <img src="../assets/images/jestina/gift_TO-BE.png" alt="사은품 영역 TO-BE" />
-                </p>
-              </div>
-            </div>
-            <div class="myPort-detail__explanation">
-              <div class="myPort-detail__element">
-                <span class="myPort-detail__element-tle">결과</span>
-                <p class="myPort-detail__element-txt">
-                  상품 정보와 사은품 정보를 직관적으로 구분할 수 있게 되었으며,
-                  <br />
-                  사은품 증정 기간 및 기준 전달의 명확성을 개선했습니다.
-                </p>
-              </div>
-            </div>
-          </section>
-        </section>
-        <section class="myPort-detail__chapters">
-          <h4 class="myPort-detail__chapters-tle">🧩 사례 B. 장바구니 상태 분기 UI 개선</h4>
-          <section class="myPort-detail__sec">
-            <div class="myPort-detail__explanation">
-              <div class="myPort-detail__element">
-                <span class="myPort-detail__element-tle">문제정의</span>
-                <p class="myPort-detail__element-txt">
-                  상품 상태에 따른 UI 구분이 명확하지 않아<br />
-                  사용자가 현재 상품 상태를 직관적으로 인지하기 어려운 문제가 있었습니다.
-                </p>
-              </div>
-              <div class="myPort-detail__element">
-                <span class="myPort-detail__element-tle">개선 방향</span>
-                <p class="myPort-detail__element-txt">
-                  품절 및 판매중지 상태를 정의하고,<br />
-                  <span class="myPort-detail__highlight">상태에 따라 UI를 분기 처리</span> 하여 사용자 행동 가능 여부를 명확하게 구분했습니다.
-                </p>
-              </div>
-            </div>
-            <div class="myPort-detail__explanation--photo">
-              <div class="myPort-detail__element">
-                <span class="myPort-detail__element-tle">[AS-IS]</span>
-                <p class="myPort-detail__potho-asIs j-detail02">
-                  <img src="../assets/images/jestina/cart_AS-IS.png" alt="장바구니 AS-IS" />
-                </p>
-              </div>
-              <div class="myPort-detail__element">
-                <span class="myPort-detail__element-tle">[TO-BE]</span>
-                <p class="myPort-detail__potho-toBe j-detail02">
-                  <img src="../assets/images/jestina/cart_TO-BE.png" alt="장바구니 TO-BE" />
-                </p>
-              </div>
-            </div>
-            <div class="myPort-detail__explanation">
-              <div class="myPort-detail__element">
-                <span class="myPort-detail__element-tle">결과</span>
-                <p class="myPort-detail__element-txt">
-                  상품 상태를 직관적으로 인지할 수 있도록 개선되어<br />
-                  사용자 혼란을 줄이고 명확한 구매 흐름을 유도할 수 있도록 개선했습니다.
-                </p>
-              </div>
-            </div>
-          </section>
-        </section>
-        <section class="myPort-detail__chapters">
-          <h4 class="myPort-detail__chapters-tle">🧩 사례 C. 선물하기 기능 및 카카오톡 연동</h4>
-          <section class="myPort-detail__sec">
-            <div class="myPort-detail__explanation">
-              <div class="myPort-detail__element">
-                <span class="myPort-detail__element-tle">문제정의</span>
-                <p class="myPort-detail__element-txt">
-                  기존 선물하기 기능은 결제 완료 후 SMS로만 발송되어<br />
-                  전달 방식이 제한적이고 사용자 선택의 폭이 좁은 문제가 있었습니다.
-                </p>
-              </div>
-              <div class="myPort-detail__element">
-                <span class="myPort-detail__element-tle">개선 방향</span>
-                <p class="myPort-detail__element-txt">
-                  카카오톡 연동을 통해 발송 채널을 확장하고, <br />
-                  사용자가 상황에 맞는 전달 방식을 선택할 수 있도록 UI 흐름을 개선했습니다.
-                </p>
-                <p class="myPort-detail__element-txt">또한 메시지 전달 과정을 단순화하여 사용자 입력 경험을 개선했습니다.</p>
-              </div>
-              <div class="myPort-detail__element">
-                <span class="myPort-detail__element-tle">구현 내용</span>
-                <ul class="myPort-detail__desc-list">
-                  <li class="myPort-detail__desc-item">카카오톡 친구 선택 기반의 발송 대상자 선택 UI 구성</li>
-                  <li class="myPort-detail__desc-item">메시지 카드 선택 및 미리보기 인터페이스 설계</li>
-                  <li class="myPort-detail__desc-item">SMS 및 카카오톡 발송 방식을 선택할 수 있는 UI 제공</li>
-                </ul>
-              </div>
-            </div>
-            <div class="myPort-detail__sec-text">
-              <div class="myPort-detail__explanation--photo">
-                <span class="myPort-detail__element-tle">[TO-BE]</span>
-                <div class="myPort-detail__element">
-                  <p class="myPort-detail__potho-toBe j-detail031">
-                    <img src="../assets/images/jestina/giftCard01.png" alt="장바구니 AS-IS" />
-                  </p>
-                </div>
-                <div class="myPort-detail__element">
-                  <p class="myPort-detail__potho-toBe j-detail032">
-                    <img src="../assets/images/jestina/giftCard02.png" alt="장바구니 TO-BE" />
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="myPort-detail__explanation">
-              <div class="myPort-detail__element">
-                <span class="myPort-detail__element-tle">결과</span>
-                <p class="myPort-detail__element-txt">
-                  <span class="myPort-detail__highlight">발송 채널 선택의 유연성</span>이 확보되고,<br />
-                  <span class="myPort-detail__highlight">사용자 상황에 맞는 선물 전달 경험</span>을 제공할 수 있도록 개선했습니다.
-                </p>
-              </div>
-            </div>
-          </section>
-        </section>
-      </section>
-    </main>
->>>>>>> 6428c7990aa6063d691c6fe607c332f04f336bba
+                </article>
+                <article class="myProt-detail__case">
+                    <h4 class="myPort-detail__case-tle">🧩 사례 B. 장바구니 상태 분기 UI 개선</h4>
+                    <div class="myPort-detail__case-body">
+                        <section class="myPort-detail__case-section">
+                            <h5 class="myPort-detail__case-subtitle">문제정의</h5>
+                            <p class="myPort-detail__case-desc">
+                                상품 상태에 따른 UI 구분이 명확하지 않아<br />
+                                사용자가 현재 상품 상태를 직관적으로 인지하기 어려운 문제가 있었습니다.
+                            </p>
+                        </section>
+                        <section class="myPort-detail__case-section">
+                            <h5 class="myPort-detail__case-subtitle">개선 방향</h5>
+                            <p class="myPort-detail__case-desc">
+                                품절 및 판매중지 상태를 정의하고,<br />
+                                <span class="myPort-detail__highlight">상태에 따라 UI를 분기 처리</span> 하여 사용자 행동 가능 여부를 명확하게 구분했습니다.
+                            </p>
+                        </section>
+                    </div>
 
-    <script>
-      AOS.init();
-      const mySwiper = new Swiper(".swiper-container", {
-          slidesPerView: "1",
-          spaceBetween: 1,
-          loop: false,
-          // If we need pagination
-          pagination: {
-              el: ".swiper-pagination",
-              clickable: true,
-              renderBullet: function (index, className) {
-                  return '<span class="' + className + '">' + menu[index] + "</span>";
-              },
-          },
-      });
-    </script>
-  </body>
+                    <div class="myPort-detail__case-compare j-detail02">
+                        <figure class="myPort-detail__case-compare-item myPort-detail_compare-A">
+                            <figcaption class="myPort-detail__case-label">[AS-IS]</figcaption>
+                            <img class="myPort-detail__photo-asIs" src="../assets/images/jestina/cart_AS-IS.png" alt="장바구니 AS-IS" />
+                        </figure>
+                        <figure class="myPort-detail__case-compare-item myPort-detail_compare-B">
+                            <figcaption class="myPort-detail__case-label">[TO-BE]</figcaption>
+                            <img class="myPort-detail__photo-toBe" src="../assets/images/jestina/cart_TO-BE.png" alt="장바구니 TO-BE" />
+                        </figure>
+                    </div>
+
+                    <section class="myPort-detail__case-section">
+                        <h5 class="myPort-detail__case-subtitle">결과</h5>
+                        <p class="myPort-detail__case-desc">
+                            상품 상태를 직관적으로 인지할 수 있도록 개선되어<br />
+                            사용자 혼란을 줄이고 명확한 구매 흐름을 유도할 수 있도록 개선했습니다.
+                        </p>
+                    </section>
+                </article>
+
+                <article class="myProt-detail__case">
+                    <h4 class="myPort-detail__case-tle">🧩 사례 C. 선물하기 기능 및 카카오톡 연동</h4>
+                    <div class="myPort-detail__case-body">
+                        <section class="myPort-detail__case-section">
+                            <h5 class="myPort-detail__case-subtitle">문제정의</h5>
+                            <p class="myPort-detail__case-desc">
+                                기존 선물하기 기능은 결제 완료 후 SMS로만 발송되어<br />
+                                전달 방식이 제한적이고 사용자 선택의 폭이 좁은 문제가 있었습니다.
+                            </p>
+                        </section>
+                        <section class="myPort-detail__case-section">
+                            <h5 class="myPort-detail__case-subtitle">개선 방향</h5>
+                            <p class="myPort-detail__case-desc">
+                                카카오톡 연동을 통해 발송 채널을 확장하고, <br />
+                                사용자가 상황에 맞는 전달 방식을 선택할 수 있도록 UI 흐름을 개선했습니다.
+                            </p>
+                            <p class="myPort-detail__case-desc">또한 메시지 전달 과정을 단순화하여 사용자 입력 경험을 개선했습니다.</p>
+                        </section>
+                        <section class="myPort-detail__case-section">
+                            <h5 class="myPort-detail__case-subtitle">구현 내용</h5>
+                            <ul class="myPort-detail__desc-list">
+                                <li class="myPort-detail__desc-item">카카오톡 친구 선택 기반의 발송 대상자 선택 UI 구성</li>
+                                <li class="myPort-detail__desc-item">메시지 카드 선택 및 미리보기 인터페이스 설계</li>
+                                <li class="myPort-detail__desc-item">SMS 및 카카오톡 발송 방식을 선택할 수 있는 UI 제공</li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div class="myPort-detail__case-compare j-detail03">
+                        <figure class="myPort-detail__case-compare-item myPort-detail_tobe">
+                            <figcaption class="myPort-detail__case-label">[TO-BE]</figcaption>
+                            <div class="myPort-detail__photo-toBe j-detail031">
+                                <img class="" src="../assets/images/jestina/giftCard01.png" alt="카카오톡 선물하기" />
+                            </div>
+                            <div class="myPort-detail__photo-toBe j-detail032">
+                                <img class="" src="../assets/images/jestina/giftCard02.png" alt="카카오톡 선물하기" />
+                            </div>
+                        </figure>
+                    </div>
+                </article>
+            </div>
+        </main>
+
+        <script>
+            AOS.init();
+            const mySwiper = new Swiper(".swiper-container", {
+                slidesPerView: "1",
+                spaceBetween: 1,
+                loop: false,
+                // If we need pagination
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                    renderBullet: function (index, className) {
+                        return '<span class="' + className + '">' + menu[index] + "</span>";
+                    },
+                },
+            });
+        </script>
+    </body>
 </html>
