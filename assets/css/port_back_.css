@@ -287,7 +287,7 @@
     display: block;
     font-size: 24px;
     font-weight: bold;
-    color: #a37a7a;
+    color: #c97373;
 }
 
 @media screen and (max-width: 1000px) {
@@ -575,6 +575,6 @@
         display: block;
         font-size: 24px;
         font-weight: bold;
-        color: #a37a7a;
+        color: #c97373;
     }
 }

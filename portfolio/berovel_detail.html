@@ -12,77 +12,17 @@
         <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" rel="stylesheet" />
         <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
     </head>
-    <style>
-        .myPort-detail__code-wrap {
-            margin-bottom: 20px;
-        }
-        .code-container {
-            width: 100% !important;
-            background: #1e1e1e;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .code-header {
-            background: #2d2d2d;
-            padding: 8px;
-        }
-
-        .code-container pre {
-            margin: 0;
-            padding: 0;
-            overflow-x: auto;
-            line-height: 1.4;
-        }
-
-        .code-container code {
-            font-family: "Fira Code", monospace;
-            font-size: 13px;
-            line-height: 1.4;
-        }
-
-        .code-container code span {
-            line-height: 1.4;
-        }
-        .dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            display: inline-block;
-            margin-right: 5px;
-        }
-
-        .red {
-            background: #ff5f56;
-        }
-        .yellow {
-            background: #ffbd2e;
-        }
-        .green {
-            background: #27c93f;
-        }
-        .code-caption {
-            padding: 0.8rem;
-            color: #dedede;
-        }
-        .flex {
-            display: flex;
-        }
-        .flex > div {
-            width: 50%;
-            max-width: 300px;
-        }
-    </style>
+    <style></style>
     <body>
         <!-- 공통 UI구조,컴포넌트구성,인터랙션UX,읽기화면UX,작가/사용자 역할 분리 구조 -->
         <main class="myPort-detail" id="myPortDetail">
-            <h2 class="myPort-detail__name">비로벨</h2>
+            <h2 class="myPort-detail__name">비로벨_ DETAIL REVIEW</h2>
             <a class="myPort-detail__link" href="../index.html">
                 <img src="/assets/images/ico/home.png" alt="홈 버튼" />
             </a>
-            <section class="myPort-detail__inner">
-                <section class="myPort-detail__chapters myPort-detail__point">
-                    <h3 class="myPort-detail__chapters-tle">PROJECT KEY POINT</h3>
+            <div class="myPort-detail__inner">
+                <section class="myProt-detail__chapter myPort-detail__point">
+                    <h3 class="myProt-detail__chapter-tle">PROJECT KEY POINT</h3>
                     <ul class="myPort-detail__point-list">
                         <li class="myPort-detail__point-item">Component Breakdown</li>
                         <li class="myPort-detail__point-item">State Handling</li>
@@ -90,134 +30,142 @@
                     </ul>
                 </section>
 
-                <section class="myPort-detail__chapters">
-                    <section class="myPort-detail__sec">
-                        <h3 class="myPort-detail__chapters-tle">★. Component Breakdown</h3>
-                        <div class="myPort-detail__sec-desc">
-                            자유연재 웹소설 플랫폼 구축 과정에서 메인, 작품 리스트, 작품 상세, 작가 등록 및 정산 페이지 등 주요 화면을 컴포넌트 단위로 분리하여 퍼블리싱했습니다. <br />
-                            반복적으로 사용되는 UI를 공통 구조로 설계해 재사용성과 유지보수성을 높였습니다.
-                        </div>
-                        <div class="myPort-detail__sec-text">
-                            <h4 class="myPort-detail__sec-tle">예시 1. 작품 카드 컴포넌트</h4>
-                            <!-- <div class="myPort-detail__sec-desc">
+                <section class="myProt-detail__chapter">
+                    <h3 class="myProt-detail__chapter-tle">★ Component Breakdown</h3>
+                    <div class="myPort-detail__desc">
+                        자유연재 웹소설 플랫폼 구축 과정에서 메인, 작품 리스트, 작품 상세, 작가 등록 및 정산 페이지 등 주요 화면을 컴포넌트 단위로 분리하여 퍼블리싱했습니다. <br />
+                        반복적으로 사용되는 UI를 공통 구조로 설계해 재사용성과 유지보수성을 높였습니다.
+                    </div>
+                    <article class="myPort-detail__case">
+                        <h4 class="myPort-detail__case-tle">예시 1. 작품 카드 컴포넌트</h4>
+                        <!-- <div class="myPort-detail__desc">
                                 작품 리스트, 추천 영역, 검색 결과 등에서 반복 노출되는 작품 정보를 <br />
                                 카드 단위로 분리하여 공통 UI로 구성했습니다.<br />
                                 썸네일, 제목, 작가명, 태그, 상태 정보 등 기본 구조는 유지하고<br />
                                 노출 정보만 상황에 따라 다르게 적용할 수 있도록 설계했습니다.
                             </div> -->
 
-                            <ul class="myPort-detail__desc-list">
-                                <li class="myPort-detail__desc-item">리스트/추천/검색 결과에서 공통 사용</li>
-                                <li class="myPort-detail__desc-item">썸네일, 제목, 작가명, 태그, 상태값 노출</li>
-                                <li class="myPort-detail__desc-item">데이터에 따라 뱃지/노출 항목 분기</li>
-                            </ul>
-                            <p>반복되는 리스트형 UI를 공통 카드 구조로 정리하여 화면 확장 시 재사용할 수 있도록 구성</p>
-                        </div>
-
-                        <div class="myPort-detail__sec-text">
-                            <h4 class="myPort-detail__sec-tle">예시 2. 선택 패턴을 통일한 컴포넌트</h4>
-                            <!-- <div class="myPort-detail__sec-desc">
+                        <ul class="myPort-detail__desc-list">
+                            <li class="myPort-detail__desc-item">리스트/추천/검색 결과에서 공통 사용</li>
+                            <li class="myPort-detail__desc-item">썸네일, 제목, 작가명, 태그, 상태값 노출</li>
+                            <li class="myPort-detail__desc-item">데이터에 따라 뱃지/노출 항목 분기</li>
+                        </ul>
+                        <p>반복되는 리스트형 UI를 공통 카드 구조로 정리하여 화면 확장 시 재사용할 수 있도록 구성</p>
+                    </article>
+                    <article class="myPort-detail__case">
+                        <h4 class="myPort-detail__case-tle">예시 2. 선택 패턴을 통일한 컴포넌트</h4>
+                        <!-- <div class="myPort-detail__desc">
                                 작품 리스트, 추천 영역, 검색 결과 등에서 반복 노출되는 작품 정보를 <br />
                                 카드 단위로 분리하여 공통 UI로 구성했습니다.<br />
                                 썸네일, 제목, 작가명, 태그, 상태 정보 등 기본 구조는 유지하고<br />
                                 노출 정보만 상황에 따라 다르게 적용할 수 있도록 설계했습니다.
                             </div> -->
-                            <p>반복되는 리스트형 UI를 공통 카드 구조로 정리하여 화면 확장 시 재사용할 수 있도록 구성</p>
-                            다양한 화면에서 사용되던 선택형 UI(라디오, 체크박스, 셀렉트 박스)를 공통 Selection 컴포넌트로 정리하고,<br />
-                            단일 선택/복수 선택/상태 표시를 props 기반으로 제어할 수 있도록 설계했습니다.<br />
-                            이를 통해 동일한 UI 패턴을 유지하면서도 다양한 화면에 유연하게 적용할 수 있도록 했습니다.
-                        </div>
-                    </section>
+                        <p>반복되는 리스트형 UI를 공통 카드 구조로 정리하여 화면 확장 시 재사용할 수 있도록 구성</p>
+                        다양한 화면에서 사용되던 선택형 UI(라디오, 체크박스, 셀렉트 박스)를 공통 Selection 컴포넌트로 정리하고,<br />
+                        단일 선택/복수 선택/상태 표시를 props 기반으로 제어할 수 있도록 설계했습니다.<br />
+                        이를 통해 동일한 UI 패턴을 유지하면서도 다양한 화면에 유연하게 적용할 수 있도록 했습니다.
+                    </article>
                 </section>
 
-                <section class="myPort-detail__chapters">
-                    <section class="myPort-detail__sec">
-                        <h3 class="myPort-detail__chapters-tle">★ State Handling</h3>
-                        <div class="myPort-detail__sec-desc">
-                            자유연재 웹소설 플랫폼 구축 과정에서 Vue.js 컴포넌트 구조를 기반으로 주요 화면을 퍼블리싱했습니다. <br />
-                            메인 페이지, 작품 리스트, 작품 상세, 작가 등록 및 정산 페이지 등 반복적으로 사용되는 UI를 컴포넌트 단위로 분리하여 화면을 구성했습니다.
-                        </div>
+                <section class="myProt-detail__chapter">
+                    <h3 class="myProt-detail__chapter-tle">★ State Handling</h3>
+                    <div class="myPort-detail__desc">
+                        자유연재 웹소설 플랫폼 구축 과정에서 Vue.js 컴포넌트 구조를 기반으로 주요 화면을 퍼블리싱했습니다. <br />
+                        메인 페이지, 작품 리스트, 작품 상세, 작가 등록 및 정산 페이지 등 반복적으로 사용되는 UI를 컴포넌트 단위로 분리하여 화면을 구성했습니다.
+                    </div>
 
-                        <div class="myPort-detail__sec-text">
-                            <h4 class="myPort-detail__sec-tle">예시 1. 사용자 유형에 따른 메뉴 분기</h4>
-                            <div class="myPort-detail__sec-desc">
-                                일반 사용자와 작가 사용자의 목적이 다르기 때문에<br />
-                                로그인 상태 및 권한에 따라 메뉴 구성과 진입 가능한 화면을 다르게 노출했습니다.<br />
-                                이를 통해 사용자 유형에 맞는 기능만 우선적으로 보여줄 수 있도록 구조를 설계했습니다.
-                            </div>
+                    <article class="myPort-detail__case">
+                        <h4 class="myPort-detail__case-tle">예시 1. 사용자 유형에 따른 메뉴 분기</h4>
+                        <div class="myPort-detail__desc">
+                            일반 사용자와 작가 사용자의 목적이 다르기 때문에<br />
+                            로그인 상태 및 권한에 따라 메뉴 구성과 진입 가능한 화면을 다르게 노출했습니다.<br />
+                            이를 통해 사용자 유형에 맞는 기능만 우선적으로 보여줄 수 있도록 구조를 설계했습니다.
                         </div>
-                        <div class="myPort-detail__sec-text">
-                            <h4 class="myPort-detail__sec-tle">예시 2. 작품 상태에 따른 노출 분기</h4>
-                            <ul>
-                                <li class="flex">
-                                    <div>
-                                        <figure class="myPort-detail__sec-photo">
-                                            <img src="../assets/images/berovel/detail/item_normal.png" alt="" />
-                                        </figure>
-                                        <p>인증된 사용자 ▶ 정상 노출</p>
-                                    </div>
-                                    <div>
-                                        <figure class="myPort-detail__sec-photo">
-                                            <img src="../assets/images/berovel/detail/item_normal--off.png" alt="" />
-                                        </figure>
-                                        <p>미인증 사용자 ▶ 이미지 블러 + 19 표시</p>
-                                    </div>
-                                </li>
-                            </ul>
-
-                            <div class="myPort-detail__sec-desc">
-                                사용자 성인 인증 여부에 따라 콘텐츠 노출을 분기하고, <br />
-                                비인증 사용자에게는 블라인드 처리된 UI를 제공하여 <br />
-                                접근 권한에 따른 콘텐츠 제어 흐름을 구현
-                            </div>
+                    </article>
+                    <article class="myPort-detail__case">
+                        <h4 class="myPort-detail__case-tle">예시 2. 작품 상태에 따른 노출 분기</h4>
+                        <ul class="myPort-detail__case-list">
+                            <li class="myPort-detail__case-item">
+                                <figure class="myPort-detaii__case-photo">
+                                    <img src="../assets/images/berovel/detail/state_adult-on.png" alt="" />
+                                </figure>
+                                <figcaption class="myPort-detaii__case-caption">
+                                    <p>인증된 사용자</p>
+                                    <p>▶ 정상 노출</p>
+                                </figcaption>
+                            </li>
+                            <li class="myPort-detail__case-item">
+                                <figure class="myPort-detaii__case-photo">
+                                    <img src="../assets/images/berovel/detail/state_adult-off.png" alt="" />
+                                </figure>
+                                <figcaption class="myPort-detaii__case-caption">
+                                    <p>미인증 사용자</p>
+                                    <p>
+                                        ▶ 콘텐츠 블라인드 <br />
+                                        + 인증 유도 UI 제공
+                                    </p>
+                                </figcaption>
+                            </li>
+                            <li class="myPort-detail__case-item">
+                                <figure class="myPort-detaii__case-photo">
+                                    <img src="../assets/images/berovel/detail/state_adult-none.png" alt="" />
+                                </figure>
+                                <figcaption class="myPort-detaii__case-caption">
+                                    <p>전체 이용 가능</p>
+                                    <p>▶ 제한 없이 콘텐츠 노출</p>
+                                </figcaption>
+                            </li>
+                        </ul>
+                        <div class="myPort-detail__desc">
+                            사용자 성인 인증 여부에 따라 콘텐츠 노출을 분기하고, 미인증 사용자에게는 블라인드 처리된 UI를 제공하여 <br />
+                            접근 권한에 따른 콘텐츠 제어 흐름을 구현했습니다.
                         </div>
-                        <div class="myPort-detail__sec-text">
-                            <h4 class="myPort-detail__sec-tle">예시 3. 데이터 유무에 따른 화면 처리</h4>
-
-                            <div class="swiper-container">
-                                <div class="swiper-wrapper">
-                                    <div class="code-container swiper-slide">
-                                        <figure class="myPort-detail__sec-photo">
-                                            <img src="../assets/images/berovel/detail/mypage_main--nodata.png" alt="" />
-                                        </figure>
-                                        <p class="code-caption">사용자-작가: 리스트 데이터 없는 경우</p>
-                                    </div>
-                                    <div class="code-container swiper-slide">
-                                        <figure class="myPort-detail__sec-photo">
-                                            <img src="../assets/images/berovel/detail/mypage_main--data.png" alt="" />
-                                        </figure>
-                                        <p class="code-caption">사용자-작가: 리스트 데이터 있는 경우</p>
-                                    </div>
+                    </article>
+                    <article class="myPort-detail__case">
+                        <h4 class="myPort-detail__case-tle">예시 3. 데이터 유무에 따른 화면 처리</h4>
+                        <div class="myPort-detail__swiper swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="myPort-detail__swiper-item swiper-slide">
+                                    <figure class="myPort-detail__sec-photo">
+                                        <img src="../assets/images/berovel/detail/mypage_main--nodata.png" alt="" />
+                                    </figure>
+                                    <p class="myPort-detail__swiper--caption">사용자-작가: 리스트 데이터 없는 경우</p>
+                                </div>
+                                <div class="myPort-detail__swiper-item swiper-slide">
+                                    <figure class="myPort-detail__sec-photo">
+                                        <img src="../assets/images/berovel/detail/mypage_main--data.png" alt="" />
+                                    </figure>
+                                    <p class="myPort-detail__swiper--caption">사용자-작가: 리스트 데이터 있는 경우</p>
                                 </div>
                             </div>
-                            <div class="myPort-detail__sec-desc">
-                                리스트 데이터가 없는 경우, 등록된 작품이 없는 경우, 검색 결과가 없는 경우 등<br />
-                                빈 상태 화면을 별도로 구성하여 사용자가 다음 행동을 이해할 수 있도록 했습니다.<br />
-                                단순 비노출이 아닌 안내 메시지와 액션을 함께 제공하는 방향으로 정리했습니다.
-                            </div>
                         </div>
-                        <!-- <figure class="myPort-detail__sec-photo">
+                        <div class="myPort-detail__desc">
+                            리스트 데이터가 없는 경우, 등록된 작품이 없는 경우, 검색 결과가 없는 경우 등<br />
+                            빈 상태 화면을 별도로 구성하여 사용자가 다음 행동을 이해할 수 있도록 했습니다.<br />
+                            단순 비노출이 아닌 안내 메시지와 액션을 함께 제공하는 방향으로 정리했습니다.
+                        </div>
+                    </article>
+                    <!-- <figure class="myPort-detail__sec-photo">
                             <img src="/assets/images/berovel/detail/myPort-detail__chpter1-thum1.png" alt="" />
                         </figure> -->
-                    </section>
                 </section>
-                <!-- <section class="myPort-detail__chapters">
+                <!-- <section class="myProt-detail__case">
                     <section class="myPort-detail__sec">
-                        <h3 class="myPort-detail__chapters-tle">2. 시맨틱 마크업 기반 UI 구현</h3>
-                        <h4 class="myPort-detail__sec-tle">2.1 콘텐츠에 의미 정의 및 목적부여</h4>
-                        <h4 class="myPort-detail__chapters-tle-sub">&lt; 컴포넌트를 사용하는 이유 &gt;</h4>
+                        <h3 class="myPort-detail__case-tle">2. 시맨틱 마크업 기반 UI 구현</h3>
+                        <h4 class="myPort-detail__case-tle">2.1 콘텐츠에 의미 정의 및 목적부여</h4>
+                        <h4 class="myPort-detail__case-tle-sub">&lt; 컴포넌트를 사용하는 이유 &gt;</h4>
                         <figure class="myPort-detail__sec-photo">
                             <img src="/assets/images/berovel/detail/myPort-detail__chpter1-thum1.png" alt="" />
                         </figure>
-                        <div class="myPort-detail__sec-desc">
+                        <div class="myPort-detail__desc">
                             플랫폼 내 다양한 콘텐츠 구조를 보다 명확하게 전달할 수 있도록 시맨틱 태그를 활용해 마크업을 구성했습니다. <br />
                             콘텐츠 영역의 의미를 구분하고, 사용자와 개발자가 모두 이해하기 쉬운 구조를 만드는 데 중점을 두었습니다.
                         </div>
-                        <p class="myPort-detail__sec-desc">- CategoryList.vue 라는 구조를 동일하게 사용하여 중복코드 사용을 줄였습니다.</p>
+                        <p class="myPort-detail__desc">- CategoryList.vue 라는 구조를 동일하게 사용하여 중복코드 사용을 줄였습니다.</p>
                     </section>
                     <section class="myPort-detail__sec">
-                        <h4 class="myPort-detail__sec-tle">`&lt;section&gt;` `&lt;article&gt;`의 차이점 및 div 사용 지양이 의미하는 바</h4>
-                        <div class="myPort-detail__sec-text">
+                        <h4 class="myPort-detail__case-tle">`&lt;section&gt;` `&lt;article&gt;`의 차이점 및 div 사용 지양이 의미하는 바</h4>
+                        <div class="myPort-detail__case">
                             <p>시멘틱마크업을 하면서 제일 고민한 부분이 section태그를 쓸 것인지, article 태그를 쓸 것인지에 대한 것이었습니다.</p>
                             <dl class="myPort-detail__desc-list">
                                 <dt>1. 의미와 목적</dt>
@@ -239,7 +187,7 @@
                                     <p>`&lt;article&gt;` : 자체적으로 완전한 콘텐츠이며, 제목과 본문을 포함하는 것이 일반적입니다.</p>
                                 </dd>
                             </dl>
-                            <div class="myPort-detail__sec-text">
+                            <div class="myPort-detail__case">
                                 두 태그의 차이점을 찾아보고 예시를 계속 고민하였고, 정답은 계속해서 사용해보는 것 밖에 없다고 생각하여 매 이벤트, 기획전을 작업할 때 기획서와 디자인 요소 확인 후 시멘틱
                                 태그를 먼저 고려하여 작업하였습니다.
                             </div>
@@ -254,22 +202,22 @@
                         </div>
                     </section>
                 </section> -->
-                <section class="myPort-detail__chapters">
-                    <h3 class="myPort-detail__chapters-tle">3. BEM 방법론을 활용한 SCSS 구조화</h3>
-                    <div class="myPort-detail__sec-desc">
+                <section class="myProt-detail__chapter">
+                    <h3 class="myProt-detail__chapter-tle">3. BEM 방법론을 활용한 SCSS 구조화</h3>
+                    <div class="myPort-detail__desc">
                         자유연재 웹소설 플랫폼 구축 과정에서 Vue.js 컴포넌트 구조를 기반으로 주요 화면을 퍼블리싱했습니다. <br />
                         메인 페이지, 작품 리스트, 작품 상세, 작가 등록 및 정산 페이지 등 반복적으로 사용되는 UI를 컴포넌트 단위로 분리하여 화면을 구성했습니다.
                     </div>
 
                     <section class="myPort-detail__sec">
-                        <div class="myPort-detail__sec-text">
-                            <h4 class="myPort-detail__sec-tle">3.1 작업 포인트</h4>
+                        <article class="myPort-detail__case">
+                            <h4 class="myPort-detail__case-tle">3.1 작업 포인트</h4>
                             <ul class="myPort-detail__desc-list">
                                 <li class="myPort-detail__desc-item">BEM 네이밍을 통한 클래스 역할 구분</li>
                                 <li class="myPort-detail__desc-item">SCSS를 활용한 중첩 및 스타일 구조화</li>
                                 <li class="myPort-detail__desc-item">공통/개별 스타일 분리를 통한 유지보수성 향상</li>
                             </ul>
-                            <h4 class="myPort-detail__sec-tle">3.2 기대 효과</h4>
+                            <h4 class="myPort-detail__case-tle">3.2 기대 효과</h4>
                             <ul class="myPort-detail__desc-list">
                                 <li class="myPort-detail__desc-item">스타일 충돌 최소화</li>
                                 <li class="myPort-detail__desc-item">코드 재사용성 향상</li>
@@ -278,7 +226,7 @@
                             <figure class="myPort-detail__sec-code">
                                 <img src="/assets/images/berovel/detail/myPort-detail__chpter2-code1.png" alt="" />
                             </figure>
-                        </div>
+                        </article>
                     </section>
                 </section>
                 <!--   <section class="myPort-detail__thum">
@@ -286,7 +234,7 @@
                         <img src="/assets/images/berovel/main_pc.png" alt="비로벨 메인 썸네일" />
                     </div>
                 </section> -->
-            </section>
+            </div>
         </main>
 
         <script>
