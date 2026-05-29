@@ -199,98 +199,40 @@ main {
 .baloBag .effect_wrap {
     position: absolute;
     top: 14%;
+    left: 58.7%;
     width: 32.2%;
     height: 40rem;
-    left: 58.7%;
-    background-position: 0 -100%;
-    animation: rolling_txt 8s cubic-bezier(0.4, 0, 1, 1) infinite;
-    background-repeat: repeat-y;
-    background-size: 100% auto;
-    background-image: url(../../assets/images/jestina/balloBag/rolling.png);
-    text-indent: -9999px;
-    opacity: 1;
-    background-position: 0px 28rem;
+    overflow: hidden;
 }
+
+.baloBag .effect_wrap img {
+    width: 100%;
+    animation: rolling_txt 20s cubic-bezier(0.4, 0, 1, 1) infinite;
+}
+
 @keyframes rolling_txt {
-    /* 첫번째 이미지 */
     0% {
-        background-position: 0 600px;
-        background-position: 0 15rem;
+        transform: translateY(-60rem); /* 마지막 사진에서 여백 안 나오게 조정 */
     }
-    20% {
-        background-position: 0px 27rem;
-    }
-    21% {
-        background-position: 0px 27rem;
-    }
-    22% {
-        background-position: 0px 28rem;
-    }
-    23% {
-        background-position: 0px 28rem;
-    }
-    24% {
-        background-position: 0px 29.5rem;
-    }
+
+    20%,
     25% {
-        background-position: 0px 29.5rem;
+        transform: translateY(-40rem);
     }
-    /* 두번째 이미지 */
-    40% {
-        background-position: 0px 42rem;
-    }
-    41% {
-        background-position: 0px 42rem;
-    }
-    42% {
-        background-position: 0px 43rem;
-    }
-    43% {
-        background-position: 0px 43rem;
-    }
-    44% {
-        background-position: 0px 44rem;
-    }
+
+    40%,
     50% {
-        background-position: 0px 44rem;
+        transform: translateY(-26rem);
     }
-    /* 세번째 이미지 */
-    65% {
-        background-position: 0px 56rem;
-    }
-    66% {
-        background-position: 0px 56rem;
-    }
-    67% {
-        background-position: 0px 57rem;
-    }
-    68% {
-        background-position: 0px 57rem;
-    }
-    70% {
-        background-position: 0px 58rem;
-    }
+
+    65%,
     75% {
-        background-position: 0px 59rem;
+        transform: translateY(-12rem);
     }
-    /* 네번째 이미지 */
-    86% {
-        background-position: 0px 70rem;
-    }
-    87% {
-        background-position: 0px 70rem;
-    }
-    88% {
-        background-position: 0px 71rem;
-    }
-    89% {
-        background-position: 0px 71rem;
-    }
-    90% {
-        background-position: 0px 72rem;
-    }
+
+    86%,
     100% {
-        background-position: 0px 72rem;
+        transform: translateY(0);
     }
 }
 .baloBag .featured_gif-wrap {
