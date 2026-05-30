@@ -33,9 +33,10 @@ button {
 img {
     vertical-align: middle;
 }
-.wrap {
+.portfolio-main {
     width: 100%;
 }
+<<<<<<< HEAD
 
 /* common */
 .myportMain {
@@ -55,6 +56,38 @@ img {
         margin-bottom: 24px;
     }
 }
+=======
+/* common */
+.main__section {
+    display: block;
+    box-sizing: border-box;
+    /* max-width: 1200px; */
+    width: 100%;
+    padding: 0 24px;
+    margin-bottom: 56px;
+    padding-top: 56px;
+    &-inner {
+        max-width: 1000px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    &-tle {
+        font-size: 36px;
+        margin-bottom: 24px;
+        color: #292929;
+        text-transform: uppercase;
+    }
+    &-sub {
+        font-size: 18px;
+        margin-bottom: 24px;
+    }
+}
+@mixin inner {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+>>>>>>> ef618a7e9e9275f1c4d3736f022e2a38fc33ed6e
 /* intro */
 .intro {
     position: relative;
@@ -69,6 +102,7 @@ img {
     background-repeat: no-repeat;
     padding-top: 6rem;
 }
+<<<<<<< HEAD
 .intro::after {
     position: absolute;
     display: block;
@@ -95,6 +129,36 @@ img {
     width: 140px;
     height: 140px;
     background: #d9d9d9;
+=======
+.intro {
+    &::after {
+        position: absolute;
+        display: block;
+        content: "";
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 5;
+    }
+    &__top {
+        position: relative;
+        font-size: 32px;
+        line-height: 1.5;
+        font-weight: 500;
+        text-align: center;
+        color: #fff;
+        margin-bottom: 50px;
+        z-index: 10;
+    }
+    &__profile {
+        width: 140px;
+        height: 140px;
+        background: #d9d9d9;
+    }
+>>>>>>> ef618a7e9e9275f1c4d3736f022e2a38fc33ed6e
 }
 .intro__coding {
     position: relative;
@@ -104,6 +168,7 @@ img {
     max-width: 800px;
     margin: 0 auto;
     color: #f9d849;
+<<<<<<< HEAD
 }
 .intro__coding-item {
     display: flex;
@@ -122,6 +187,17 @@ img {
     margin: 0;
     margin-left: 5px;
     color: #4a9df8;
+=======
+    &-line {
+        display: flex;
+        &::after {
+            content: ",";
+        }
+        &:last-child::after {
+            content: "";
+        }
+    }
+>>>>>>> ef618a7e9e9275f1c4d3736f022e2a38fc33ed6e
 }
 .intro__coding-var {
     color: #99d6f5;
@@ -129,13 +205,71 @@ img {
 .intro__coding-indentifier {
     color: #2e68ff;
 }
+<<<<<<< HEAD
 .intro__coding-keyword {
     color: #ffffff;
 }
 .intro__coding-lang {
     color: #c5e294;
+=======
+.intro__coding-key {
+    color: #ffffff;
+    margin-left: 65px;
+    flex-shrink: 0;
+    margin-right: 1rem;
+    &::after {
+        content: " :";
+        display: inline-block;
+        margin-left: 4px;
+    }
 }
-
+.intro__coding-value {
+    color: #c5e294;
+    &::before,
+    &::after {
+        content: " '";
+        display: inline-block;
+    }
+    &--list {
+        display: inline;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        &::before,
+        &::after {
+            color: #f9d849;
+        }
+        &::before {
+            content: "[";
+        }
+        &::after {
+            content: "]";
+        }
+    }
+    &--item {
+        display: inline;
+        &::before,
+        &::after {
+            display: inline-block;
+        }
+        &::before {
+            content: " '";
+        }
+        &::after {
+            content: "' ,";
+        }
+        &:last-child::after {
+            content: "";
+        }
+    }
+    /* 공통 (문자열처럼 보이게) */
+    &:not(.intro__coding-value--list)::before,
+    &:not(.intro__coding-value--list)::after {
+        content: "'";
+    }
+>>>>>>> ef618a7e9e9275f1c4d3736f022e2a38fc33ed6e
+}
 /* header*/
 .header {
     position: fixed;
@@ -152,6 +286,7 @@ img {
     background: #fff;
     border-radius: 50px;
     transition: all 0.5s;
+<<<<<<< HEAD
 }
 .header.topfixed {
     max-width: 100%;
@@ -200,10 +335,63 @@ img {
     letter-spacing: 1.2;
 }
 
+=======
+    nav {
+        margin-left: 0;
+        text-transform: uppercase;
+    }
+    &.topfixed {
+        max-width: 100%;
+        top: 0;
+        border-radius: 0;
+        box-shadow: 1px 1px 5px #eeeeee;
+        animation: TopHeader 0.3s;
+    }
+    &__logo {
+        margin-right: 2.4rem;
+        img {
+            display: block;
+        }
+    }
+    &__list {
+        display: flex;
+    }
+    &__item {
+        font-size: 1.3rem;
+        margin-right: 2.4rem;
+    }
+    &__name {
+        font-size: 1.2rem;
+        color: #4b8752;
+        margin-left: auto;
+        margin-right: 2rem;
+    }
+    &__link {
+        display: inline-block;
+        width: 100%;
+        font-size: 16px;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 1.2;
+        }
+    }
+}
+@keyframes TopHeader {
+    0% {
+        top: 5rem;
+    }
+    100% {
+        top: 0;
+    }
+}
+>>>>>>> ef618a7e9e9275f1c4d3736f022e2a38fc33ed6e
 /*========================
 ========  about ========
 ========================*/
 .about {
+<<<<<<< HEAD
     box-sizing: border-box;
     display: block;
     padding-top: 56px;
@@ -216,6 +404,28 @@ img {
 .about__inner {
     max-width: 1000px;
     margin: 0 auto;
+=======
+    &__tags {
+        display: flex;
+        font-size: 15px;
+    }
+    &__tag {
+        display: flex;
+        margin-right: 10px;
+        padding: 4px 12px;
+        font-weight: bold;
+        color: #fff;
+        background: #000000;
+        border-radius: 5rem;
+        &::before {
+            content: "#";
+            margin-right: 4px;
+        }
+    }
+}
+.about__inner {
+    @include inner;
+>>>>>>> ef618a7e9e9275f1c4d3736f022e2a38fc33ed6e
 }
 .about__wrap {
     display: flex;
@@ -271,6 +481,7 @@ img {
     word-break: keep-all;
 }
 
+<<<<<<< HEAD
 .about-intro__top {
     font-size: 28px;
     font-weight: bold;
@@ -292,11 +503,35 @@ img {
 }
 .about-intro__desc-inner:last-child {
     margin-bottom: 0;
-}
+=======
+.about-greeting {
+    &__heading {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        word-break: keep-all;
+        width: 70%;
+    }
+    &__content {
+        word-break: keep-all;
+        max-width: 780px;
+        font-size: 18px;
+        margin-bottom: 30px;
 
+        p {
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+>>>>>>> ef618a7e9e9275f1c4d3736f022e2a38fc33ed6e
+}
 /*========================
 ========  myskill ========
 ========================*/
+<<<<<<< HEAD
 .myskill {
     min-height: auto;
 }
@@ -361,17 +596,69 @@ img {
     content: "✔️";
     margin-right: 5px;
 }
+=======
+.myskill__tle-more {
+    font-size: 24px;
+}
+.myskill-top {
+    margin-bottom: 36px;
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        width: calc(33.333% - 30px);
+        width: 33.3333%;
+        font-size: 14px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    &__name {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    &__text {
+        margin-bottom: 8px;
+        &::before {
+            content: "☑️";
+            display: inline-block;
+            margin-right: 5px;
+        }
+    }
+}
+.myskill-top__text .myskill-bottom__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.myskill-bottom {
+    &__item {
+        width: auto;
+        font-size: 14px;
+        font-weight: 400;
+        margin-right: 24px;
+        margin-bottom: 8px;
+        &::before {
+            content: "✔️";
+            margin-right: 5px;
+        }
+    }
+}
+>>>>>>> ef618a7e9e9275f1c4d3736f022e2a38fc33ed6e
 /*========================
 ========  myProject ========
 ========================*/
 .myProject {
     min-height: auto;
 }
+<<<<<<< HEAD
 .myProject__inner {
     max-width: 1000px;
     width: 100%;
     margin: 0 auto;
 }
+=======
+>>>>>>> ef618a7e9e9275f1c4d3736f022e2a38fc33ed6e
 .myProject__list {
     width: 100%;
     display: flex;
@@ -404,15 +691,24 @@ img {
 }
 .myProject__thum {
     width: 100%;
+<<<<<<< HEAD
     height: 250px;
 }
 .myProject__thum img {
     width: 100%;
     height: 100%;
+=======
+    height: 300px;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+>>>>>>> ef618a7e9e9275f1c4d3736f022e2a38fc33ed6e
 }
 /*========================
 ========  mywork ========
 ========================*/
+<<<<<<< HEAD
 .myWork {
 }
 .myWork__inner {
@@ -431,6 +727,13 @@ img {
     margin-bottom: 18px;
     text-align: center;
 }
+=======
+.myWork__name {
+    font-size: 36px;
+    margin-bottom: 18px;
+    text-align: center;
+}
+>>>>>>> ef618a7e9e9275f1c4d3736f022e2a38fc33ed6e
 .myWork__name-sub {
     display: block;
     font-size: 14px;
@@ -602,12 +905,15 @@ img {
 .myStudy {
     margin-bottom: 56px;
 }
+<<<<<<< HEAD
 .myStudy__tle {
     font-size: 30px;
     font-weight: bold;
     text-transform: uppercase;
     color: #292929;
 }
+=======
+>>>>>>> ef618a7e9e9275f1c4d3736f022e2a38fc33ed6e
 .myStudy__inner {
     max-width: 1000px;
     margin: 0 auto;
@@ -650,6 +956,7 @@ img {
     .intro {
         align-items: center;
         padding: 0;
+<<<<<<< HEAD
     }
     .intro__top {
         font-size: 2rem;
@@ -662,12 +969,28 @@ img {
     }
     .intro__coding-left {
         margin-left: 3rem;
+=======
+        &__top {
+            font-size: 2.2rem;
+            line-height: 1.5;
+            margin-bottom: 2rem;
+        }
+    }
+    .intro__coding {
+        font-size: 1.6rem;
+        line-height: 1.75;
+        &-key {
+            margin-left: 2.2rem;
+            margin-right: 0.5rem;
+        }
+>>>>>>> ef618a7e9e9275f1c4d3736f022e2a38fc33ed6e
     }
 }
 @media only screen and (max-width: 768px) {
     html {
         font-size: 62.5%;
     }
+<<<<<<< HEAD
     .header {
         width: 95%;
     }
@@ -724,12 +1047,61 @@ img {
     }
     .about-intro__desc {
         padding-right: 0;
+=======
+    /* header*/
+    .header {
+        width: 95%;
+        height: 6rem;
+        font-size: 1.2rem;
+        border-radius: 5rem;
+        &.topfixed {
+            width: 100%;
+        }
+        &__item {
+            font-size: 1.6rem;
+            margin-right: 1.8rem;
+        }
+        &__name {
+            font-size: 1.3rem;
+            margin-right: 3rem;
+        }
+        &__link {
+            font-size: 1.5rem;
+            &:hover {
+                font-size: 1.6rem;
+            }
+        }
+    }
+    /* common */
+    .main__section {
+        max-width: 768px;
+        padding: 2rem 1.4rem 0;
+        margin-bottom: 4rem;
+        &-tle {
+            font-size: 2rem;
+            margin-bottom: 1.2rem;
+        }
+        &-sub {
+            font-size: 1.8rem;
+            margin-bottom: 2.4rem;
+        }
+    }
+    .intro {
+        &__top {
+            font-size: 2rem;
+        }
+    }
+    .intro__coding {
+        font-size: 1.6rem;
+        padding: 0 2rem;
+>>>>>>> ef618a7e9e9275f1c4d3736f022e2a38fc33ed6e
     }
 
     /*========================
   ========  about ========
   ========================*/
     .about {
+<<<<<<< HEAD
         padding-top: 36px;
     }
     .about__wrap {
@@ -741,10 +1113,57 @@ img {
     .about-intro__desc-inner {
         font-size: 1.4rem;
         margin-bottom: 0.6rem;
+=======
+        &__tags {
+            flex-wrap: wrap;
+            width: 100%;
+            font-size: 1.4rem;
+            gap: 1rem 0;
+        }
+        &__tag {
+            margin-right: 1rem;
+            padding: 0.5rem 1.2rem;
+            &::before {
+                margin-right: 0.2rem;
+            }
+        }
+        &-more {
+            display: none;
+        }
     }
+    .about-greeting {
+        &__heading {
+            font-size: 2rem;
+            margin-bottom: 2.4rem;
+        }
+        &__content {
+            word-break: keep-all;
+            font-size: 1.6rem;
+            margin-bottom: 2.4rem;
+
+            p {
+                width: 100%;
+                margin-bottom: 1.6rem;
+            }
+        }
+>>>>>>> ef618a7e9e9275f1c4d3736f022e2a38fc33ed6e
+    }
+    .about__wrap {
+        display: block;
+    }
+    .about-left {
+        margin: 0 auto;
+    }
+    .about-profile {
+        width: 18rem;
+        height: 18rem;
+        background-size: 13rem;
+    }
+
     /*========================
   ========  myskill ========
   ========================*/
+<<<<<<< HEAD
     .myportMain_sec-tle.myStudy__tle {
         margin-bottom: 0.8rem;
     }
@@ -794,21 +1213,96 @@ img {
         margin-bottom: 24px;
     }
     /*========================
+=======
+    .myskill__tle-more {
+        font-size: 2rem;
+    }
+    .myskill-top {
+        margin-bottom: 36px;
+        &__list {
+            flex-direction: column;
+        }
+        &__item {
+            width: 100%;
+            margin-bottom: 1.6rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        &__name {
+            font-size: 1.8rem;
+            margin-bottom: 0.8rem;
+        }
+        &__text {
+            font-size: 1.4rem;
+            margin-bottom: 0.7rem;
+            &::before {
+                margin-right: 0.5rem;
+            }
+        }
+    }
+    .myskill-bottom {
+        &__item {
+            width: auto;
+            font-size: 1.4rem;
+            margin-left: 0;
+            margin-bottom: 0.7rem;
+            &::before {
+                margin-right: 0.5rem;
+            }
+        }
+    }
+    /*========================
+  ========  mywork ========
+  ========================*/
+    .myWork__thum {
+        width: 100%;
+        height: 300px;
+    }
+    .myWork__innerWrap {
+        flex-direction: column;
+        padding: 16px;
+    }
+    .myWork__right {
+        width: 100%;
+        margin-top: 12px;
+        padding: 0;
+    }
+    .myWork-desc__item {
+        margin-bottom: 24px;
+    }
+    /*========================
+>>>>>>> ef618a7e9e9275f1c4d3736f022e2a38fc33ed6e
     ========  myProject ========
     ========================*/
     .myProject {
         display: block;
+<<<<<<< HEAD
         min-height: auto;
+=======
+>>>>>>> ef618a7e9e9275f1c4d3736f022e2a38fc33ed6e
     }
     .myProject__item {
         width: 100%;
         margin-bottom: 1.6rem;
+<<<<<<< HEAD
     }
     .myProject__thum {
         height: auto;
     }
     .myProject__item:last-child {
         margin-bottom: 0;
+    }
+    .myProject__hover {
+        padding: 2rem;
+=======
+        &:last-child {
+            margin-bottom: 0;
+        }
+>>>>>>> ef618a7e9e9275f1c4d3736f022e2a38fc33ed6e
+    }
+    .myProject__thum {
+        height: auto;
     }
     .myProject__hover {
         padding: 2rem;
