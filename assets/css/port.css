@@ -757,10 +757,10 @@
   position: absolute;
   display: block;
   content: "▶";
-  left: -17%;
+  left: -12%;
   top: 50%;
   color: red;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .myPort-detail__photo-toBe {
@@ -932,8 +932,8 @@
 /* 가로 해상도가 768px 보다 작은 큰화면에 적용) */
 @media only screen and (max-width: 768px) {
   /*========================
-    ========  mywork ========
-    ========================*/
+  ========  mywork ========
+  ========================*/
   .myPort {
     padding: 3.4rem 1.6rem 0;
   }
