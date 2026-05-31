@@ -216,6 +216,105 @@ main {
   font-weight: bold;
 }
 /* =====================
+  *     sweet_day
+===================== */
+.sweet_day .text_box.box01 {
+  left: 66%;
+  top: 43%;
+  opacity: 1;
+}
+.sweet_day .event_sec {
+  position: relative;
+  width: 100%;
+  overflow-y: hidden;
+}
+.sweet_day .event_effect-wrap {
+  display: none;
+}
+.sweet_day .event_sec.start .event_effect-wrap {
+  opacity: 1;
+  display: block;
+}
+.sweet_day .event_link-item {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  z-index: 10;
+}
+.sweet_day .event_link {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.sweet_day .event_main-btn {
+  position: absolute;
+  top: 44.8%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 9rem;
+  height: 2.38rem;
+  background-image: url(/assets/images/jestina/sweet_day/main_btn-off.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  animation: btnEffect 1s linear infinite;
+  cursor: pointer;
+}
+.sweet_day .event_effec-item {
+  position: absolute;
+  z-index: 100;
+  cursor: pointer;
+}
+.sweet_day .event_effec-item.item01 {
+  left: 6%;
+  animation: dropIcon01 3s linear infinite;
+}
+.sweet_day .event_effec-item.item02 {
+  right: 15%;
+  animation: dropIcon01 3s 5s linear infinite;
+  z-index: 101;
+  top: -200px;
+}
+.sweet_day .event_effec-item.item03 {
+  left: 39%;
+  animation: dropIcon02 4s linear infinite;
+}
+.sweet_day .event_effec-item.item04 {
+  right: 3%;
+  animation-duration: 5s;
+  animation: dropIcon02 5s linear infinite;
+}
+.sweet_day .event_effec-item.item05 {
+  left: 20%;
+  top: -200px;
+  animation: dropIcon01 4s 5s linear infinite;
+}
+@keyframes btnEffect {
+  0% {
+    background-image: url(/assets/images/jestina/sweet_day/main_btn-off.png);
+  }
+  100% {
+    background-image: url(/assets/images/jestina/sweet_day/main_btn-on.png);
+  }
+}
+@keyframes dropIcon01 {
+  0% {
+    top: -200px;
+  }
+  100% {
+    top: 1500px;
+  }
+}
+@keyframes dropIcon02 {
+  0% {
+    top: -150px;
+  }
+  100% {
+    top: 1500px;
+  }
+}
+/* =====================
   *     ballo bag
 ===================== */
 .baloBag .text_box.box01 {
@@ -657,12 +756,12 @@ main {
   *    IU Magazine
 ===================== */
 .IU-Magazine .text_box.box01 {
-  top: 73%;
-  left: 74%;
+  top: 70%;
+  left: 70%;
 }
 
 .IU-Magazine .text_box.box02 {
-  top: 17%;
+  top: 25%;
   left: 74%;
 }
 .IU-Magazine .text_box.box03 {
@@ -720,6 +819,10 @@ main {
   background-image: url(/assets/images/jestina/iu_magazine/rolling02.png);
   background-repeat: repeat-x;
   background-position: 0 0%;
+}
+.IU-Magazine .sec05 .rolling {
+  top: initial;
+  bottom: 0;
 }
 .IU-Magazine .event_link {
   position: absolute;
@@ -878,6 +981,17 @@ main {
   height: 59.3%;
   z-index: 1;
 }
+.videoArea_text {
+  position: absolute;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  width: 87%;
+  left: 50%;
+  font-size: 1.5rem;
+  font-size: 24px;
+  text-align: center;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -906,10 +1020,10 @@ main {
 /* =====================
   *      poshe
 ===================== */
-section .inner {
-  position: relative;
-  width: 100%;
-  height: auto;
+.poche .text_box.box01 {
+  top: 67%;
+  left: 65%;
+  opacity: 1;
 }
 .poche .cursor_blink {
   position: absolute;
@@ -966,7 +1080,7 @@ section .inner {
 #result_box img {
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -1px;
   width: 100%;
 }
 #result_box .mo {
@@ -1088,7 +1202,7 @@ section .inner {
   *     risingBag
 ===================== */
 .risingBag .text_box.box01 {
-  left: 77%;
+  left: 75%;
   top: 15%;
 }
 .risingBag main {
@@ -1117,11 +1231,11 @@ section .inner {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
-  gap: 1.2rem 0;
+  gap: 1.5rem 0;
 }
 .risingBag .featured-item {
   width: 48%;
-  height: 15.4%;
+  height: 15.3%;
 }
 .risingBag .featured_link {
   position: relative;
@@ -1130,7 +1244,7 @@ section .inner {
 }
 .risingBag .arrow {
   position: absolute;
-  bottom: 5.4%;
+  bottom: 6%;
   left: 27%;
 }
 .risingBag .featured-item:hover .arrow {
@@ -1140,7 +1254,19 @@ section .inner {
 /* =====================
   *       jAward
 ===================== */
-
+.jaward .tabV2024 .text_box.box01 {
+  opacity: 0;
+}
+.jaward .tabV2024.fixed .text_box.box01 {
+  left: 3%;
+  top: 80%;
+  opacity: 1;
+}
+.jaward .text_box.box02 {
+  left: 51%;
+  top: 55%;
+  opacity: 1;
+}
 /* main */
 .jaward .event_sec-wrap {
   position: relative;
@@ -1464,8 +1590,16 @@ section .inner {
     *    IU Magazine
     ===================== */
   .IU-Magazine .text_box.box01 {
-    top: 37%;
-    left: 30%;
+    top: 3%;
+    left: 2%;
+  }
+  .IU-Magazine .text_box.box02 {
+    top: 30%;
+    left: 39%;
+  }
+  .IU-Magazine .text_box.box03 {
+    top: 31%;
+    left: 5%;
   }
   .IU-Magazine .tlt01 {
     top: 33%;
@@ -1488,6 +1622,10 @@ section .inner {
     animation: textSlide 30s linear 0s infinite;
     background-image: url(/../assets/images/jestina/iu_magazine/m_rolling02.png);
     background-size: auto 50%;
+  }
+  .sec05 .IU-Magazine .rolling {
+    top: initial;
+    bottom: 0;
   }
   .IU-Magazine .event_link {
     bottom: 24%;
@@ -1628,6 +1766,11 @@ section .inner {
     width: 77.7%;
     /* height: 50.3%; */
   }
+  .videoArea_text {
+    top: 42%;
+    width: 89%;
+    font-size: 1.5rem;
+  }
   .sweet_day .notice-wrap {
     background: linear-gradient(70deg, #fedff1, #fcd6ee);
   }
@@ -1725,6 +1868,73 @@ section .inner {
   }
 
   /* =====================
+  *     sweet_day
+===================== */
+  .sweet_day .text_box.box01 {
+    left: 44%;
+    top: 25%;
+    opacity: 1;
+  }
+  .sweet_day .event_main-btn {
+    top: 36.4%;
+    width: 70%;
+    height: 6rem;
+    background-image: url(assets/images/jestina/sweet_day/main_btn-off.png);
+  }
+  .sweet_day .event_effec-item {
+    position: absolute;
+    z-index: 100;
+    cursor: pointer;
+    transform: scale(0.9);
+  }
+  .sweet_day .event_effec-item.item01 {
+    left: 7%;
+    animation: dropIcon01 3s linear infinite;
+    width: 26%;
+    top: 3%;
+  }
+  .sweet_day .event_effec-item.item02 {
+    right: 3%;
+    animation: dropIcon01 3s 5s linear infinite;
+    z-index: 101;
+    top: -12%;
+    width: 25%;
+  }
+  .sweet_day .event_effec-item.item03 {
+    left: 3%;
+    animation: dropIcon02 4s linear infinite;
+    top: 29%;
+  }
+  .sweet_day .event_effec-item.item04 {
+    right: 1%;
+    width: 39%;
+    /* top: 39%; */
+    animation-duration: 5s;
+    animation: dropIcon02 5s linear infinite;
+  }
+  .sweet_day .event_effec-item.item05 {
+    left: 30%;
+    width: 40%;
+    top: -20%;
+    animation: dropIcon01 4s 5s linear infinite;
+  }
+  @keyframes dropIcon01 {
+    0% {
+      top: -200px;
+    }
+    100% {
+      top: 1500px;
+    }
+  }
+  @keyframes dropIcon02 {
+    0% {
+      top: -150px;
+    }
+    100% {
+      top: 1500px;
+    }
+  }
+  /* =====================
      *    womensWatch
     ===================== */
   .womensWatch .text_box.box01 {
@@ -1800,6 +2010,14 @@ section .inner {
   /* =====================
      *      poshe
     ===================== */
+  .poche .text_box.box01 {
+    top: 60%;
+    left: 44%;
+    font-size: 0.9rem;
+  }
+  .poche .text_box .text_tle {
+    font-size: 1rem;
+  }
   .poche .jestina-sub-project__wrap {
     width: 100%;
     max-width: 960px;
@@ -1884,6 +2102,7 @@ section .inner {
     position: absolute;
     left: 0;
     top: 0;
+    bottom: initial;
     width: 100%;
   }
   #result_box .pc {
@@ -1987,16 +2206,23 @@ section .inner {
   /* =====================
   *     risingBag
 ===================== */
+  .risingBag .text_box.box01 {
+    left: 40%;
+    top: 81%;
+  }
   .risingBag .featured-item__wrap {
     top: 0.5%;
     width: 92%;
     height: 97.5%;
   }
+  .risingBag .featured-item__list {
+    gap: 2.6rem 0;
+  }
   .risingBag .featured-item {
     width: 48%;
-    height: calc(100% / 6 - 1.5%);
-    margin-bottom: 9.5%;
-    border: 1px solid rgba(0, 0, 0, 0);
+    height: 23rem;
+    /* margin-bottom: 9.5%; */
+    /* border: 1px solid rgba(0, 0, 0, 0); */
   }
   .risingBag .arrow {
     bottom: 5.4%;
@@ -2029,7 +2255,10 @@ section .inner {
   /* =====================
      *      jaward
     ===================== */
-
+  .jaward .text_box.box02 {
+    left: 36%;
+    top: 49%;
+  }
   .jaward .event_btn {
     position: absolute;
     display: block;
